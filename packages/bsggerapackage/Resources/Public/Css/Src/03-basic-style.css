@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/**
+* Font - basic Font for the webpage
+**/
+
+
+/* Basic-Styles zazu-CI-COLORS*/
+
+:root {
+    --fontGrey: rgb(115, 119, 128);
+    --blue: rgb(98, 180, 234); /*#62b4ea*/
+    /*#62B4EA*/
+    --brightBlue: #EDF6FE;
+    --purple: #5c2466;
+    --lightGrey: #444b51;
+    --darkBlueGrey: #2f383c;
+    --logoGrey: #687280;
+}
+
+
+@font-face {
+    font-family: 'robotoVar';
+    src: url('../../Fonts/Roboto-variable/Roboto-VariableFont_wght.woff2') format('woff2'),
+        url('../../Fonts/Roboto-variable/Roboto-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    /* weight range from light to bold */
+    font-stretch: 75% 125%;
+    /* stretch range from condensed to extended */
+}
+
+
+@font-face {
+    font-family: 'ralewayVar';
+    src: url('../../Fonts/Raleway-variable/Raleway-VariableFont_wght.woff2') format('woff2'),
+        url('../../Fonts/Raleway-variable/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    /* weight range from light to bold */
+    font-stretch: 75% 125%;
+    /* stretch range from condensed to extended */
+}
+
+
+
+
+/**
+*
+*  Basic website styling sitepackage
+*
+**/
+
+
+/* hyphens
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;*/
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #000;
+    font-family: 'robotoVar', Arial, Helvetica, sans-serif;
+    font-weight: 350;
+    font-size: 1.125em;
+    /*18px*/
+    color: var(--fontGrey);
+}
+
+/**
+    * apply a border-box layout model to all elements
+    **/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*just a horizontal line between content-blocks*/
+
+.blueLine {
+    border: none;
+    height: 1px;
+    background-color: var(--blue);
+    margin: 2rem 0;
+    display: block;
+}
+
+
+/*wrapper and headlines responsive 320 ==================== border 15 = 290 ===========*/
+
+.wrapper {
+    width: 100%;
+    padding-left: 4.6875%;
+    /* 15 / 320 */
+    padding-right: 4.6875%;
+    /* 15 / 320 */
+}
+
+h1 {
+    font-family: 'ralewayVar', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+    margin-top: 2rem;
+    margin-bottom: 0.67em;
+    line-height: 1.2em;
+    color: var(--blue);
+}
+
+h2 {
+    font-family: 'ralewayVar', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.6666666666667em;
+    /*30px*/
+    margin-top: 2rem;
+    margin-bottom: 0.67em;
+    line-height: 1.2em;
+    color: var(--blue);
+}
+
+h3 {
+    font-family: 'ralewayVar', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.444444445em;
+    /*26px*/
+    line-height: 1.2em;
+    margin-top: 2rem;
+    margin-bottom: 0.67em;
+    color: var(--blue);
+}
+
+h4 {
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.2222222223em;
+    /*22px*/
+    line-height: 1.2em;
+    margin-top: 2rem;
+    margin-bottom: 0.67em;
+    color: var(--blue);
+}
+
+h5 {
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.111111112em;
+    /*20px*/
+    line-height: 1.2em;
+    margin-top: 2rem;
+    margin-bottom: 0.67em;
+
+}
+
+
+h6 {
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 2rem;
+    margin-bottom: 0;
+
+}
+
+
+p {
+    margin-top: 0;
+    line-height: 1.7em;
+}
+
+
+
+a {
+    text-decoration: none;
+    line-height: 1.5em;
+}
+
+a,
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+li {
+    line-height: 1.5em;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+img,
+svg {
+    width: 100%;
+    height: auto;
+}
+
+#matomo {
+    width: 1px;
+    height: 1px;
+}
+
+/*======= WRAPPER ===== GENERAL ====== WRAPPER =========== GENERAL ================*/
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .wrapper {
+        padding-left: 2.604166667%;
+        /*15px/576px*/
+        padding-right: 2.604166667%;
+        /*15px/576px*/
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        padding-left: 1.953125%;
+        /*15px/768px*/
+        padding-right: 1.953125%;
+        /*15px/768px*/
+    }
+
+    h1 {
+        font-size: 3.55em;
+
+    }
+
+    h2 {
+        font-size: 1.8333333em;
+        /*33px*/
+    }
+
+    h3 {
+        font-size: 1.6111111em;
+        /*29px*/
+    }
+
+    h4 {
+        font-size: 1.333333334em;
+        /*24px*/
+    }
+
+    h5 {
+        font-size: 1.222222223em;
+        /*22px*/
+    }
+
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .wrapper {
+        padding-left: 1.515151515%;
+        /* 15 / 990 */
+        padding-right: 1.515151515%;
+        /* 15 / 990 */
+    }
+
+    h1 {
+        font-size: 3.6em;
+    }
+
+    h2 {
+        font-size: 2em;
+        /*36px*/
+    }
+
+    h3 {
+        font-size: 1.777777778em;
+        /*32px*/
+    }
+
+    h4 {
+        font-size: 1.44444445em;
+        /*26px*/
+    }
+
+    h5 {
+        font-size: 1.3333334em;
+        /*24px*/
+    }
+
+}
+
+/*======================= 1398 ========== border 30 and more = end size 1338 ==========*/
+
+/* "center" only necessary when background goes all out*/
+
+@media only screen and (min-width: 1398px) {
+
+    /*wrapper now overwritten by center, new: in same div*/
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .center {
+        width: 1338px;
+        margin: 0 auto 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    html {
+        font-size: 1.1875em;
+        /*19px*/
+    }
+
+    h1 {
+        font-size: 3.65em;
+
+    }
+
+    h2 {
+        font-size: 2.105263158em;
+        /*40px*/
+    }
+
+    h3 {
+        font-size: 1.842105263em;
+        /*35px*/
+    }
+
+    h4 {
+        font-size: 1.526315789em;
+        /*29px*/
+    }
+
+    h5 {
+        font-size: 1.368421053em;
+        /*26px*/
+    }
+}
+
+/*======= 2512 ======= MEDIA QUERIES Headlines only in endless layout not in THIS, this is limited to 1398
+
+@media only screen and (min-width: 2512px) {
+
+html {
+   font-size: 1.375em;
+   }
+
+h1 {
+  font-size: 3.125em;
+  }
+
+h2 {
+  font-size: 2.1875em;
+  }
+
+h3 {
+  font-size: 2.375em;
+  }
+
+h4, h5, h6 {
+  font-size: 1.375em;
+  }
+}
+
+==== border 151-45 = 2396 ==*/

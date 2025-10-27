@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-09-20T13:49:00+00:00" product-name="zazuberlin/c29-image-text-below-two-col">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>c29 - Two columns image with text below</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Image and text below in two columns.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

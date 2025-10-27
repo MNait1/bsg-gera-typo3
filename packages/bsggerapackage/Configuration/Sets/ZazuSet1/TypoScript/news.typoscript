@@ -1,0 +1,111 @@
+#Sitepackage TYPO3 zazu.berlin
+#last change:
+#20190509
+
+# TYPOSCRIPT for news
+
+#general news modified templates by zazu.berlin / sitepackage setup.typoscript-static must be included after news TS-static in Page-Template!!!!
+plugin.tx_news {
+        view {
+                templateRootPaths >
+                templateRootPaths {
+                        0 = EXT:news/Resources/Private/Templates/
+                        1 = EXT:bsggerapackage/Resources/Private/Templates/News/
+                }
+                partialRootPaths >
+                partialRootPaths {
+                        0 = EXT:news/Resources/Private/Partials/
+                        1 = EXT:bsggerapackage/Resources/Private/Partials/News/
+                }
+                layoutRootPaths >
+                layoutRootPaths {
+                        0 = EXT:news/Resources/Private/Layouts/
+                        1 = EXT:bsggerapackage/Resources/Private/Layouts/News/
+                }
+        }
+}
+
+#News settings
+plugin.tx_news {
+    settings {
+        cropMaxCharacters = 80
+        overrideFlexformSettingsIfEmpty := addToList(detailPid)
+        displayDummyIfNoMedia = 0
+        #back from single news to ...
+        backPid = {$tx_news.settings.backPid}
+        detailPid = {$tx_news.settings.detailPid}
+        detail {
+            showPrevNext= 1
+            media {
+                image {
+                    maxWidth = 600
+                    maxHeight = 600
+                }
+            }
+        }
+        #Same image size then detail so only on image to load, with many news this has to change!
+        list {
+            media {
+                image {
+                    maxWidth = 600
+                    maxHeight = 600
+                }
+            }
+        }
+    }
+}
+
+
+plugin.tx_news._LOCAL_LANG.de.more-link = Mehr erfahren!
+plugin.tx_news._LOCAL_LANG.en.more-link = read more
+plugin.tx_news._LOCAL_LANG.fr.more-link = lire la suite
+
+plugin.tx_news._LOCAL_LANG.de.list_nonewsfound = Keine Daten in dieser Kategorie.
+
+plugin.tx_news._LOCAL_LANG.de.back-link = zurück zur Übersicht
+plugin.tx_news._LOCAL_LANG.en.back-link = back to list view
+plugin.tx_news._LOCAL_LANG.fr.back-link = retour à la liste
+
+
+########## NEWS DCE ###########
+###### browse News on HOME with Flexslider #########
+plugin.tx_news {
+  templateLayouts.10 = caseListBrowse
+}
+
+lib.newsBrowse = USER
+lib.newsBrowse {
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  extensionName = News
+  pluginName = Pi1
+  vendorName = GeorgRinger
+
+  switchableControllerActions {
+        News {
+          1 = list
+        }
+  }
+
+  settings < plugin.tx_news.settings
+  settings {
+        #only use top-news for the slider
+        topNewsRestriction = 1
+        limit = 999
+        cropMaxCharacters = 100
+        hidePagination = 1
+        #where to find the detail page
+        detailPid = {$newsBrowse.settings.detailPid}
+        #override what is chosen in the plugin
+        overrideFlexformSettingsIfEmpty := addToList(detailPid)
+        #the news folder is starting point
+        startingpoint = {$newsBrowse.settings.startingpoint}
+        #choose the layout in fluid refering "if condition 10"
+        templateLayout = 10
+        list.media.image.maxWidth = 760
+        list.media.image.maxHeight = 760
+  }
+}
+
+
+
+

@@ -1,0 +1,14 @@
+<f:layout name="PageLayout"/>
+
+<f:section name="Main">
+    <f:asset.css identifier="main" href="EXT:bsggerapackage/Resources/Public/Css/Src/04-default-layout.css" />
+        <!--Main Content-->
+        <main>
+            <f:render partial="Content" arguments="{records: content.main.records}"/>
+        </main>
+        <aside>
+            <f:render partial="Content" arguments="{records: content.sidebar.records}"/>
+        </aside>
+    <f:asset.script identifier="main" src="EXT:bsggerapackage/Resources/Public/JavaScript/Src/package-site.js" />
+</f:section>
+

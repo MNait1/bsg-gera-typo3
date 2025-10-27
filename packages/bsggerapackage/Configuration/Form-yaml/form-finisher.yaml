@@ -1,0 +1,10 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        finishersDefinition:
+          Confirmation:
+            options:
+              templateName: Confirmation.html
+              templateRootPaths:
+                100: 'EXT:bsggerapackage/Resources/Private/Templates/Form/Finishers/Confirmation/'

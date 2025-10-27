@@ -1,0 +1,52 @@
+// Part 4: global site configuration
+config {
+
+    # show errors on frontend - only in part where the error/plugin occcurs with = 1, full errors = 0
+    contentObjectExceptionHandler = 0
+    # If set then debug information in the TypoScript code is sent.
+    debug = 1
+    no_cache = {$config.no_cache}
+
+    # Display the Admin Panel at the bottom of pages to logged in backend users
+    admPanel = 1
+
+    # preventing any revealing and space-consuming comments in the HTML source code
+    disablePrefixComment = 0
+    # Remove Default CSS: Default CSS of extensions will be removed
+    removeDefaultCss = 1
+    #If this value is set, then all relative links in TypoScript are prepended with auto detect site root.
+    # needed for multi-domain environments
+    absRefPrefix = auto
+
+    #default is _top
+    extTarget = _blank
+    intTarget = _top
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    #If set, the inline styles TYPO3 controls in the core are written to a file
+    inlineStyle2TempFile = 1
+
+    headerComment = Fliesenschwab - Qualität aus Meisterhand Fluorn-Winzeln - 
+
+
+    // Compression and concatenation of CSS and JS Files
+    // only if they are included with TS "include", needs level in .htaccess
+    // plus TYPO3 BE/FE Configure Installation wide options for compression level (1-9/7)
+    compressCss = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+
+    // the JS in the head for decryption of email addresses
+    removeDefaultJS = 1
+    # if page is cache internal and no user is logged in 1 will send headers
+    sendCacheHeaders = 1
+    #test caching not working, 86400 = 24 h
+    cache_period = 86400
+
+    # Adjust the title tag to be displayed as “website - page title”, set in site settings BE
+    pageTitleSeparator = -
+    pageTitleSeparator.noTrimWrap = | | |
+    #pageTitleFirst = 1
+}

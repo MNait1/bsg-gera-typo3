@@ -1,0 +1,479 @@
+@charset "UTF-8";
+@import url("01-normalize-801.css");
+@import url("02-boilerplate-701.css");
+@import url("03-basic-style.css");
+@import url("05-default-template.css");
+@import url("07-all-content.css");
+
+/*
+zazu.berlin - Film + Digital
+Responsive Design – Mobile First - sitepackage for
+Author: Thomas Hezel (c) 2019 - 20190509
+http://zazu.berlin
+
+
+
+/**
+*
+* Header
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+#mainHeader {
+    width: 100%;
+    /*for absolute telefon, mail*/
+    position: relative;
+}
+
+/**
+* logo
+**/
+
+#mainHeader #logoContainer {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    float: none;
+    text-align: center;
+}
+
+#mainHeader #logo {
+    width: 50%;
+    height: auto;
+}
+
+/**
+* mainMenu
+**/
+
+
+/*======= 767 after mobile menu ======== MEDIA QUERIES ===========*/
+/*max-width -- max-width -- max-width*/
+
+@media only screen and (max-width: 767px) {
+
+
+    /*
+* settings for the mobile menu
+*/
+
+
+    #mainMenuBox li>a:only-child:after {
+        content: '';
+    }
+
+    /* zazu: plus sign is now from lable*/
+    #mainMenuBox li>a:after {
+        content: '';
+    }
+
+    /*hide the nav menu, not the LINK!*/
+    /*.toggle+a,*/
+    #mainMenuList {
+        display: none;
+    }
+
+    /* Styling the toggle lable
+    * zazu:
+    * lable is no page link only for drop down
+    * floats right and with neg. margin down
+    */
+    #mainMenuBox .toggle {
+        display: block;
+        padding: 15px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+        margin-bottom: -40px;
+        width: 20%;
+        float: right;
+        cursor: pointer;
+    }
+
+    #mainMenuBox .toggle:hover {
+        color: #5c2466;
+    }
+
+    #mainMenuBox .toggle:after {
+        content: '+';
+        font-size: 1.5em;
+        color: #5c2466;
+    }
+
+    #mainMenuBox [id^=drop]:checked+.toggle:after {
+        content: '–';
+        color: #5c2466;
+    }
+
+    /*second level, different style*/
+    #mainMenuBox nav ul li ul li .toggle {
+        padding: 15px 20px 10px 20px;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable*/
+    #hamburger:checked+label+ul,
+    #mainMenuBox [id^=drop]:checked+label+a+ul {
+        display: block;
+    }
+
+    /* Change menu item's width to 100% */
+    #mainMenuBox nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    #mainMenuBox nav ul ul .toggle,
+    #mainMenuBox nav ul ul a {
+        padding: 0 40px;
+    }
+
+    #mainMenuBox nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    #mainMenuBox nav a:hover {
+        background-color: #7fcce0;
+        border: none;
+    }
+
+    /*padding of the dropdown menu mobile, level2*/
+    #mainMenuBox nav ul ul a {
+        padding: 14px 30px;
+        font-size: 17px;
+    }
+
+    /*padding of the dropdown menu mobile, level3*/
+    #mainMenuBox nav ul ul ul a {
+        padding: 14px 42px;
+        font-size: 17px;
+    }
+
+    /*second level color*/
+    #mainMenuBox nav ul ul a {
+        background-color: #e8fccd;
+    }
+
+    /*third level color*/
+    #mainMenuBox nav ul ul ul a {
+        background-color: #a9e954;
+    }
+
+    /* Hide Dropdowns by Default second level*/
+    #mainMenuBox nav ul ul {
+        float: none;
+        position: static;
+    }
+
+    /* Hide menus on hover */
+    #mainMenuBox nav ul ul li:hover>ul,
+    #mainMenuBox nav ul li:hover>ul {
+        display: none;
+    }
+
+    /* Fisrt Tier Dropdown */
+    #mainMenuBox nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    #mainMenuBox nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+    }
+
+}
+
+
+/*
+*
+* start menu with no width and then min-width
+*
+*/
+
+/*mobile Menu Hamburger*/
+
+label.hamburger {
+    display: block;
+    /*border: solid 1px var(--blue);*/
+    width: 51px;
+    height: 46px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    cursor: pointer;
+    margin-top: 0.4em;
+}
+
+input#hamburger {
+    display: none
+}
+
+.hamburgerLine {
+    position: absolute;
+    left: 10px;
+    height: 4px;
+    width: 31px;
+    border-radius: 4px;
+    background: var(--blue);
+    display: block;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.hamburgerLine:nth-child(1) {
+    top: 8px;
+}
+
+.hamburgerLine:nth-child(2) {
+    top: 20px;
+}
+
+.hamburgerLine:nth-child(3) {
+    top: 32px;
+}
+
+#hamburger:checked+.hamburger .hamburgerLine:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+#hamburger:checked+.hamburger .hamburgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger:checked+.hamburger .hamburgerLine:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+/*NAVIGATION main NAV*/
+
+/*don't display the input checkbox, and the lable with toggle*/
+#mainMenuBox .toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Since we'll have the "ul li" "float:left"
+we need to add a clear after the container. */
+
+#mainMenuBox nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+
+#mainMenuBox nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    z-index: 999;
+}
+
+/* Positioning the navigation items inline, no inline float left instead*/
+
+#mainMenuBox nav ul li {
+    margin: 0px;
+    float: left;
+    border-bottom: solid 1px #95de11;
+}
+
+/*
+* Styling the links
+*/
+
+#mainMenuBox nav a {
+    display: block;
+    padding: 17px 7px;
+    /*padding top corresponds to font-size*/
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/*from second level onwards background color*/
+#mainMenuBox nav ul li ul li {
+    background-color: rgba(240, 240, 240, 0.6);
+}
+
+/*level 2 when hover over level 3*/
+#mainMenuBox nav ul li ul li:hover {
+    background: #a8b7c7;
+}
+
+/* Background color change on Hover same as mobile nav!*/
+#mainMenuBox nav a:hover {
+    background-color: #e8f6d4;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+
+#mainMenuBox nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 60px;
+}
+
+/*level 2 drop down*/
+
+#mainMenuBox nav ul li:hover>ul {
+    display: inherit;
+}
+
+/*first row drop down*/
+
+#mainMenuBox nav ul ul li {
+    float: none;
+    display: list-item;
+    position: relative;
+    width: 170px;
+}
+
+/* second and other rows to the left
+*  by the amount of the first row
+*  left: - minus for menu items at the right border
+*
+*  avoid a second level for the very last item if your
+*  menu floats right to the border of the screen
+*  and the second level has a longer name then the first
+*/
+#mainMenuBox nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* same number as width nav ul ul li */
+    left: 170px;
+}
+
+#mainMenuBox nav ul li:nth-child(7) ul ul li {
+    left: -170px;
+}
+
+
+
+
+/*======= 330 mobile menu ======== MEDIA QUERIES ===========*/
+
+/*space on the right side for the finger to scroll on mobile open*/
+@media all and (max-width: 330px) {
+    #mainMenuBox nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+
+/*======= 768 after mobile menu ======== MEDIA QUERIES ===========*/
+/*from here it is the normal menu*/
+
+@media only screen and (min-width: 768px) {
+    label.hamburger {
+        display: none;
+    }
+
+    /* change '+' in order to change the dropdown symbol*/
+    #mainMenuBox li>a:after {
+        content: '+';
+    }
+
+    /*hide the nav menu, not the LINK!*/
+    /*.toggle+a,*/
+    #mainMenuList {
+        display: block;
+    }
+
+}
+
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+
+    /*first level distance between sites*/
+    #mainMenuBox nav a {
+        padding: 17px 9px;
+    }
+}
+
+/*END MENU*/
+
+
+/**
+* header contact
+**/
+
+#headerContact {
+    float: right;
+    text-align: right;
+}
+
+#headerContact #mail {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:%2362B4EA;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ESenden%3C/title%3E%3Cpath class='a' d='M21.9,65.27H65.82a3.19,3.19,0,0,0,3.06-2.67l4.19-29.9A2.29,2.29,0,0,0,70.75,30H26.18L46.81,49l24.62-17.8'/%3E%3Cline class='a' x1='35.58' y1='55.99' x2='14.02' y2='55.99'/%3E%3Cline class='a' x1='30.83' y1='48.04' x2='2.94' y2='48.04'/%3E%3Cline class='a' x1='23.88' y1='40.1' x2='11.24' y2='40.1'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 40px;
+    height: auto;
+    margin-top: 8px;
+}
+
+#headerContact #phone {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a,.b%7Bfill:none;stroke:%2362B4EA;stroke-width:2px;%7D.a%7Bstroke-linecap:square;stroke-linejoin:round;%7D.b%7Bstroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ETelefon%3C/title%3E%3Cpath class='a' d='M53.51,47.55a3.49,3.49,0,0,0-4-.23l-5.77,3.19a98.69,98.69,0,0,1-8.95-8h0l-.05,0,0,0h0a97.7,97.7,0,0,1-8-8.94l3.18-5.77a3.52,3.52,0,0,0-.22-4l-6.38-9.56a2.58,2.58,0,0,0-2.5-1.29c-1.75.08-6.91,4.94-6.91,4.94-2.73,2.42-2.13,4.55-2.13,4.55,1.84,13,15.51,25.53,16.56,26.62,1.41,1.31,13.62,14.72,26.62,16.55,0,0,2.12.61,4.55-2.12,0,0,4.86-5.16,4.94-6.91a2.57,2.57,0,0,0-1.3-2.5Z'/%3E%3Cpath class='b' d='M40.79,22.74a13.06,13.06,0,0,1,12.7,12.65'/%3E%3Cpath class='b' d='M41.05,15.5A20.29,20.29,0,0,1,60.72,35'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 40px;
+    height: auto;
+    margin-top:8px;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    #mainHeader #logoContainer {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+    }
+
+    #mainHeader #logo {
+        width: 400px;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+/* @media 768 be carefull mixture of 'max' and 'min'*/
+
+@media only screen and (min-width: 768px) {
+    #mainHeader #logoContainer {
+        padding: 1em 1em 1em 0;
+        float: left;
+        width: 40%;
+        clear: right;
+        justify-content: left;
+    }
+
+    #headerContact {
+        margin-top: 0.95em;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE x*/
+
+/*======== Header ================================================*/

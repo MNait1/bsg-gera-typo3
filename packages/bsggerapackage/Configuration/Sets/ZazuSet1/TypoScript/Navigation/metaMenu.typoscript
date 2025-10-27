@@ -1,0 +1,12 @@
+page {
+    10 {
+        dataProcessing {
+            40 = menu
+            40 {
+                as = metaMenu
+                special = directory
+                special.value = {$bsggerapackage.metaMenuRoot}
+            }
+        }
+    }
+}

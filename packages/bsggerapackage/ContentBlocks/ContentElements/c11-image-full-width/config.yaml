@@ -1,0 +1,15 @@
+name: zazuberlin/c11-image-full-width
+typeName: zazuberlin_c11imagefullwidth
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: image
+    useExistingField: true
+    label: Image
+    type: File
+    extendedPalette: false
+    minitems: 1
+    maxitems: 1
+    allowed: jpg, jpeg, png, gif, svg
+    description: 'One image full width of the screen.'

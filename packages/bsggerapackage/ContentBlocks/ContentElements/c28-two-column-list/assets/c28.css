@@ -1,0 +1,97 @@
+/**
+*
+*  c28
+*  list with display numbers and headline
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+.c28 {
+    text-align: center;
+    border-bottom: 1px solid var(--blue);
+    margin-bottom: 2em;
+}
+
+.c28 ol {
+    counter-reset: big-counter;
+    list-style: none;          /* remove default numbers */
+    padding-left: 0;
+}
+
+.c28 ol li {
+    counter-increment: big-counter;
+    position: relative;
+    padding-left: 4rem;        /* space for big numbers */
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.c28 ol li::before {
+    content: counter(big-counter);
+    position: absolute;
+    left: 0;
+    top: -0.2rem;             /* fine-tune vertical alignment */
+    font-size: 4rem;          /* really big numbers */
+    color: var(--blue);
+    line-height: 1;
+}
+
+.c28 ol #link::before {
+    content: "!"
+}
+
+.c28 #link a {
+    color: var(--blue);
+}
+
+.c28 #link a:hover {
+    font-weight: 500;
+}
+
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .c28 ol li {
+        margin-bottom: 3rem;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .c28 ol {
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* exactly 2 columns */
+        grid-auto-flow: column;          /* fill columns top-to-bottom */
+        gap: 0 4rem;
+        align-items: start;
+        /* Key: Set a specific number of rows based on half your items */
+        grid-template-rows: repeat(5, auto); /* Adjust "x" to roughly half your max items */
+    }
+
+    /*page komplettlösungen*/
+    body#p5 .c28 ol {
+         /* Key: Set a specific number of rows based on half your items */
+        grid-template-rows: repeat(4, auto); /* Adjust "x" to roughly half your max items */
+    }
+
+    .c28 ol li {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-c28*/

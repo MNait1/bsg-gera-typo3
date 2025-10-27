@@ -1,0 +1,51 @@
+name: zazuberlin/c23-image-text
+typeName: zazuberlin_c23imagetext
+group: default
+prefixFields: true
+prefixType: full
+fields:
+
+  - identifier: header
+    label: Überschrift über alles
+    useExistingField: true
+
+  - identifier: toggle
+    label: Überschrift über alles ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+
+  - identifier: image
+    useExistingField: true
+    label: Image
+    type: File
+    extendedPalette: false
+    minitems: 1
+    maxitems: 1
+    allowed: jpg, jpeg, png, gif, svg
+    description: 'Bild linke Spalte.'
+
+  - identifier: textarea
+    type: Textarea
+    label: Text rechts
+    description: 'Text rechts Spalte'
+    enableRichtext: true
+    richtextConfiguration: zazu
+    rows: 40
+    
+  - identifier: link
+    type: Link
+    label: Link at the end
+    description: 'TypoLink (page/external/mail/url) for the link at the end'
+    required: false
+    default: ''
+  - identifier: linktext
+    type: Text
+    label: Link text 
+    description: 'Text des unteren Links'
+
+  - identifier: toggleLine
+    label: blaue Linie am Ende ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0

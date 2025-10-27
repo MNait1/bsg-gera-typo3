@@ -1,0 +1,2370 @@
+@charset "UTF-8";
+/**
+*
+*  zazu.berlin 20190509
+*  DCEs for the DCE-Extension CSS
+*  each DCE has a wrapping Class ".dx"
+*  "x" is the number of the DCE
+*  sorted by the first number then numeric of the DCE
+*  1xxx one column, 2xxx two column ...
+*
+**/
+
+/**
+*
+*  DCE d1
+*  simple 1 column text element
+*  article, h2, naked text
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d1 {
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.d1 h2 {
+    margin-top: 0;
+}
+
+.d1 article {
+    margin-bottom: 2em;
+    /*margin for color background*/
+}
+
+.d1 li::before {
+    content: '';
+    float: left;
+    margin-left: -1.5em;
+    height: 1em;
+    width: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%231f9cd8;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EZeichenfläche 1%3C/title%3E%3Cpolygon class='a' points='45 45 0 45 45 0 45 45'/%3E%3C/svg%3E");
+}
+
+.d1 ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.5em;
+    text-align: left;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d1 article {
+        padding: 0 10% 0 19%;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+    .d1.wrapper {
+        width: 100%;
+    }
+}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 1*/
+
+/**
+*
+*  DCE d1a
+*  only text field no headline
+*  naked text
+*
+**/
+
+/* no CSS */
+
+/*END-DCE 1a*/
+
+/**
+*
+*  DCE d10
+*  1 column image
+*  figure and image
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d10 {
+    margin-bottom: 2em;
+}
+
+.d10 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*gap under the pic*/
+}
+
+.d10 figure {
+    margin: 0;
+    padding: 0;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 10*/
+
+/**
+*
+*  DCE d11
+*  1 column image full width
+*  no wrapper, no center, figure, image
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d11 {
+    margin-bottom: 2em;
+}
+
+.d11 img {
+    width: 100%;
+    height: auto;
+    display: block
+        /*gap under the pic*/
+}
+
+.d11 figure {
+    margin: 0;
+    padding: 0;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 11*/
+
+/**
+*
+*  DCE d12
+*  image with text inside
+*  figure, image, figcaption
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d12 figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.d12 img {
+    height: auto;
+    width: 100%;
+    display: block
+        /*gap under the pic*/
+}
+
+.d12 figcaption {
+    position: absolute;
+    bottom: -1px;
+    left: -40px;
+    color: #fff;
+    background-color: rgba(0, 158, 227, 0.5);
+    padding-left: calc(1.6129032258064515% + 40px);
+    padding-bottom: 0.5em;
+    padding-top: 0;
+    padding-right: 0;
+    transform: skew(-10deg, 0);
+    width: 78%;
+    height: 60%;
+}
+
+.d12 .captionTxt {
+    display: block;
+    transform: skew(10deg, 0);
+    width: 90%;
+}
+
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .d12 figcaption {
+        width: 68%;
+        height: 50%;
+        font-size: 2em;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d12 figcaption {
+        left: -80px;
+        padding-left: calc(1.6129032258064515% + 80px);
+        padding-top: 0.5em;
+        padding-right: 3em;
+        width: 60%;
+        height: 50%;
+    }
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d12 figcaption {
+        width: 55%;
+        font-size: 3em;
+    }
+
+
+}
+
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 12/
+
+
+/**
+*
+*  DCE 13
+*  just Headline H1
+*  h1 as preset just enter text
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d13 {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 13*/
+
+/**
+*
+*  DCE 14
+*  fotorama slider full width
+*  figure, h2 hidden, div fotorama, img
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d14 {
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.d14 .slider img {
+    width: 100%;
+    height: auto;
+}
+
+.d14 figure {
+    margin: 140px 0 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.fotorama__arr {
+    top: 62%;
+    height: 55px;
+    width: 45px;
+    background: rgba(0, 0, 0, 0) url(../Icons/fotorama-grau.png) no-repeat scroll 0 0;
+}
+
+.fotorama__arr--next {
+    background-position: -35px 0;
+}
+
+@media (-webkit-min-device-pixel-ratio:1.5),
+(min-resolution:2dppx) {
+    .fotorama__arr {
+        background: rgba(0, 0, 0, 0) url(../Icons/fotorama-grau@2x.png) 9px 92px no-repeat;
+    }
+
+    .fotorama__arr--next {
+        background: rgba(0, 0, 0, 0) url(../Icons/fotorama-grau@2x.png) no-repeat -25px 92px;
+    }
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d14 figure {
+        margin: 160px 0 0 0;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d14 figure {
+        margin: 0 0 0 0;
+    }
+
+    /*zoom in slider*/
+    .d14 .slider {
+        width: 130%;
+        height: auto;
+        margin-left: -15%;
+    }
+
+    /*for bigger bg pic arrows change height and width
+  .fotorama__arr {
+      height: 32px;
+      margin-top: -16px;
+      position: absolute;
+      top: 50%;
+      width: 32px;
+  }
+  */
+    .fotorama__arr {
+        top: 62%;
+        right: 12%;
+    }
+
+    .fotorama__arr--prev {
+        left: 12%;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+    .d14 .slider {
+        width: 120%;
+        margin-left: -10%;
+    }
+
+    .fotorama__arr {
+        right: 9%;
+    }
+
+    .fotorama__arr--prev {
+        left: 9%;
+    }
+}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {
+    .d14 .slider {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+}
+
+/*END-DCE 14*/
+
+
+
+/**
+*
+*  DCE 16
+*  FlexSlider center width
+*  figure, h2 hidden, image, div caption
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d16 {
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.d16 .slider img {
+    width: 100%;
+    height: auto;
+}
+
+/*remove the border around flexslider*/
+.d16 .flexslider {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin: 1.5em 0 40px 0;
+}
+
+/*arrows flexslider*/
+.d16 .flex-direction-nav a::before {
+    font-family: "noto_sansregular", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 160px;
+    display: inline-block;
+    content: '\2039';
+    color: rgba(0, 158, 227, 0.8);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.d16 .flex-direction-nav a.flex-next::before {
+    content: '\203A';
+}
+
+.d16 .flex-direction-nav a {
+    width: 75px;
+    height: 110px;
+    padding-top: 45px;
+    top: 10%;
+}
+
+
+/* take the arrow off-screen on small screens but then
+you don't know that it is a slider on small screens
+.d16 .flex-direction-nav .flex-prev {
+    left: -60px;
+}
+
+.d16 .flex-direction-nav .flex-next {
+    right: -60px;
+}
+*/
+
+/* felx-Caption*/
+.d16 .flexslider .slides li {
+    position: relative;
+}
+
+.d16 .flex-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding: 0.5em;
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    background-color: rgba(220, 220, 220, 0.6);
+    font-size: 1em;
+    line-height: 1.2em;
+    width: 70%;
+    height: 50%;
+}
+
+/*space for the points at the bottom of the player*/
+.d16 .flexslider {
+    padding-bottom: 19px;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .d16 .flex-direction-nav a {
+        top: 30%;
+    }
+
+    .d16 .flex-caption {
+        font-size: 1.2em;
+        height: 40%;
+    }
+
+    /*space for the points at the bottom of the player*/
+    .d16 .flexslider {
+        padding-bottom: 0;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d16 .flexslider {
+        margin: 3px 0 40px 0;
+    }
+
+    .d16 .flex-direction-nav a {
+        top: 40%;
+    }
+
+    .d16 .flex-caption {
+        font-size: 1.4em;
+        line-height: 1.4em;
+        width: 55%;
+        height: 30%;
+    }
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+
+    /*zoom in slider
+    .d16 .flexslider img {
+        width: 130% !important;
+        height: auto;
+    }*/
+
+    /*default 10px*/
+    .d16 .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 30px;
+    }
+
+    /*default 10px*/
+    .d16 .flexslider:hover .flex-direction-nav .flex-next {
+        right: 30px;
+    }
+
+    .d16 .flex-direction-nav a {
+        top: 45%;
+    }
+
+    .d16 .flex-caption {
+        font-size: 2em;
+        line-height: 1.6em;
+        width: 55%;
+        height: 25%;
+    }
+
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 16*/
+
+
+/**
+*
+*  DCE 17
+*  FlexSlider full width
+*  figure, h2 hidden, image, div caption
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d17 {
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.d17 .slider img {
+    width: 100%;
+    height: auto;
+}
+
+.d17 figure {
+    margin: 140px 0 0 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d17 figure {
+        margin: 160px 0 0 0;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d17 figure {
+        margin: 0 0 0 0;
+    }
+
+    /*zoom in slider*/
+    .d17 .flexslider img {
+        width: 130% !important;
+        height: auto;
+    }
+
+    /*default 10px*/
+    .d17 .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 100px;
+    }
+
+    /*default 10px*/
+    .d17 .flexslider:hover .flex-direction-nav .flex-next {
+        right: 100px;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 17*/
+
+/**
+*
+*  DCE 18
+*  FlexSlider for random input - choose other content records
+*  childDce.render -> format.raw / div flexslider, ul, li
+*
+**/
+
+/* no CSS */
+
+/**
+*
+*  DCE 18a
+*  Image Input for FlexSlider DCE 18
+*  just img - put it on a hidden page
+*
+**/
+
+/* no CSS */
+
+/**
+*
+*  DCE 18b
+*  Text Input for FlexSlider DCE 18
+*  RTE - Text - put it on a hidden page
+*
+**/
+
+/* no CSS */
+
+/**
+*
+*  DCE 100
+*  aside for news
+*
+*
+**/
+
+/* no CSS */
+
+/**
+*
+*  DCE 101
+*  Leaflet Map - with open streetmap
+*  with activation DSGVO
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+#anfahrt {
+    display: block;
+}
+
+#map {
+    float: left;
+    height: 400px;
+    width: 97%;
+    z-index: 1;
+    position: relative;
+    margin-top: 10px;
+    background-image: url("../../Images/Map/osm-screen-shot.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.leaflet-popup-tip {
+    display: none;
+}
+
+.ipHint {
+    font-size: 0.7em;
+}
+
+.dataWarning svg {
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+}
+
+.dataWarning {
+    float: left;
+    clear: left;
+    padding: 0.5em 1em;
+    line-height: 1.2em;
+}
+
+div#map.dontShowBackground {
+    background-image: none;
+}
+
+/*space right of map to scroll on iPhones*/
+
+#scrollPhone {
+    float: left;
+    width: 3%;
+    height: 400px;
+}
+
+div.leaflet-control-zoom.leaflet-bar.leaflet-control {
+    margin-bottom: 35px;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    #map::before {
+        height: 80px;
+        top: -47px;
+        left: -20px;
+    }
+
+    #map {
+        margin-top: 20px;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    #map {
+        height: 550px;
+    }
+
+    #map::before {
+        height: 90px;
+        top: -57px;
+        left: -20px;
+    }
+
+    #map {
+        margin-top: 25px;
+    }
+
+    #scrollPhone {
+        display: none;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    #map::before {
+        height: 113px;
+        top: -77px;
+        left: -20px;
+    }
+
+    #map {
+        margin-top: 44px;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+    #map::before {
+        height: 170px;
+        top: -110px;
+        left: -20px;
+    }
+
+    #map {
+        margin-top: 60px;
+    }
+}
+
+/*====END-DCE 101=======*/
+
+/**
+*
+*  DCE 102
+*  cObject
+*
+*
+**/
+
+/* no CSS */
+
+
+/**
+*
+*  DCE 2u
+*  universal 2 column choose 1/3 or 2/3 or 1/2 relation
+*  text left, if image left, text right, if image right, if text bottom, if link bottom
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d2u {
+    margin-bottom: 3em;
+}
+
+.d2u img {
+    width: 100%;
+    height: auto;
+}
+
+.d2u h2,
+.d2u h3,
+.d2u h4 {
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+.d2u .colLeft132,
+.d2u .colLeft231,
+.d2u .colLeft121 {
+    margin-bottom: 2em;
+}
+
+.d2u .botMiddle {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.d2u .goToBox {
+    display: inline-block;
+    border: solid 1px #bdc2c8;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d2u .colLeft132,
+    .d2u .colLeft231,
+    .d2u .colLeft121 {
+        margin-bottom: 0;
+    }
+
+    .d2u h2,
+    .d2u h3,
+    .d2u h4 {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*ratio 1/3 to 2/3 */
+    .d2u .colLeft132 {
+        float: left;
+        width: 34.065934065934066%;
+        /*248px/728px*/
+    }
+
+    /*ratio 2/3 to 1/3 */
+    .d2u .colLeft231 {
+        float: left;
+        width: 59.61538461538461%;
+        /*434px/728px*/
+    }
+
+    /*ratio 1/2 to 1/2 */
+    .d2u .colLeft121 {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .d2u .colRight132 {
+        float: left;
+        width: 59.61538461538461%;
+        /*434px/728px*/
+        margin-left: 6.318681318681318%;
+        /*46px/728px*/
+    }
+
+    .d2u .colRight231 {
+        float: left;
+        width: 34.065934065934066%;
+        /*248px/728px*/
+        margin-left: 6.318681318681318%;
+        /*46px/728px*/
+    }
+
+    .d2u .colRight121 {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+
+    .d2u .colRight132space {
+        float: left;
+    }
+
+    .d2u .colRight231space {
+        float: left;
+    }
+
+    .d2u .colRight121space {
+        float: left;
+    }
+
+    .d2u .botMiddle {
+        display: inline-block;
+        clear: both;
+        width: 100%;
+        margin-top: 1.5em;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d2u .botMiddleTxt {
+        padding: 0 8% 0 8%;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 2u*/
+
+
+/**
+*
+*  DCE 2uu
+*  universal 2 column choose 1/3 or 2/3 or 1/2 relation
+*  compared to d2u here is image first and now link at the end
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d2uu {
+    margin-bottom: 3em;
+}
+
+.duu img {
+    width: 100%;
+    height: auto;
+}
+
+.duu h2,
+.duu h3,
+.duu h4 {
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+.duu .colLeft132,
+.duu .colLeft231,
+.duu .colLeft121 {
+    margin-bottom: 2em;
+}
+
+.duu .botMiddle {
+    margin-top: 1em;
+    text-align: center;
+}
+
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .duu .colLeft132,
+    .duu .colLeft231,
+    .duu .colLeft121 {
+        margin-bottom: 0;
+    }
+
+    .duu h2,
+    .duu h3,
+    .duu h4 {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*ratio 1/3 to 2/3 */
+    .duu .colLeft132 {
+        float: left;
+        width: 34.065934065934066%;
+        /*248px/728px*/
+    }
+
+    /*ratio 2/3 to 1/3 */
+    .duu .colLeft231 {
+        float: left;
+        width: 59.61538461538461%;
+        /*434px/728px*/
+    }
+
+    /*ratio 1/2 to 1/2 */
+    .duu .colLeft121 {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .duu .colRight132 {
+        float: left;
+        width: 59.61538461538461%;
+        /*434px/728px*/
+        margin-left: 6.318681318681318%;
+        /*46px/728px*/
+    }
+
+    .duu .colRight231 {
+        float: left;
+        width: 34.065934065934066%;
+        /*248px/728px*/
+        margin-left: 6.318681318681318%;
+        /*46px/728px*/
+    }
+
+    .duu .colRight121 {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+
+    .duu .colRight132space {
+        float: left;
+    }
+
+    .duu .colRight231space {
+        float: left;
+    }
+
+    .duu .colRight121space {
+        float: left;
+    }
+
+    .duu .botMiddle {
+        display: inline-block;
+        clear: both;
+        width: 100%;
+        margin-top: 1.5em;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .duu .botMiddleTxt {
+        padding: 0 8% 0 8%;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 2u*/
+
+
+
+/**
+*
+*  DCE 20
+*  2 column  text plus FlexSlider
+*  h1 or h2, text, h2 or h3, text - Flexslider right col
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d20 {
+    margin-bottom: 2em;
+}
+
+.d20 h1 {
+    margin-top: 2em;
+}
+
+.d20 .slider {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.d20 figure {
+    margin: 0;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .d20 .flex-caption {
+        position: absolute;
+        bottom: 3em;
+        /*display: block;*/
+        background-color: rgba(200, 200, 200, 0.7);
+        height: 200px;
+        padding: 1em;
+        color: red;
+        font-size: 1.6em;
+    }
+
+    .d20 .flex-caption h2 {
+        margin-top: 0;
+    }
+
+    .d20 .flex-control-thumbs li {
+        width: 20%;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d20 div.fotorama__caption {
+        font-size: 1.8em;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d20 .txtPlusSlider {
+        float: left;
+        width: 31.877729257641924%;
+        /*292px/916px*/
+        margin-bottom: 0;
+    }
+
+    .d20 .flexslider {
+        float: left;
+        width: 65.93886462882097%;
+        /*604px/916px*/
+        margin-left: 2.1834061135371177%;
+        /*20px/916px*/
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+    .d20 .txtPlusSlider {
+        width: 382px;
+    }
+
+    .d20 .flexslider {
+        width: 790px;
+        margin-left: 26px;
+    }
+}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 20*/
+
+
+/**
+*
+*  DCE 22
+*  2 column text plus image headline on top
+*  if h2, text left col, image right col
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d22 {
+    margin-bottom: 2em;
+}
+
+.d22 img {
+    width: 100%;
+    height: auto;
+}
+
+.d22 .colLeft {
+    margin-bottom: 2em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d22 .colLeft,
+    .d22 .colRight {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .d22 .colRight {
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 22*/
+
+/**
+*
+*  DCE 23
+*  2 column image plus text headline on top
+*  if h2, text left col, image right col
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d23 {
+    margin-bottom: 2em;
+}
+
+.d23 h2 {
+    margin-bottom: 0.6em;
+}
+
+.d23 img {
+    width: 100%;
+    height: auto;
+}
+
+.d23 .colRight {
+    margin-bottom: 2em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d23 .colLeft,
+    .d23 .colRight {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .d23 .colRight {
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 23*/
+
+/**
+*
+*  DCE 23s
+*  SVG plus Text 2 column - plus bottom center text
+*  svg inline, right col headline text, bottom text
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d23s {
+    margin-bottom: 2em;
+}
+
+.d23s h2 {
+    margin-bottom: 0.6em;
+}
+
+.d23s img {
+    width: 100%;
+    height: auto;
+}
+
+.d23s .colRight {
+    margin-bottom: 2em;
+}
+
+.d23s .bottomCenter {
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.d23s h3 {
+    line-height: 1.2em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d23s .colLeft,
+    .d23s .colRight {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .d23s .colRight {
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 23s*/
+
+/**
+*
+*  DCE 24
+*  2 coumn text
+*  h2, text - h2, text
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d24 {
+    margin-bottom: 2em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d24 .col2TxtL,
+    .d24 .col2TxtR {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .d24 .col2TxtR {
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+
+    .d24 .overAll {
+        width: 100%;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 24*/
+
+/**
+*
+*  DCE 25
+*  container - 2 col - with image text elements
+*  image - text
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d25 {
+    background-color: #f6f6f8;
+    padding: 2em 0;
+}
+
+.d25 figure {
+    margin: 0 0 0 0;
+    padding: 0 20px;
+}
+
+.d25 img {
+    width: 100%;
+    height: auto;
+}
+
+.d25 h3 {
+    font-size: 1.2em;
+    margin-top: 0.3em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d25 .singleEle {
+        float: left;
+        height: 680px;
+    }
+
+    .d25 .singleEle:nth-child(1) {
+        width: 48.9010989010989%;
+        /*356px/728px*/
+        height: 920px;
+    }
+
+    .d25 .singleEle {
+        width: 48.9010989010989%;
+        /*356px/728px*/
+        margin-left: 2%;
+        /*20px/916px*/
+    }
+
+    .d25 .singleEle:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .d25 .singleEle:nth-child(odd) {
+        margin-left: 0;
+        clear: left;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d25 .singleEle {
+        height: 560px;
+    }
+
+    .d25 .singleEle:nth-child(odd) {
+        margin-left: 2.1834061135371177%;
+        /*20px/916px*/
+        clear: none;
+    }
+
+    .d25 .singleEle:nth-child(1) {
+        width: 48.90829694323144%;
+        /*448px/916px*/
+        height: 1140px;
+    }
+
+    .d25 .singleEle {
+        width: 23.362445414847162%;
+        /*214px/916px*/
+        margin-left: 2.1834061135371177%;
+        /*20px/916px*/
+    }
+
+    .d25 .singleEle:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .d25 .singleEle:nth-child(6) {
+        margin-left: 0;
+        clear: left;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 25*/
+
+
+/**
+*
+*  DCE 26
+*  2 NEWS FlexSlider - plus right column hl img, img text
+*  image - text
+*  -> see Gesitrel
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d26 {
+    overflow: hidden;
+}
+
+/*news slider .colLeft*/
+
+.d26 .flexslider {
+    padding: 1em 1em 3em 1em;
+    border: solid 1px #444b51;
+    box-shadow: none;
+    margin: 0;
+}
+
+/*overwrite news exension*/
+/*points nav at the bottom*/
+/*since ol is absolute 100% is not referring to container so it must be width:calc(100% - 2times padding)*/
+.d26 .flex-control-nav {
+    bottom: 1em;
+    width: calc(100% - 2em);
+}
+
+.flexslider .article .news-img-wrap {
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.flexslider .footer {
+    border-top-color: #95de11;
+}
+
+.d26 .colLeft {
+    float: left;
+    width: 100%;
+}
+
+.d26 .flexslider .article {
+    float: left;
+}
+
+.d26 img {
+    max-width: 100%;
+}
+
+.d26 .header h3 a {
+    display: inline-block;
+    width: 100%;
+    line-height: 1.2em;
+}
+
+.d26 .more {
+    display: block;
+    border: solid 1px #5c2466;
+    width: 200px;
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*arrows flexslider*/
+
+.d26 .flex-direction-nav a::before {
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 160px;
+    display: inline-block;
+    content: '\2039';
+    color: rgba(0, 158, 227, 0.8);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.d26 .flex-direction-nav a.flex-next::before {
+    content: '\203A';
+}
+
+.d26 .flex-direction-nav a {
+    width: 75px;
+    height: 110px;
+    padding-top: 45px;
+    top: 40%;
+}
+
+/*take the arrow out of frame for small screens
+but then you don't know that it is a slider on small screens
+
+.d26 .flex-direction-nav .flex-prev {
+    left: -60px;
+}
+
+.d26 .flex-direction-nav .flex-next {
+    right: -60px;
+}
+*/
+
+/*col right*/
+.d26 .colRight {
+    float: left;
+}
+
+.d26 .text {
+    margin-top: 1em;
+}
+
+.d26 .colRight img {
+    width: 45%;
+    height: auto;
+}
+
+.d26 .colRight .imgFull img {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.d26 .colRight img:nth-child(2) {
+    margin-left: 10%;
+}
+
+.d26 .colRight ul {
+    padding-left: 0;
+    margin-top: 1em;
+    list-style-type: none;
+}
+
+.d26 .colRight ul li {
+    font-size: 0.9em;
+    padding-left: 12px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20' widht='40' height='24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23007bc4;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EElement 1%3C/title%3E%3Cpath class='a' d='M.1,7.7l3.1-3L.1,1.6A.4.4,0,0,1,0,1.3c0-.1,0-.2.1-.2l1-1h.5L5.9,4.4a.4.4,0,0,1,.1.3c0,.1,0,.2-.1.2L1.6,9.2H1.3c-.1,0-.2,0-.2-.1l-1-.9A.4.4,0,0,1,0,8,.4.4,0,0,1,.1,7.7Z'/%3E%3C/svg%3E") no-repeat 0px 7px;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d26 .flexslider .article {
+        padding: 1em;
+        width: 50%;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d26 .colLeft {
+        width: 68.12227074235808%;
+        /*624px/916px*/
+    }
+
+    .d26 .colRight {
+        width: 31.877729257641924%;
+        /*292px/916px*/
+        margin-top: 2.55em;
+    }
+
+    .d26 .flexslider {
+        margin: 0 0 60px 2.1052631578947367%;
+    }
+
+
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+
+    .d26 .colRight {
+        width: 25.54585152838428%;
+        /*234px/916px*/
+        margin-left: 6.331877729257641%;
+        /*58px/916px*/
+    }
+
+    .d26 .flexslider {
+        margin: 0 0 60px 0;
+    }
+
+
+}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 26*/
+
+
+
+/**
+*
+*  DCE 28
+*  Container - many FlexSliders in a row
+*  logged in slider
+*  -> see Gesitrel
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d28 .flexslider,
+.d28 .notLoggedIn {
+    width: 100%;
+    display: inline-block;
+    /*avoid split in column*/
+}
+
+.d28 .flexslider {
+    margin-bottom: 0;
+}
+
+.d28 img {
+    width: 100%;
+    height: auto;
+}
+
+/*without logIn*/
+
+.d28 .dontShow {
+    display: none;
+}
+
+.d28 .slides li,
+.d28 .notLoggedIn {
+    position: relative;
+}
+
+.d28 .flex-caption,
+.bildUnterschrift {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    font-size: 0.7em;
+}
+
+.d28 h2 {
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d28 figure {
+        -moz-column-count: 2;
+        -moz-column-gap: 80px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 80px;
+        column-count: 2;
+        column-gap: 80px;
+    }
+
+    .d28 h2 {
+        font-size: 1.6em;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 28*/
+
+
+/**
+*
+*  DCE 30
+*  3 column - images with text below
+*  if h2, figure figcaption 3x
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d30 {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.d30 h2 {
+    margin-bottom: 0.6em;
+}
+
+.d30 figure {
+    margin: 0;
+}
+
+.d30 img {
+    width: 100%;
+    height: auto;
+}
+
+.d30 .col1,
+.d30 .col2 {
+    margin-bottom: 2em;
+}
+
+.d30 li::before {
+    content: '';
+    float: left;
+    margin-left: -1.5em;
+    height: 1em;
+    width: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%231f9cd8;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EZeichenfläche 1%3C/title%3E%3Cpolygon class='a' points='45 45 0 45 45 0 45 45'/%3E%3C/svg%3E");
+}
+
+.d30 ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.5em;
+    text-align: left;
+}
+
+.d30 li {
+    margin-bottom: 2em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+
+    .d30 .col1,
+    .d30 .col2,
+    .d30 .col3 {
+        float: left;
+        width: 48.717948717948715%;
+        /*228px/468px*/
+    }
+
+    .d30 .col2,
+    .d30 .col3 {
+        margin-left: 2.564102564102564%;
+        /*12px/468px*/
+    }
+
+    .d30 .col3 {
+        float: none;
+        margin-left: 0;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d30 .col1,
+    .d30 .col2,
+    .d30 .col3 {
+        width: 31.868131868131865%;
+        /*232px/728px*/
+        margin-bottom: 0;
+    }
+
+    .d30 .col2,
+    .d30 .col3 {
+        margin-left: 2.197802197802198%;
+        /*16px/728px*/
+    }
+
+    .d30 .col3 {
+        float: left;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 30*/
+
+/**
+*
+*  DCE 31
+*  3 column - images plus text right
+*  article, h2, ul li img - div txt
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d31 {
+    margin-bottom: 2em;
+}
+
+.d31 h2 {
+    margin-bottom: 0.6em;
+}
+
+.d31 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.d31 li {
+    float: left;
+    width: 100%;
+}
+
+.d31 img {
+    float: left;
+    width: 32.25806451612903%;
+    /*100px/310px*/
+    height: auto;
+    margin-bottom: 3em;
+}
+
+.d31 .txt {
+    float: left;
+    width: 64.51612903225806%;
+    /*200px/310px*/
+    margin-left: 3.225806451612903%;
+    /*10px/310px*/
+    margin-bottom: 3em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .d31 li {
+        width: 48.9010989010989%;
+        /*356px/728px*/
+        margin-left: 2.197802197802198%;
+        /*16px/728px*/
+    }
+
+    .d31 .li1,
+    .d31 .li3,
+    .d31 .li5,
+    .d31 .li7,
+    .d31 .li9 {
+        margin-left: 0;
+        clear: left;
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d31 li {
+        width: 31.877729257641924%;
+        /*292px/916px*/
+        margin-left: 2.1834061135371177%;
+        /*20px/916px*/
+    }
+
+    .d31 .li3,
+    .d31 .li5,
+    .d31 .li9 {
+        clear: none;
+        margin-left: 2.1834061135371177%;
+        /*20px/916px*/
+    }
+
+    .d31 .li4 {
+        margin-left: 0;
+        clear: left;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 31*/
+
+/**
+*
+*  DCE 32
+*  top text middle - 3 column text-image-text
+*  top text, left col txt, middle col image, right col txt, bottom text
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d32 .topTxt {
+    text-align: center;
+}
+
+.d32 img {
+    width: 100%;
+    height: auto;
+}
+
+.d32 .bottomTxt {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.d32 .bottomTxt a {
+    display: inline-block;
+    background: #f6f6f8;
+    padding: 0.5em;
+}
+
+.d32 li::before {
+    content: '';
+    float: left;
+    margin-left: -1.5em;
+    height: 1em;
+    width: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%231f9cd8;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EZeichenfläche 1%3C/title%3E%3Cpolygon class='a' points='45 45 0 45 45 0 45 45'/%3E%3C/svg%3E");
+}
+
+.d32 ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.5em;
+    text-align: left;
+}
+
+.d32 li {
+    margin-bottom: 0.5em;
+}
+
+.d32 h3 {
+    font-size: 1.3em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+
+    .d32 .leftCol,
+    .d32 .midCol,
+    .d32 .rightCol {
+        float: left;
+        width: 31.877729257641924%;
+        /*292px/916px*/
+    }
+
+    .d32 .midCol,
+    .d32 .rightCol {
+        margin-left: 2.1834061135371177%;
+        /*20px/916px*/
+    }
+
+    .d32 .midCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 800px;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 32*/
+
+/**
+*
+*  DCE 33
+*  3 columns top with SVG underneath text / 2 rows
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.d33 {
+    margin-bottom: 3em;
+}
+
+.d33 svg {
+    width: 100%;
+    height: auto;
+}
+
+.d33 .row2 h2 {
+    margin-top: 0;
+}
+
+.d33 .row1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.d33 .icons {
+    width: 75%;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: solid 1px #2f383c;
+}
+
+.d33 .text {
+    margin-bottom: 2em;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .d33 .icons {
+        width: 60%;
+    }
+
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .d33 .row1,
+    .d33 .row2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .d33 .icons {
+        border: none;
+        padding: 0;
+        width: 30%
+    }
+
+    .d33 .text {
+        display: inline-block;
+        width: 30%;
+    }
+
+    .d33 #box {
+        padding: 1em;
+        border: solid 1px #2f383c;
+    }
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .d33 #box {
+        padding: 3em;
+        border: solid 1px #2f383c;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 33*/
+
+
+
+
+
+
+
+
+
+/**
+*
+*  DCE xxxx
+*  xxxx
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE xx*/

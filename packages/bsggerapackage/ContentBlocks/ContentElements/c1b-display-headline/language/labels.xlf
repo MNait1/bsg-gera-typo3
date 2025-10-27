@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-10-21T09:01:11+00:00" product-name="zazuberlin/c1b-display-headline">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>c1b Display Headline</source>
+			</trans-unit>
+			<trans-unit id="edition.note">
+				<source>EDIT</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Display headline with big letters.</source>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>Display headline</source>
+			</trans-unit>
+			<trans-unit id="toggle.label">
+				<source>Blue line at the bottom yes/no.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

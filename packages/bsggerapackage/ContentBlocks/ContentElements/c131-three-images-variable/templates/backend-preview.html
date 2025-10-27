@@ -1,0 +1,30 @@
+<html data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Header">
+    <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">BEARBEITEN</cb:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+
+    <f:for each="{data.imgLeft}" as="image" iteration="iterator">
+        <f:image image="{image}" width="250" /> -
+    </f:for>
+
+    <f:for each="{data.imgMid}" as="image" iteration="iterator">
+        <f:image image="{image}" width="250" /> -
+    </f:for>
+
+    <f:for each="{data.imgRight}" as="image" iteration="iterator">
+        <f:image image="{image}" width="250" /> -
+    </f:for>
+
+</f:section>
+
+
+<f:section name="Footer">
+    zazuberlin/three images different layout
+</f:section>
+
+</html>

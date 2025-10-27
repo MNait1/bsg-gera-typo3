@@ -1,0 +1,15 @@
+.editorconfig
+.vscode
+.DS_Store
+/var/*
+!/var/labels
+/vendor
+/public/*
+!/public/.htaccess
+!/public/typo3conf
+/public/typo3conf/*
+!public/typo3conf/LocalConfiguration.php
+!/public/typo3conf/AdditionalConfiguration.php
+*.gz
+*.cache
+db.sql

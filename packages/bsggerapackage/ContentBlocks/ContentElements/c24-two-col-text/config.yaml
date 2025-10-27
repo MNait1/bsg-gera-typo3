@@ -1,0 +1,45 @@
+name: zazuberlin/c24-two-col-text
+typeName: zazuberlin_c24twocoltext
+group: default
+prefixFields: true
+prefixType: full
+fields:
+
+  - identifier: header
+    label: Überschrift über alles
+    useExistingField: true
+
+  - identifier: toggle
+    label: Überschrift über alles ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+
+  - identifier: textarea1
+    type: Textarea
+    label: Text links
+    description: 'Text links'
+    enableRichtext: true
+    richtextConfiguration: zazu
+    rows: 40
+  
+  - identifier: textarea2
+    type: Textarea
+    label: Text rechts
+    description: 'Text rechts'
+    enableRichtext: true
+    richtextConfiguration: full
+    rows: 40
+  
+  - identifier: link
+    type: Link
+    label: Link at the end
+    description: 'TypoLink (page/external/mail/url) for the link at the end'
+    required: false
+    default: ''
+    
+  - identifier: linktext
+    type: Text
+    label: Link text 
+    description: 'Text des unteren Links'
+

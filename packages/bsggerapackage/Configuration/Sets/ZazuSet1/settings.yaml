@@ -1,0 +1,12 @@
+styles:
+    templates:
+        layoutRootPath: EXT:bsggerapackage/Resources/Private/ContentElements/Layouts
+        partialRootPath: EXT:bsggerapackage/Resources/Private/ContentElements/Partials
+        templateRootPath: EXT:bsggerapackage/Resources/Private/ContentElements/Templates
+    content:
+        textmedia:
+            maxW: 1200
+            maxWInText: 600
+            linkWrap:
+                lightboxEnabled: true
+                lightboxCssClass: lightbox

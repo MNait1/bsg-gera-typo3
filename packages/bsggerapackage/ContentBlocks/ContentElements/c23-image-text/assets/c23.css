@@ -1,0 +1,94 @@
+/**
+*
+*  c23
+*  2 column image plus 
+*  headline on top toggle
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.c23 {
+    margin-bottom: 2em;
+
+}
+
+.c23.bottomLine {
+    border-bottom: 1px solid var(--blue);
+}
+
+.c23 h2 {
+    margin-bottom: 0.6em;
+}
+
+.c23 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5em;
+}
+
+.c23 .colRight {
+    margin-bottom: 2em;
+}
+
+.c23 .link {
+    float: right;
+}
+
+.c23 .link a {
+    color: var(--blue);
+}
+
+.c23 .link a:hover {
+    font-weight: 500;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+
+
+
+
+    .c23 .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6.27%;
+        align-items: flex-start;
+    }
+
+    .c23 .leftCol {
+        width: 61.88%;
+    }
+
+    .c23 .rightCol {
+        
+        width: 31.8%;
+
+    }
+
+    .c23 .container h2 {
+        margin-top: 0;
+    }
+
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-c23*/

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" target-language="de" date="2025-10-21T09:01:11+00:00" product-name="zazuberlin/c1b-display-headline">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>c1b Display Headline</source>
+				<target>c1b Schmuck Überschrift</target>
+			</trans-unit>
+			<trans-unit id="edition.note">
+				<source>EDIT</source>
+				<target>BEARBEITEN</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Display headline with big letters.</source>
+				<target>Überschrift mit großen Buchstaben anzeigen.</target>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>Display headline</source>
+				<target>Schmuck Überschrift</target>
+			</trans-unit>
+			<trans-unit id="toggle.label">
+				<source>Blue line at the bottom yes/no.</source>
+				<target>Blaue Linie unten ja/nein.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

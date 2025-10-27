@@ -1,0 +1,77 @@
+/**
+*
+*  c22
+*  2 column display number plus
+*  text and scond column with image right side
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.c22 {
+    margin-bottom: 2em;
+
+}
+
+.c22.bottomLine {
+    border-bottom: 1px solid var(--blue);
+}
+
+.c22 .colLeft {
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.c22 .number {
+    font-size: 4rem;
+    color: var(--blue);
+    margin-right: 30px;
+}
+
+.c22 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5em;
+}
+
+.c22 .colRight {
+    margin-bottom: 2em;
+}
+
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+
+    .c22 .colLeft,
+    .c22 .colRight {
+        float: left;
+        width: 45.74175824175824%;
+        /*333px/728px*/
+    }
+
+    .c22 .colRight {
+        margin-left: 8.516483516483516%;
+        /*62px/728px*/
+    }
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-c22*/

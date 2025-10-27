@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/**
+*
+*  c17
+*  FlexSlider full width
+*  figure, h2 hidden, image, div caption
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.c17 {
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.c17 .slider img {
+    width: 100%;
+    height: auto;
+}
+
+.c17 figure {
+    margin: 0 0 0 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.c17 .flexslider {
+    margin-bottom: 0;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+    .c17 {
+        margin-bottom: 80px;
+    }
+
+    .c17 figure {
+        margin: 0 0 0 0;
+    }
+
+    /*zoom in slider*/
+    .c17 .flexslider img {
+        width: 130% !important;
+        height: auto;
+    }
+
+    /*default 10px*/
+    .c17 .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 100px;
+    }
+
+    /*default 10px*/
+    .c17 .flexslider:hover .flex-direction-nav .flex-next {
+        right: 100px;
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-DCE 17*/
+
+
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+    visibility: hidden;
+}

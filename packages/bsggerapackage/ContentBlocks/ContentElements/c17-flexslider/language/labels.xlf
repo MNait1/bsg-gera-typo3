@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-10-14T04:49:39+00:00" product-name="zazuberlin/c17-flexslider">
+		<header/>
+		<body>
+            <trans-unit id="title">
+                <source>c17 - flexslider-full width</source>
+            </trans-unit>
+            <trans-unit id="description">
+                <source>A flexslider using the full width of the screen.</source>
+            </trans-unit>
+			<trans-unit id="amountOfImages">
+				<source>Amount of Images</source>
+			</trans-unit>
+			<trans-unit id="image.label">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="header.description">
+				<source>A hidden headline for SEO.</source>
+			</trans-unit>
+			<trans-unit id="editContentBlock">
+				<source>EDIT</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

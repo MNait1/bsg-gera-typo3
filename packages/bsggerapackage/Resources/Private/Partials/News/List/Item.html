@@ -1,0 +1,84 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+		changed zazu 20170426/20240111
+-->
+<div class="news-list-item article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+			 <!-- date -->
+      <div class="news-list-date">
+        <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+          <span class="tag"><f:format.date format="d">{newsItem.datetime}</f:format.date></span><f:format.date format="%B %Y">{newsItem.datetime}</f:format.date>
+        </time>
+      </div>
+
+<div class="news-list-text">
+	<!-- header -->
+	<div class="header">
+		<h2>
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+				<span itemprop="headline">{newsItem.title}</span>
+			</n:link>
+		</h2>
+	</div>
+
+	<!-- teaser -->
+	<div class="teaser-text">
+		<n:removeMediaTags>
+		<f:if condition="{newsItem.teaser}">
+			<f:then>
+				<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1', append:'&nbsp;…') -> f:format.html()}</div>
+			</f:then>
+			<f:else>
+				<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1', append:'&nbsp;…') -> f:format.html()}</div>
+			</f:else>
+		</f:if>
+		</n:removeMediaTags>
+		<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+			<f:translate key="more-link"/>
+		</n:link>
+	</div>
+
+</div><!-- end div news-list-text-->
+
+<f:if condition="{newsItem.mediaPreviews}">
+		<!-- media preview element -->
+		<f:then>
+			<div class="news-list-img">
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+					<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+						<f:if condition="{mediaElement.originalResource.type} == 2">
+							<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+						</f:if>
+						<f:if condition="{mediaElement.originalResource.type} == 4">
+							<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+						</f:if>
+						<f:if condition="{mediaElement.originalResource.type} == 5">
+							<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+						</f:if>
+					</f:alias>
+				</n:link>
+			</div>
+		</f:then>
+		<f:else>
+			<f:if condition="{settings.displayDummyIfNoMedia}">
+				<div class="news-list-img">
+					<span class="no-media-element">
+						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+							<f:image src="{settings.list.media.dummyImage}" title="" alt="" loading="{settings.list.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+						</n:link>
+					</span>
+				</div>
+			</f:if>
+		</f:else>
+	</f:if>
+
+
+</div>
+
+<hr class="clear" />
+</html>

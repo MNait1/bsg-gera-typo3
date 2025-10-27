@@ -1,0 +1,48 @@
+categories:
+  bsggerapackage:
+    label: 'bsggerapackage'
+  bsggerapackage.templates:
+    label: 'Templates'
+    parent: bsggerapackage
+  bsggerapackage.layout:
+    label: 'Layout'
+    parent: bsggerapackage
+  bsggerapackage.menus:
+    label: 'Menus'
+    parent: bsggerapackage
+
+settings:
+  bsggerapackage.template_path:
+    label: 'Page template path'
+    category: bsggerapackage.templates
+    description: 'Path to the templates of the bsggerapackage.'
+    type: string
+    default: 'EXT:bsggerapackage/Resources/Private/Templates/'
+
+  bsggerapackage.logo:
+    label: 'Logo'
+    category: bsggerapackage.layout
+    description: 'Path to the logo of bsggerapackage.'
+    type: string
+    default: 'EXT:bsggerapackage/Resources/Public/Images/logo.svg'
+
+  bsggerapackage.logo-alt:
+    label: 'Logo Alt text'
+    category: bsggerapackage.layout
+    description: 'Alternative text of the logo for the visually impaired'
+    type: string
+    default: 'Logo'
+
+  bsggerapackage.favicon:
+    label: 'Favicon'
+    description: 'This icon is displayed in search engine results and in the browser tab'
+    category: bsggerapackage.layout
+    type: string
+    default: 'EXT:bsggerapackage/Resources/Public/Icons/favicon.ico'
+
+  bsggerapackage.metaMenuRoot:
+      label: 'Meta menu root uid'
+      description: 'The subpages of this page are displayed as MetaNav'
+      category: bsggerapackage.menus
+      type: int
+      default: 12

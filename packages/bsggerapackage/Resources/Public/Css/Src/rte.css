@@ -1,0 +1,8 @@
+/**
+ * Created from sitepackagebuilder.com
+ * shows a class or a styling inside the CKEditor in the intended way
+ * is not effecting output!!! if not added to 04-default-layout.css
+ */
+.zazu {
+    font-size: 10em;
+}

@@ -1,0 +1,48 @@
+name: zazuberlin/c131-three-images-variable
+typeName: zazuberlin_c131threeimagesvariable
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: select
+    type: Select
+    renderType: selectSingle
+    label: Aufteilung wählen
+    default: '1'
+    items:
+      - label: 'gleichmäßig'
+        value: 1
+      - label: 'Links großes Bild'
+        value: 2
+      - label: 'Rechts großes Bild'
+        value: 3
+  - identifier: imgLeft
+    label: Image Left
+    type: File
+    extendedPalette: false
+    minitems: 1
+    maxitems: 1
+    allowed: jpg, jpeg, png, gif, svg
+    description: 'Image for the left side.'
+  - identifier: imgMid
+    label: Middle Image
+    type: File
+    extendedPalette: false
+    minitems: 1
+    maxitems: 1
+    allowed: jpg, jpeg, png, gif, svg
+    description: 'Image in the middle.'
+  - identifier: imgRight
+    label: Image Right
+    type: File
+    extendedPalette: false
+    minitems: 1
+    maxitems: 1
+    allowed: jpg, jpeg, png, gif, svg
+    description: 'Image for the right side.'
+  
+  - identifier: toggleLine
+    label: blaue Linie am Ende ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0

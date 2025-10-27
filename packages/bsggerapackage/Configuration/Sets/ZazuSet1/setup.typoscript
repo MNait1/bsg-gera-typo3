@@ -1,0 +1,6 @@
+@import './TypoScript/*.typoscript'
+@import './TypoScript/Navigation/*.typoscript'
+
+
+pageTitle = TEXT
+pageTitle.data = page:title

@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>bsggerapackage Documentation &#8212; bsggerapackage 1.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5c3ddff6" />
+
+    <script src="_static/documentation_options.js?v=fc837d61"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">bsggerapackage 1.1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">bsggerapackage Documentation</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="bsggerapackage-documentation">
+<h1>bsggerapackage Documentation<a class="headerlink" href="#bsggerapackage-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="whois">
+<h2>Whois<a class="headerlink" href="#whois" title="Link to this heading">¶</a></h2>
+<p>As readme.rst file on bitbucket, this documentation looks not perfect. Not everything
+is rendered correctly. Better check “Documentation/build/html/index.html”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Version<span class="colon">:</span></dt>
+<dd class="field-odd"><p>20240107</p>
+</dd>
+<dt class="field-even">Author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Thomas Hezel</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="instructions-and-issues">
+<h2>Instructions and Issues<a class="headerlink" href="#instructions-and-issues" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="open-tasks">
+<h3>Open Tasks<a class="headerlink" href="#open-tasks" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>build .md markdown files for bitbucket readme.md since readme.rst is not rendered correctly</p></li>
+<li><p>propper yaml sequence for CKEditor and usage inside DCE</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>zazu.berlin Headline Sequence: ## ** = - ^ “</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="changes-and-bugfixes-for-this-installation">
+<h3>Changes and bugfixes for this Installation<a class="headerlink" href="#changes-and-bugfixes-for-this-installation" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="changes-for-typo3-12-4-x">
+<h3>Changes for TYPO3 12.4.x<a class="headerlink" href="#changes-for-typo3-12-4-x" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>defined(‘TYPO3’) or die(‘Access denied.’); replaces “TYPO3_MODE”, produces white page and errores in empty cache and database check</p></li>
+<li><p>ext_emconf.php can be removed for composer mode</p></li>
+<li><p>the extension icon is now in Icons and needs the name: Extension.svg or png</p></li>
+<li><p>extensions are in vendor/typo3/cms/extensions/ and not in typo3conf/ext/ any more</p></li>
+<li><p>the extension folder “ext” is not needed any more</p></li>
+<li><p>config.php is now paralell to public folder in config/system/settings</p></li>
+<li><p>ENABLE_INSTAL_TOOL goes in var/transient/ENABLE_INSTALL_TOOL</p></li>
+<li><p>vendor/bin/typo3 list (comand to list all commands, kept fixfoldersturcture and other scripts in composer.json)</p></li>
+<li><p>sitepackage switched from “master” to “main” branch</p></li>
+<li><p>include TypoScript from extensions is now in TypoScript/Edit TyposScript Record menu</p></li>
+<li><p>changed TypoScript to combine backendtemplate with layout template</p></li>
+<li><p>JavaScript now TypeScript</p></li>
+<li><p>DCEs have svg icons in fileadmin</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="changes-for-typo3-11-5-0">
+<h3>Changes for TYPO3 11.5.0<a class="headerlink" href="#changes-for-typo3-11-5-0" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>file ext_emconf.php is with composer optional and can be omitted</p></li>
+<li><p>cookies extension now with categories: one must still tick the bootstrapFallback in the Constants section!</p></li>
+<li><p>cookies extension “delete cookies” is not working see blog article</p></li>
+<li><p>changed some css for cookies 8 for T11</p></li>
+<li><p>change conditon from general cookie to statistic cookie</p></li>
+</ul>
+<section id="new-grid-layout-2023">
+<h4>new grid layout (2023)<a class="headerlink" href="#new-grid-layout-2023" title="Link to this heading">¶</a></h4>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/*======= 320  padding l,r  15  = 290 ===*/</span>
+<span class="c">/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/</span>
+<span class="w">  </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">576px</span><span class="o">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="c">/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/</span>
+<span class="w">  </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">768px</span><span class="o">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="c">/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/</span>
+<span class="w">  </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">990px</span><span class="o">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="c">/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/</span>
+<span class="w">  </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">1398px</span><span class="o">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="c">/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/</span>
+<span class="w">  </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">2512px</span><span class="o">)</span><span class="w"> </span><span class="p">{}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="changes-for-typo3-10-4-3">
+<h3>Changes for TYPO3 10.4.3<a class="headerlink" href="#changes-for-typo3-10-4-3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>typoscript conditons from [globalVar = TSFE:id = 2]  to [page[“uid”] == 2] more information here: https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/Conditions/Index.html#conditions</p></li>
+<li><p>typoscript condtions language ID [globalVar = GP:L = 1] is now [siteLanguage(“languageId”) == “1”]</p></li>
+<li><p>in ext_localconf.php for the RTE Global array must be the extensions name and not the the $_EXTKEY variable, same for RTE the variable is not known here</p></li>
+<li><p>in DCE where you select something e.g. h2-5 the second line after “select” must be “&lt;renderType&gt;selectSingle&lt;/renderType&gt;”</p></li>
+<li><p>in ext_emconf.php this line is added as a dependencie: ‘rte_ckeditor’ =&gt; ‘10.4.0-10.4.99’, same for composer.json : “typo3/cms-rte-ckeditor”: “^10.4”,</p></li>
+<li><p>in news template Detail you must ommit the if condition: “n:social-dis” delete</p></li>
+<li><p>without a site setting in the BE it doesn’t work any more</p></li>
+<li><p>form TYPO3 9 to TYPO3 10 changes in tables as usual with Maintenance</p></li>
+<li><p>form in typoscript setup needs the “module.tx_form { …” so the form definition is found in the extension</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="powermail">
+<h3>powermail<a class="headerlink" href="#powermail" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>in php TYPO3 Installation-Wide Option set for sendmail a default Sender email and Sender name</p></li>
+<li><p>or better set in TypoScript default sender and default referrer</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="general-changes">
+<h3>general changes<a class="headerlink" href="#general-changes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>20211021 removed config language from typo3 setup since it is now inside yaml</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="part-1-documentation-bsggerapackage">
+<h2>Part 1 Documentation bsggerapackage<a class="headerlink" href="#part-1-documentation-bsggerapackage" title="Link to this heading">¶</a></h2>
+<p>x-z-z-x-package is the start-package for zazu.berlin TYPO3 websites</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>form has some wrong content in tt_content: YOURpackage -&gt; call of userfunc() = 0 Error Mesage
+In case form has a problem: change in database the template reference in tt_content form flexform field</p>
+</div>
+<section id="a-start-a-new-sitepackage-new-preferable-put-it-into-ddev-local-packages">
+<h3>A. Start a new sitepackage (new: preferable put it into DDEV local_packages)<a class="headerlink" href="#a-start-a-new-sitepackage-new-preferable-put-it-into-ddev-local-packages" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>duplicate the x-zzxpackage</p></li>
+<li><p>move the copy to the folder DDEV local_packages of the DDEV installation</p></li>
+<li><p>change the name to the new name, replace “x-z-z-x” (name is without the hyphens) of the folders</p></li>
+<li><p>delete the git files</p></li>
+<li><p>change inside with textedit NEWpackage-workspace.code-workspace</p></li>
+<li><p>open in VSC the workspace</p></li>
+<li><p>replace in files with VSC (313 results in 33 files) “x-z-z-x” to new name (x-z-z-x without the hyphens)</p></li>
+<li><p>correct the classes part at the end of composer.json for the extension, both words start with a capital letter: “Zazuberlin\bsggerapackage\”: “Classes/”</p></li>
+<li><p>correct the classes part in ext_emconf.php to capital letters like above</p></li>
+<li><p>change the sftp.json file to the new sftp upload destination at the place where the site is hosted</p></li>
+<li><p>make a new project on bitbucket, don’t include a README or a .gitignore repository must be empty, main branch is “master”</p></li>
+<li><p>in VSC then: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;initial</span> <span class="pre">commit&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">release</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">git&#64;bitbucket.org:thomas-hezel/bsggerapackage.git</span></code> (this version works with ssh and key)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">main</span></code> (new from TYPO3 12 master branch now main)</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="aa-the-folder-initialisation-for-getting-fileadmin-files-from-the-x-z-z-x-installation-not-tested">
+<h4>Aa. The folder “Initialisation” for getting fileadmin files from the x-z-z-x-Installation - not tested<a class="headerlink" href="#aa-the-folder-initialisation-for-getting-fileadmin-files-from-the-x-z-z-x-installation-not-tested" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>adding a folder Initialisation to the folder bsggerapackage makes it possible to transfer files to the fileadmin</p></li>
+<li><p>the folder will be in the fileadmin in a masterfolder with the name “bsggerapackage”</p></li>
+<li><p>it is also possible to load “data.t3d” to the root level</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="b-start-a-new-typo3-website-full-hardware-server-setup">
+<h3>B. Start a new TYPO3 website: Full Hardware Server Setup<a class="headerlink" href="#b-start-a-new-typo3-website-full-hardware-server-setup" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Terminal: make a folder where everything goes to</p></li>
+<li><p>give the folder the rights “2775” and the owner “yourTerminalUser:www-data” (“2” in front is important!)</p></li>
+<li><p># Download the Base Distribution, the latest “sprint” release (10): composer create-project “typo3/cms-base-distribution:^11.5” my-new-project</p></li>
+<li><p>compare the two composer.json and make the final one</p></li>
+<li><p>put the basic composer.json into this folder from the folder “Extras”</p></li>
+<li><p>run inside this folder “composer update”</p></li>
+<li><p>give the folder with -R again new rights and owndership see above (otherwise it will give you a white page in the Browser</p></li>
+<li><p>cd inside the public folder and do: “touch FIRST_INSTALL”</p></li>
+<li><p>get your Database connection details (user and password) / you can create a DB or let TYPO3-FIRST_INSTALL do it</p></li>
+<li><p>with the Browser navigate into the public folder and do TYPO3 first install …</p></li>
+<li><p>if you followed the above you should end up in the new backend</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="c-ddev-setup-instead-of-a-full-server">
+<h3>C. DDEV setup instead of a full server<a class="headerlink" href="#c-ddev-setup-instead-of-a-full-server" title="Link to this heading">¶</a></h3>
+<p>see also TYPO3:
+<a class="reference external" href="https://typo3.com/blog/tutorial-get-a-local-typo3-v10-installation-with-no-effort">https://typo3.com/blog/tutorial-get-a-local-typo3-v10-installation-with-no-effort</a></p>
+<p>and Using DDEV-CLI:
+<a class="reference external" href="https://ddev.readthedocs.io/en/stable/users/cli-usage/">https://ddev.readthedocs.io/en/stable/users/cli-usage/</a></p>
+<ol class="arabic simple">
+<li><p>Make a new directory on the coding computer inside the DDEV folder (Name starts with capital letter e.g. “Abc”, same name as sitepackage name first part e.g. “abcpackage”)</p></li>
+<li><p>cd into the folder with the terminal and do “ddev config”</p></li>
+<li><p>run the create “ddev composoer create” command</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ddev<span class="w"> </span>config<span class="w"> </span>--project-type<span class="o">=</span>typo3<span class="w"> </span>--docroot<span class="o">=</span>public<span class="w"> </span>--create-docroot<span class="o">=</span><span class="nb">true</span>
+ddev<span class="w"> </span>composer<span class="w"> </span>create<span class="w"> </span>typo3/cms-base-distribution:<span class="s2">&quot;^12.4&quot;</span><span class="w"> </span>--prefer-dist
+
+<span class="c1"># don&#39;t use &quot;dev-master&quot; use &quot;^12.4&quot; or other version, &quot;dev-master&quot; would not meet constraints of all sys-extensions and would be a latest</span>
+<span class="c1"># version beyond the LTS</span>
+<span class="c1"># for host entrys in the system ddev needs the sudo password of the account you are working on</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>to recreate the AdditionalConfiguration.php file which got deleted in the last step we have to do ddev start</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ddev<span class="w"> </span>start
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>with TYPO3 12 the low level system package must be installed by hand</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>First install for TYPO3 needs the FIRST_INSTALL file in public</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>public/FIRST_INSTALL
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>go to the browser and open the site on <a class="reference external" href="https://fliesensite.ddev.site">https://fliesensite.ddev.site</a></p></li>
+<li><p>go through the TYPO3 setup process (database credentials will be skipped)</p></li>
+<li><p>create a folder “local_packages” for the sitepackage to be manageable on spot</p></li>
+<li><p>copy the [project]composer.json of the x-z-z-x-package into the new installation and change the “x-z-z-x” (without the hyphens) with the new name (3 occurrences)</p></li>
+<li><p>make sure that the project composer.json includes in “repositories” the “./local_packages”</p></li>
+<li><p>sometimes dev-master (it is still master for composer) for the sitepackage is not working in local_packages composer, change to a version number for the sitepackage (as in the sitepackage composer.json)</p></li>
+<li><p>duplicate the x-z-z-x-package (without the hyphens) as described in section “A” into a new sitepackage, if not already done</p></li>
+<li><p>“composer update” to get all extensions loaded (it will symlink from the local_packages)</p></li>
+<li><p>export the last version of x-z-z-x-package database with “ddev export-db” or “ddev snapshot” (see below)</p></li>
+<li><p>import the exported database from x-z-z-x-package, new password for admin is the IBM-server password with a “!” added from TYPO3 12 onwards</p></li>
+<li><p>clear cache</p></li>
+<li><p>add Site Configuration</p></li>
+<li><p>sometimes include static template for sitepackage (at the end of all templates)</p></li>
+<li><p>add files to fileadmin: test images and the Icons for DCE and map marker for the leaflet map</p></li>
+<li><p>change in the “form” plugin the used template to the new sitepackage form template</p></li>
+<li><p>start coding the new site</p></li>
+</ol>
+<section id="b2a-different-db-export-with-snapshot-above-point-14">
+<h4>B2a. different db export with snapshot (above point 14.)<a class="headerlink" href="#b2a-different-db-export-with-snapshot-above-point-14" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
+<li><p>export the database with ddev snapshot” and it goes into this folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">thomas</span><span class="o">/</span><span class="n">CODE</span><span class="o">/</span><span class="n">DDEV</span><span class="o">-</span><span class="n">Projekte</span><span class="o">/</span><span class="n">fliesensite</span><span class="o">/.</span><span class="n">ddev</span><span class="o">/</span><span class="n">db_snapshots</span><span class="o">/</span><span class="n">fliesensite_20220317104325</span>
+</pre></div>
+</div>
+</li>
+<li><p>move the snapshot in the new project in .ddev/db_snapshots/ (with the db_snapshots folder)</p></li>
+<li><p>import snapshot in the new ddev-site: ddev snapshot restore [snapshot_name] [flags]</p></li>
+<li><p>the new password after db-import will be the one of fliesen, this is fine for the website building time</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># normal database export and import</span>
+<span class="nb">cd</span><span class="w"> </span>/project_base_folder_of_fliesen
+ddev<span class="w"> </span>export-db<span class="w"> </span>&gt;<span class="w"> </span>/tmp/db.sql.gz
+ddev<span class="w"> </span>import-db<span class="w"> </span>&lt;<span class="w"> </span>/tmp/db.sql
+<span class="c1"># didn&#39;t work with .gz first unpack!</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ddev snapshot for database export out of fliesen (will be in .ddev/db_snapshots)</span>
+<span class="c1"># !import of the snapshot didn&#39;t work so far with MariaDb 10.4!</span>
+
+ddev<span class="w"> </span>snapshot
+
+<span class="c1"># ddev in the new site to import the snapshot, but first **move the fliesen-snapshot into .ddev/db_snapshots**</span>
+<span class="c1"># if it is alread running you must restart ddev, after moving the snaps into the folder</span>
+<span class="c1"># zipped files seem not to work</span>
+
+ddev<span class="w"> </span>snapshot<span class="w"> </span>restore<span class="w"> </span>fliesensite_2022031
+</pre></div>
+</div>
+</section>
+<section id="b2b-change-to-ssh-for-connecting-with-vsc-to-bitbucket">
+<h4>B2b. Change to SSH for connecting with VSC to Bitbucket<a class="headerlink" href="#b2b-change-to-ssh-for-connecting-with-vsc-to-bitbucket" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>made a new key on the laptop with ssh-keygen</p></li>
+<li><p>called it Bitbucket, got “Bitbucket” and “Bitbucket.pub”</p></li>
+<li><p>connected this key to ssh <a class="reference external" href="https://support.atlassian.com/bitbucket-cloud/docs/set-up-personal-ssh-keys-on-linux/">https://support.atlassian.com/bitbucket-cloud/docs/set-up-personal-ssh-keys-on-linux/</a></p></li>
+<li><p>made a cofig file inside ~/,ssh on the laptop</p></li>
+<li><p>entered Bitbucket in the config file and the new key</p></li>
+<li><p>copied the key to Bitbucket user settings (not project settings)</p></li>
+<li><p>changed inside VSC the destination for git</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@bitbucket.org:thomas-hezel/bsggerapackage.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>now ssh with key is used to connect to Bitbucket, no password must be provided</p></li>
+</ol>
+</section>
+</section>
+<section id="c-errors-when-setting-up-a-new-page">
+<h3>C. Errors when setting up a new page<a class="headerlink" href="#c-errors-when-setting-up-a-new-page" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>make sure that all templates are included of the extensions in the main template, sitepackage goes last underneath</p></li>
+<li><p>database exchange from the x-z-z-x-package brings a new admin password (the password from x-z-z-x-package, the standard development password)</p></li>
+</ol>
+</section>
+<section id="d-mittwald-preparations">
+<h3>D. Mittwald preparations<a class="headerlink" href="#d-mittwald-preparations" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>new 2022 Mittwald provides a composer TYPO3 setup</p></li>
+<li><p>import a database into Mittwald hosting <a class="reference external" href="https://www.mittwald.de/faq/administration/datenbank/datenbank-exportieren-und-importieren">mittwald info</a></p></li>
+<li><p>before open the zip compression <code class="docutils literal notranslate"><span class="pre">gzip</span> <span class="pre">-d</span> <span class="pre">file.gz</span></code> and upload it via FTP to Mittwald (e.g. folder files)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mysql<span class="w"> </span>-u<span class="s1">&#39;Datenbank-Benutzer&#39;</span><span class="w"> </span>-p<span class="w"> </span>-h<span class="s1">&#39;Hostname/Datenbank-Server&#39;</span><span class="w"> </span><span class="s1">&#39;Datenbank&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>Name-der-Datenbank-Datei.sql
+mysql<span class="w"> </span>-u<span class="w"> </span><span class="s1">&#39;p123456&#39;</span><span class="w"> </span>-p<span class="w"> </span>-h<span class="s1">&#39;db001242.mydbserver.com&#39;</span><span class="w"> </span><span class="s1">&#39;usr_p123456_1&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>dump.sql
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Extra in case it is needed export database at Mittwald</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mysqldump<span class="w"> </span>--opt<span class="w"> </span>--no-tablespaces<span class="w"> </span>-u<span class="s1">&#39;Datenbank-Benutzer&#39;</span><span class="w"> </span>-p<span class="w"> </span>-h<span class="s1">&#39;Hostname/Datenbank-Server&#39;</span><span class="w"> </span>Datenbank<span class="w"> </span>&gt;<span class="w"> </span>Name-der-Datenbank-Datei.sql
+</pre></div>
+</div>
+</section>
+<section id="e-typo3-setup">
+<h3>E. TYPO3 Setup<a class="headerlink" href="#e-typo3-setup" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Sites: “Add new site configuration for this site” -&gt; do all settings</p></li>
+<li><p>go to Home and test it - you should see the default header and the footer</p></li>
+</ol>
+</section>
+<section id="f-admin-tools-section">
+<h3>F. Admin Tools section<a class="headerlink" href="#f-admin-tools-section" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Manage Language Packs -&gt; update</p></li>
+<li><p>Settings -&gt; Debug Settings -&gt; go from “live” to “Debug” -&gt; press Activate</p></li>
+<li><p>Check “Password hashing settings” should be “Argon2d” - you need to make new admin pw after moving</p></li>
+<li><p>Configure Installation Wide Options -&gt; put SYS.systemLocale = de_DE.UTF-8</p></li>
+<li><p>Environment - Directory Status: check rights</p></li>
+<li><p>#show errors on frontend - must be set additional to debug, see next line</p></li>
+<li><p>avoid white page at error in typoscript: config.contentObjectExceptionHandler = 0</p></li>
+</ol>
+</section>
+<section id="g-some-dirty-work-to-get-your-just-dces-from-another-typo3-installation">
+<h3>G. Some dirty work – to get your just DCEs from another TYPO3 installation<a class="headerlink" href="#g-some-dirty-work-to-get-your-just-dces-from-another-typo3-installation" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>export from your base installation with phpMyAdmin “tx_dce_domain_model_dce” and “tx_dce_domain_model_dcefield”, uncheck “validate foreign key”</p></li>
+<li><p>delete the two tables in the destination, your new website</p></li>
+<li><p>import the exported .sql file, uncheck “validate foreign key” for import</p></li>
+<li><p>go to Admin Tools -&gt; Analyze Database Strukture: should be “green” if you use the same versions of extensions and TYPO3.</p></li>
+<li><p>go to SYSTEM -&gt; DB check -&gt; Manage Referenz Index: “Update reference index” / will be very “red” -&gt; update</p></li>
+</ol>
+</section>
+<section id="h-sitemap-plus-sitemap-news">
+<h3>H. Sitemap plus Sitemap news<a class="headerlink" href="#h-sitemap-plus-sitemap-news" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>extend the site-configuration-yaml with the code in the folder Extras of the sitepackage</p></li>
+<li><p>add the static template XML sitemap (SEO)</p></li>
+<li><p>put in the TypoScript the numbers of news folder and single page</p></li>
+<li><p>check under your-domain.de/sitemap.xml</p></li>
+<li><p>use Google search-tools to add the sitemap to Google</p></li>
+<li><p><a class="reference external" href="https://docs.typo3.org/p/georgringer/news/9.2/en-us/Tutorials/BestPractice/Seo/Index.html#seo">https://docs.typo3.org/p/georgringer/news/9.2/en-us/Tutorials/BestPractice/Seo/Index.html#seo</a></p></li>
+</ol>
+</section>
+<section id="i-cookies-extension">
+<h3>I. Cookies Extension<a class="headerlink" href="#i-cookies-extension" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>in constans tick the bootstrap fallback box</p></li>
+<li><p>don’t tick the delete cookies option</p></li>
+</ol>
+</section>
+<section id="j-felogin">
+<h3>J. felogin<a class="headerlink" href="#j-felogin" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>felogin needs a sender email in settings or in the php settings as a general setting for sender email and name</p></li>
+</ol>
+</section>
+<section id="k-htaccess">
+<h3>K. .htaccess<a class="headerlink" href="#k-htaccess" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>take it form TYPPO3 12</p></li>
+<li><p>add redirects https www</p></li>
+<li><p>enable compression</p></li>
+<li><p>enable compression in php settings</p></li>
+</ol>
+</section>
+<section id="l-favicons">
+<h3>L. favicons<a class="headerlink" href="#l-favicons" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>generate favicons from the logo <a class="reference external" href="https://realfavicongenerator.net/">https://realfavicongenerator.net/</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="part-2-pre-stuff">
+<h2>Part 2: Pre-Stuff<a class="headerlink" href="#part-2-pre-stuff" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<section id="sphinx-for-rst-restructuredtext-documentation">
+<h3>Sphinx for .rst reStructuredText Documentation<a class="headerlink" href="#sphinx-for-rst-restructuredtext-documentation" title="Link to this heading">¶</a></h3>
+<p>Build a new directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">Documentation</span>
+<span class="n">cd</span> <span class="n">Documentation</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+<p>more details:
+<a class="reference external" href="https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html">https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html</a></p>
+<p>change custom.css
+put it in source/_static/
+put the logo also in source/_static/
+inside conf.py</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;classic&#39;</span>
+<span class="n">html_logo</span> <span class="o">=</span> <span class="s1">&#39;_static/logo-zazu-berlin.gif&#39;</span>
+<span class="n">html_style</span> <span class="o">=</span> <span class="s1">&#39;custom.css&#39;</span>
+
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span>
+</pre></div>
+</div>
+<p>If your are not setting the language you get an error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``&quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 961, in _sanity_check``
+``ValueError: Empty module name``
+</pre></div>
+</div>
+<p>command to render html - it will be in build/html/index.html
+change to a terminal window, go to Documentaion and then “make”
+the rst2pdf has bugs but is ok to read, the main thing ist the html version</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>Documentation
+
+make<span class="w"> </span>html
+
+<span class="c1">#the long way also works / -b stands for a builder</span>
+sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>sourcedir<span class="w"> </span>builddir
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>zazu.berlin Headline Sequence: ## ** = - ^ “</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="create-a-pdf-with-sphinx">
+<h3>Create a PDF with Sphinx<a class="headerlink" href="#create-a-pdf-with-sphinx" title="Link to this heading">¶</a></h3>
+<p>20230323 new installed with sudo apt install rst2pdf on Linux</p>
+<p>To get a software to create pdf from rest</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>rst2pdf
+</pre></div>
+</div>
+<p>to build the pdf</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rst2pdf<span class="w"> </span>Documentation/source/index.rst<span class="w"> </span>Documentation/build/documentation.pdf
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="composer">
+<h3>Composer<a class="headerlink" href="#composer" title="Link to this heading">¶</a></h3>
+<p>Extension has composer.json</p>
+<p>plus a file for TYPO3 composer install [project]composer.json, this has to got into
+the base folder for the TYPO3 project (delete the “[project]”.
+It will install all files and TYPO3 in a folder called public.
+This folder needs later on write permissions for the server-process and ftp etc.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Extensions should be installed through root composer and not as dependencies of the sitepackage - zazu decision.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer<span class="w"> </span>install
+</pre></div>
+</div>
+<p>or newer version (dont’t create a project folder on the server, composer will do it)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>composer create-project typo3/cms-base-distribution YourNewProjectFolder</p>
+<p>and</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer<span class="w"> </span>update
+</pre></div>
+</div>
+<p>The composer.json inside bsggerapackage should install all that zazupackage needs.</p>
+<p>This will start getting an extension.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer<span class="w"> </span>require<span class="w"> </span>vendor/extension
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you get problems with composer updating or “not getting updates” or some similar warnings: DELETE the .composer in your home directory of the server.</p>
+</div>
+<section id="versions">
+<h4>Versions<a class="headerlink" href="#versions" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>“dev-main” will install the latest from main branch</p></li>
+<li><p>“^” - means only inside this main version</p></li>
+<li><p>“vendor/name” will install the latest version with a full annotated tag</p></li>
+</ul>
+</section>
+<section id="installing-typo3-composer-on-a-hardware-server">
+<h4>Installing TYPO3 composer on a hardware server<a class="headerlink" href="#installing-typo3-composer-on-a-hardware-server" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>the directory must have 775</p></li>
+<li><p>since the terminal user that executes composer is terminalUser:terminalUser, the group should be changed for the web-process (terminalUser:www-data)</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="directories-and-files-of-the-bsggerapackage">
+<h3>Directories and Files of the bsggerapackage<a class="headerlink" href="#directories-and-files-of-the-bsggerapackage" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">.vscode</div>
+<div class="line-block">
+<div class="line">settings.json - <em>for vsc project level</em> (<em>above is workspace then user</em>)</div>
+<div class="line">sftp.json - <em>for sftp vsc-extension connect via sftp to the server</em></div>
+<div class="line">tasks.json - <em>start a VSC task to build on save for TypeScript</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Classes</div>
+<div class="line-block">
+<div class="line">Controller - <em>is empty / has .gitkeep</em></div>
+<div class="line">Domain - <em>is empty / has .gitkeep</em></div>
+<div class="line">Model - <em>is empty / has .gitkeep</em></div>
+<div class="line">Repository - <em>is empty / has .gitkeep</em></div>
+<div class="line">ViewHelpers - <em>is empty / has .gitkeep</em></div>
+<div class="line">.htaccess <em>rquire all denied, blocks Apache to get access to the files</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Configuration</div>
+<div class="line-block">
+<div class="line">Form-yaml</div>
+<div class="line-block">
+<div class="line">Forms</div>
+<div class="line-block">
+<div class="line">kontakt.form.yaml <em>the form that is used on the contact page</em></div>
+</div>
+<div class="line">form-finisher.ymal <em>response after sending the form</em></div>
+<div class="line">form-setup.yaml <em>paths to the layout, templates and partials of form</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">RTE</div>
+<div class="line-block">
+<div class="line">zazu-settings-RTE.yaml</div>
+<div class="line">zzz-Default-RTE-package.yaml - the original yaml from TYPO3 S. Kott</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">TCA</div>
+<div class="line-block">
+<div class="line">Overrides</div>
+<div class="line-block">
+<div class="line">pages.php - <em>registers the file</em> <strong>All.tsconfig</strong> <em>witch then includes all</em> <strong>TsConfig</strong> <em>files</em></div>
+<div class="line">sys_template.php - <em>puts the static template files with the TS in the BE list for including</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">TsConf</div>
+<div class="line-block">
+<div class="line">Page</div>
+<div class="line-block">
+<div class="line">Mod</div>
+<div class="line-block">
+<div class="line">WebLayout</div>
+<div class="line-block">
+<div class="line">BackendLayouts</div>
+<div class="line-block">
+<div class="line">package-bel.tsconfig - <em>config for the backend layout, generated in the BE</em></div>
+</div>
+<div class="line">BackendLayouts.tsconfig - <em>includes the above file and all in the folder</em></div>
+</div>
+</div>
+</div>
+<div class="line">All.tsconfig - <em>include file for all .tsconfig below</em></div>
+<div class="line">RTE.tsconfig - <em>the new zazu preset for the RTE in the DCEs if you choose RTE you can select “zazu”</em></div>
+<div class="line">TCEFORM.tsconfig - <em>empty</em></div>
+<div class="line">TCEMAiN.tsconfig - <em>this is to choose news different selfmade modules to use</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">TypoScript</div>
+<div class="line-block">
+<div class="line">Helper</div>
+<div class="line-block">
+<div class="line">dynamicContent.typoscript - <em>lib to get stuff from tt_content left, middle etc.</em></div>
+<div class="line">news.typoscript - <em>all typoscript for news</em></div>
+</div>
+<div class="line">constants.typoscript - <em>some are with #cat to work on in the BE, some not</em></div>
+<div class="line">setup.typoscript - <em>this is the</em> <strong>main TypoScript</strong></div>
+<div class="line">.htaccess - <em>rquire all denied, blocks Apache to get access to the files</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">Documentation</div>
+<div class="line-block">
+<div class="line">build</div>
+<div class="line-block">
+<div class="line">doctrees</div>
+<div class="line-block">
+<div class="line">- different files <em>generated by Sphinx</em></div>
+</div>
+<div class="line">html</div>
+<div class="line-block">
+<div class="line">- different files <em>generated by Sphinx, has sub-files: usually HTML,CSS,Js files</em></div>
+</div>
+<div class="line">documentation.pdf <em>genereated by rest2pd documentation.pdf</em></div>
+</div>
+<div class="line">source</div>
+<div class="line-block">
+<div class="line">_static</div>
+<div class="line-block">
+<div class="line">custom.css - <em>css that is moved into build/_static while “make”</em></div>
+<div class="line">logo-zazu-berlin.gif - <em>logo to put into the build</em></div>
+</div>
+<div class="line">_templates</div>
+<div class="line-block">
+<div class="line">- <em>empty</em></div>
+</div>
+<div class="line">config.py - <em>python config file for the make process</em></div>
+<div class="line">index.rst - <strong>this is documentation source file</strong></div>
+</div>
+<div class="line">Makefile - <em>the make script</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Extras</div>
+<div class="line-block">
+<div class="line">[porject]composer.json - <em>the composer json for the TYPO3 project for the server base directory</em></div>
+<div class="line">[site-configuration]config.yaml - <em>the yaml of site-config - extended with routeEnhacer for news config url</em></div>
+<div class="line">code-on-hold - <em>code that might be usefull, just a storage</em></div>
+<div class="line">datenschutz.html - <em>the GDPR base file</em></div>
+<div class="line">impressum.html - <em>the GDPR base file</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Resources</div>
+<div class="line-block">
+<div class="line">Private</div>
+<div class="line-block">
+<div class="line">Language</div>
+<div class="line-block">
+<div class="line">locallang_fe.xlf – <em>language file for the frontend, things out puted</em></div>
+<div class="line">locallang_be.xlf – <em>language file for the backend</em></div>
+<div class="line">de.locallang_fe.xlf – <em>language file for the frontend, things out puted - German</em></div>
+<div class="line">de.locallang_be.xlf – <em>language file for the backend - German</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Layouts</div>
+<div class="line-block">
+<div class="line">ContentElements</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Fluid-Styled-Content</div>
+<div class="line-block">
+<div class="line">Default-orig.html  - <em>original Layout file for fluid standard elements</em></div>
+<div class="line">Defaul.html  - <em>removed the outside div container for all fluid-content elements</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">Form - <em>empty</em></div>
+<div class="line"><br /></div>
+<div class="line">News - <em>empty</em></div>
+<div class="line"><br /></div>
+<div class="line">Page</div>
+<div class="line-block">
+<div class="line">Default-simple.html - <em>just the main menu and render section “main”</em></div>
+<div class="line">Default.html – <em>the top of the page file, renders section “main” in Default.html Template</em> <strong>MAIN Layout</strong></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">Partials</div>
+<div class="line-block">
+<div class="line">ContentElements - <em>no need - we use DCEs / has .gitkeep</em></div>
+<div class="line"><br /></div>
+<div class="line">Form</div>
+<div class="line-block">
+<div class="line">Field</div>
+<div class="line-block">
+<div class="line">Field.html - <em>standard form field - changed postion of label</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">News</div>
+<div class="line-block">
+<div class="line">Detail</div>
+<div class="line-block">
+<div class="line">Shariff.html - <em>whith sozial media to display at the bottom of news</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">List</div>
+<div class="line-block">
+<div class="line">downloadItem.html - <em>Gesitrel download sections</em></div>
+<div class="line">Item-orig.html</div>
+<div class="line">Item.html</div>
+<div class="line">ItemBrowseList.html - <em>media and news slider</em></div>
+<div class="line">ItemLatest.html - <em>usaually on Home or in the footer</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">Page</div>
+<div class="line-block">
+<div class="line">Navigation</div>
+<div class="line-block">
+<div class="line">BreadcrumbItem.html – <em>one li-element for breadcrumb imported from the main page template</em></div>
+</div>
+<div class="line">Shariff.html – <em>which social media for shariff at the bottom of every page</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">Templates</div>
+<div class="line-block">
+<div class="line">ContentElements - <em>.gitkeep</em></div>
+<div class="line">Cookies/Main - <em>.gitkeep</em></div>
+<div class="line">Form</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Finisher</div>
+<div class="line-block">
+<div class="line">Confirmation</div>
+<div class="line-block">
+<div class="line">Confirmation.html - <em>adding the zazu wrapper div</em>/</div>
+</div>
+</div>
+<div class="line">Form.html - <em>adding the zazu wrapper divs and headline</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">News</div>
+<div class="line-block">
+<div class="line">News</div>
+<div class="line-block">
+<div class="line">Detail-orig.html</div>
+<div class="line">Detail.html</div>
+<div class="line">List-orig.html</div>
+<div class="line">List.html</div>
+<div class="line">zazuList.html - <em>older version of zazu list with all the template options</em></div>
+</div>
+</div>
+</div>
+<div class="line">Page</div>
+<div class="line-block">
+<div class="line">Default.html - <em>the MAIN Template with section “main” rendered by Layout</em></div>
+<div class="line">Two-Columns-simple.html <em>a real two column layout - two different data base tables</em></div>
+<div class="line">Two-Column.htm - <em>main two-column in this case same like Default.html, auto chosen by backendLayouts</em></div>
+</div>
+</div>
+</div>
+<div class="line">Public</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Css</div>
+<div class="line-block">
+<div class="line">Min – <em>minimalized css, for production mode</em></div>
+<div class="line">Src – <em>normal css</em></div>
+<div class="line-block">
+<div class="line">01-normalize-801.css – <em>from the Normalize project version 8.0.1</em></div>
+<div class="line">02-boilerplate-701.css – <em>some basic settings from Boilerplate version 7.0.1</em></div>
+<div class="line">03-basic-styles.css – <em>from zazu: fonts, headlines, wrapper etc.</em></div>
+<div class="line">04-default-layout.css – <em>layout css: menu, header, IMPORT all other css</em></div>
+<div class="line">05-default-template.css – <em>template css: footer</em></div>
+<div class="line">06-dce.css – <em>this is the content through DCEs</em></div>
+<div class="line">07-all-content.css – <em>content not coming through DCEs</em></div>
+<div class="line">rte.css – <em>css for the RTE CKEditor</em></div>
+<div class="line">zzz_css-depot.css <em>some css stuff that could be used later or again</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">Ext - <em>all kind of web extensions jQuery player etc.</em></div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">FlexSlider-2.7.2</div>
+<div class="line-block">
+<div class="line"><em>all FelxSlider files</em></div>
+</div>
+<div class="line">Leaflet-1.9.3</div>
+<div class="line-block">
+<div class="line"><em>all Leaflet files</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">Fonts – <em>all font folders</em></div>
+<div class="line"><br /></div>
+<div class="line">Icons – <em>basically BE icons plus favicons, plus sitepackage icon</em></div>
+<div class="line"><br /></div>
+<div class="line">Images – <em>images that belong directly to the template, content is in fileadmin</em></div>
+<div class="line"><br /></div>
+<div class="line">JavaScript</div>
+<div class="line-block">
+<div class="line">Min – <em>minified versions</em></div>
+<div class="line">Src – <em>normal js, while under construction</em></div>
+<div class="line-block">
+<div class="line">leaflet-zazu.js</div>
+<div class="line">package-site.js</div>
+</div>
+<div class="line">TypeScript</div>
+<div class="line-block">
+<div class="line">package-site.tsconfig - <em>the package JS in TypeScript form</em></div>
+<div class="line">tsconfig.json - <em>TypeScript settings file for tsc</em></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="line">.editorconfig – <em>give different editors the same behavior</em></div>
+<div class="line">.gitignore – <em>things that are not relevant for the public</em></div>
+<div class="line">composer.json – <em>this is the json for this Extension!</em></div>
+<div class="line">ext_conf_template.txt – <em>empty,setting that can be accessed in the TYPO3 backend-settings</em></div>
+<div class="line">ext_localconf.php – <em>IMPORTANT includes All.tsconfig and RTE Default.yaml - from T12 it can also be in /Configuration/page.tsconfig</em></div>
+<div class="line">ext_tables_static+adt.sql – <em>empty no database tables for sitepackage</em></div>
+<div class="line">ext_tables.php – <em>empty core: mostly no longer needed, TCA is in Configuration</em></div>
+<div class="line">ext_tables.sql – <em>empty sql table definitions</em>/</div>
+<div class="line"><br /></div>
+<div class="line">readme.md - <em>copy of the index.md file to show documentation in Bitbucket - converted .rst to .md online</em></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="main-stuff">
+<h2>Main-Stuff<a class="headerlink" href="#main-stuff" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<section id="fluidtemplate-setup">
+<h3>Fluidtemplate setup<a class="headerlink" href="#fluidtemplate-setup" title="Link to this heading">¶</a></h3>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c">// Part 1: Fluid template section</span>
+<span class="mi">10</span> <span class="o">=</span> <span class="nc">FLUIDTEMPLATE</span>
+<span class="mi">10</span> <span class="ss">{</span>
+     <span class="c"># Template names will be generated automatically by converting the applied</span>
+     <span class="c"># backend_layout, there is no explicit mapping necessary anymore.</span>
+   templateName <span class="o">=</span> <span class="nc">TEXT</span>
+   templateName <span class="ss">{</span>
+         cObject <span class="o">=</span> <span class="nc">TEXT</span>
+         cObject <span class="ss">{</span>
+             data <span class="o">=</span> pagelayout
+             required <span class="o">=</span> <span class="mi">1</span>
+             case <span class="o">=</span> uppercamelcase
+             <span class="nf">split</span> <span class="ss">{</span>
+                 token <span class="o">=</span> pagets__
+                 cObjNum <span class="o">=</span> <span class="mi">1</span>
+                 <span class="mi">1</span><span class="p">.</span>current <span class="o">=</span> <span class="mi">1</span>
+             <span class="ss">}</span>
+         <span class="ss">}</span>
+         ifEmpty <span class="o">=</span> Default
+   <span class="ss">}</span>
+   <span class="c">//second line is constants $page the &quot;page-object-variable&quot;</span>
+   templateRootPaths <span class="ss">{</span>
+      <span class="mi">0</span> <span class="o">=</span> <span class="s">EXT:bsggerapackage/Resources/Private/Templates/Page/</span>
+      <span class="mi">1</span> <span class="o">=</span> <span class="ss">{</span><span class="o">$</span><span class="no">page.fluidtemplate.templateRootPath</span><span class="ss">}</span>
+   <span class="ss">}</span>
+
+   partialRootPaths <span class="ss">{</span>
+      <span class="mi">0</span> <span class="o">=</span> <span class="s">EXT:bsggerapackage/Resources/Private/Partials/Page/</span>
+      <span class="mi">1</span> <span class="o">=</span> <span class="ss">{</span><span class="o">$</span><span class="no">page.fluidtemplate.partialRootPath</span><span class="ss">}</span>
+   <span class="ss">}</span>
+
+   layoutRootPaths <span class="ss">{</span>
+      <span class="mi">0</span> <span class="o">=</span> <span class="s">EXT:bsggerapackage/Resources/Private/Layouts/Page/</span>
+      <span class="mi">1</span> <span class="o">=</span> <span class="ss">{</span><span class="o">$</span><span class="no">page.fluidtemplate.layoutRootPath</span><span class="ss">}</span>
+   <span class="ss">}</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+<p>The template names in the Backendlayout must match the template files “default” and “two-columns”
+convert to “Default.html” and “Two-columns.html”</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="old-version-direct-to-the-template-file">
+<h3>Old version direct to the template file<a class="headerlink" href="#old-version-direct-to-the-template-file" title="Link to this heading">¶</a></h3>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">=</span> <span class="nc">FLUIDTEMPLATE</span>
+<span class="mi">10</span> <span class="ss">{</span>
+template <span class="o">=</span> <span class="nc">FILE</span>
+template<span class="p">.</span>file <span class="o">=</span> <span class="s">fileadmin/Resources/Private/Templates/mainTemplate.html</span>
+
+
+<span class="ss">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="pagets-site-package-default">
+<h3>pagets__site_package_default<a class="headerlink" href="#pagets-site-package-default" title="Link to this heading">¶</a></h3>
+<p>pagets__ is a pre-variable for backendlayout names set in the backendlayout
+it is called with the function: PageTsBackendLayoutDataProvider</p>
+<p>To set the TS-for backendLayouts not in a database-folder of the page-tree
+but in files one has to make a file xx.tsconfig and then register it in a new
+page.php file</p>
+<p>Register static Page TSconfig files</p>
+<p>Register PageTS config files in Configuration/TCA/Overrides/pages.php
+of any extension,
+which will be shown in the page properties (the same way as TypoScript
+static templates are included):</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(</span>
+<span class="x">  &#39;extension_name&#39;,</span>
+<span class="x">  &#39;Configuration/TSconfig/Page/myPageTSconfigFile.txt&#39;,</span>
+<span class="x">   &#39;My special config&#39;</span>
+<span class="x"> )</span>
+</pre></div>
+</div>
+<p>All other methods that I found online didn’t work!!!!
+Kott has an additional comand in the ext_localconf.php but it seems not necessary!</p>
+<p>The trick is to load one file in TsConf/Page/All.config
+that has the include commands for all the other files in the folder</p>
+<p>Starting with TYPO3 v12.0 page TSconfig in a file named Configuration/page.tsconfig in
+an extension is automatically loaded during build time.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="constants">
+<h3>CONSTANTS<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h3>
+<p>Constants are set in the file: “Configuration/TypoScript/constants.typoscript”</p>
+<p>then</p>
+<p>inserted with a constant placement ‘$NAME/path …’ in setpu.typoscript</p>
+<p>if</p>
+<p>in constants.typoscript the comment after # is semantic it will be
+in BE-Template-Constant-Editor for setting through the BE user of TYPO3</p>
+<p>can be used also then in Fluidtemplates “{name.name}” !</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="rte-ckeditor-configuration-and-individual-config-activation">
+<h3>RTE CKEditor configuration and individual config activation<a class="headerlink" href="#rte-ckeditor-configuration-and-individual-config-activation" title="Link to this heading">¶</a></h3>
+<p>Good introduction
+<a class="reference external" href="https://www.nitsan.in/de/blog/post/einfache-schritte-zur-konfiguration-des-ckeditors-in-typo3">https://www.nitsan.in/de/blog/post/einfache-schritte-zur-konfiguration-des-ckeditors-in-typo3</a></p>
+<p>Graphical interface to style the toolbar of the CKEditor
+<a class="reference external" href="https://ckeditor.com/latest/samples/toolbarconfigurator/index.html#basic">https://ckeditor.com/latest/samples/toolbarconfigurator/index.html#basic</a></p>
+<p>Homepage of the ckeditor
+<a class="reference external" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_installation.html">https://ckeditor.com/docs/ckeditor4/latest/guide/dev_installation.html</a>
+<a class="reference external" href="http://docs.ckeditor.com/#!/api/CKEDITOR.config">http://docs.ckeditor.com/#!/api/CKEDITOR.config</a></p>
+<dl class="simple">
+<dt>ext_localconf.php</dt><dd><p>register with globas config_vars the preset
+“zazu” with a file source and name
+EXT:zazupackage/Configuration/RTE/zazu-settings-RTE.yaml</p>
+</dd>
+<dt>Configuration/RTE/Default-RTE-zazu.yaml</dt><dd><p>file with the configuraton based on the default-setup changed for zazupackage</p>
+</dd>
+<dt>TsConfig</dt><dd><p>Page/RTE.tsconfig will be included in All.tsconfig
+is setting the preset for all pages TSConfig to
+RTE.default.preset = zazu
+To change for a single page the preset must be written directly in the page TSConfig</p>
+</dd>
+</dl>
+<section id="ckeditor">
+<h4>CKEditor<a class="headerlink" href="#ckeditor" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Step one: tags you can use to format (‘a’ doesn’t work here!)</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">editor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">format_tags</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;p;h1;h2;h3;h4;h5;pre;address;div&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Menues to be shown</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">editor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">toolbarGroups</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">clipboard</span><span class="p p-Indicator">,</span><span class="nt"> groups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">clipboard</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">undo</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">styles</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>add classes</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">editor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">stylesSet</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;quote-style&quot;</span><span class="p p-Indicator">,</span><span class="nt"> element</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;p&quot;</span><span class="p p-Indicator">,</span><span class="nt"> attributes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;quote-style&quot;</span><span class="p p-Indicator">}}</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Load</span><span class="nv"> </span><span class="s">More</span><span class="nv"> </span><span class="s">Button&quot;</span><span class="p p-Indicator">,</span><span class="nt"> element</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="nt"> attributes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;load-more&quot;</span><span class="p p-Indicator">}}</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;More</span><span class="nv"> </span><span class="s">Content&quot;</span><span class="p p-Indicator">,</span><span class="nt"> element</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;div&quot;</span><span class="p p-Indicator">,</span><span class="nt"> attributes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;more-content&quot;</span><span class="p p-Indicator">}}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>To have a preview inside the CKEditor of a style, the style must be set in the rte.css</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">editor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">contentsCss</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;EXT:zazupackage/Resources/Public/Css/Src/rte.css&quot;</span>
+</pre></div>
+</div>
+<p>shows a class or a styling inside the CKEditor in the intended way and
+is not effecting output!!! if rte.css is not added to 04-default-layout.css</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="system-extension-form">
+<h3>System Extension Form<a class="headerlink" href="#system-extension-form" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>(outdated in 2023) On a new setup from x-z-z-x-package you must change with phpMyAdmin in tt_content -&gt; pi_flexform form zazupackage to YOURpackage!
+Otherwise there is a Call to userfunct = 0 in the BE and in the Referenzindex of the database!</p>
+</div>
+<dl class="simple">
+<dt>Steps:</dt><dd><ol class="arabic simple">
+<li><p>add static Template (easily forgotten)</p></li>
+<li><p>add fluid_styled_content static Template (not sure whether realy needed)</p></li>
+<li><p>create /Configuration/Form-yaml/form-setup-zazu.yaml -&gt; Path own Templates and Paritals</p></li>
+<li><p>TypoScript to tell the plugin (FE) and the module (BE) where to find the setup</p></li>
+<li><p>create Folder in Form-yaml with a Formdefinition created in BE -&gt; transfer in EXT:</p></li>
+<li><p>add path to EXT: … Forms/zazukontakt.form.yaml in form-setup-zazu.yaml</p></li>
+</ol>
+</dd>
+<dt>distinguish between:</dt><dd><ul class="simple">
+<li><p>plugin and module</p></li>
+<li><p>Forms.yaml and form.config.yaml</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Add additional multi setups in the YAML can be made on the corresponding intend line!</p>
+</div>
+<dl class="simple">
+<dt>Good Link for Howto own form.yaml new storage place:</dt><dd><p><a class="reference external" href="https://jweiland.net/typo3/codebeispiele/typoscript/ext-form-speicherort-der-formulare-festlegen.html">https://jweiland.net/typo3/codebeispiele/typoscript/ext-form-speicherort-der-formulare-festlegen.html</a></p>
+</dd>
+</dl>
+<section id="confirmation-message">
+<h4>Confirmation Message<a class="headerlink" href="#confirmation-message" title="Link to this heading">¶</a></h4>
+<p>Confirmation is not found directly in EXT:zazupackage through setup Template pathes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Confirmation has to be set inside the zazukontakt.form.yaml setup!</p>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Vielen</span><span class="nv"> </span><span class="s">Dank</span><span class="nv"> </span><span class="s">für</span><span class="nv"> </span><span class="s">die</span><span class="nv"> </span><span class="s">Nachricht,</span><span class="nv"> </span><span class="s">wir</span><span class="nv"> </span><span class="s">werden</span><span class="nv"> </span><span class="s">uns</span><span class="nv"> </span><span class="s">umgehend</span><span class="nv"> </span><span class="s">bei</span><span class="nv"> </span><span class="s">Ihnen</span><span class="nv"> </span><span class="s">melden!&#39;</span>
+<span class="w">  </span><span class="nt">contentElementUid</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="w">  </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confirmation.html</span>
+<span class="w">  </span><span class="nt">templateRootPaths</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">20</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXT:zazupackage/Resources/Private/Templates/FormTemplates/Finishers/Confirmation/</span>
+<span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confirmation</span>
+</pre></div>
+</div>
+</section>
+<section id="modifications-and-settings">
+<h4>Modifications and settings<a class="headerlink" href="#modifications-and-settings" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>Templates modified</dt><dd><ul class="simple">
+<li><p>Form.html - surrounding divs</p></li>
+<li><p>add kontakt-fields div for column</p></li>
+<li><p>h2 Form name from EXT:LLL</p></li>
+</ul>
+</dd>
+<dt>Partials modified</dt><dd><ul class="simple">
+<li><p>Field.html - label class, div around input classes</p></li>
+<li><p>label below imput</p></li>
+<li><p>class getting field names in input classes: &lt;div class=”{element.properties.containerClassAttribute} {element.properties.containerClassAttribute}-{element.uniqueIdentifier}”&gt;</p></li>
+</ul>
+</dd>
+<dt>zazukontakt.form.yaml</dt><dd><ul class="simple">
+<li><p>deleted form label, to get it outside of kontakt fields for 2 coumun layout</p></li>
+</ul>
+</dd>
+</dl>
+<p>To avoid that the headline (Form Name) is getting the two column out of balance
+the h2 must go on top and the fields must get a div for the css column setting.
+Form is rendering the fields and the label of the form (headline) in one go, so
+the headline label has to be omitted in the setup.yaml and put inside the template
+with a LLL Headline Name reference.</p>
+</section>
+<section id="css-column-bugs">
+<h4>CSS column bugs<a class="headerlink" href="#css-column-bugs" title="Link to this heading">¶</a></h4>
+<p>CSS avoid column break inside an element inconsistency in browsers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">kontakt</span><span class="o">-</span><span class="n">fields</span> <span class="p">{</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">count</span><span class="p">:</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">gap</span><span class="p">:</span> <span class="mi">80</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">column</span><span class="o">-</span><span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="p">;</span>
+    <span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="p">;</span>
+    <span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="o">-</span><span class="n">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">kontakt</span> <span class="o">.</span><span class="n">form</span><span class="o">-</span><span class="n">group</span> <span class="p">{</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">column</span><span class="o">-</span><span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">column</span><span class="o">-</span><span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="p">;</span>
+    <span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="o">-</span><span class="n">column</span><span class="p">;</span>
+    <span class="n">page</span><span class="o">-</span><span class="k">break</span><span class="o">-</span><span class="n">inside</span><span class="p">:</span> <span class="n">avoid</span><span class="p">;</span>
+    <span class="n">display</span><span class="p">:</span> <span class="n">inline</span><span class="o">-</span><span class="n">block</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="leaflet-map-and-openstreetmap">
+<h3>Leaflet map and OpenStreetmap<a class="headerlink" href="#leaflet-map-and-openstreetmap" title="Link to this heading">¶</a></h3>
+<section id="settins-in-dce-js-and-setup-typoscript-css">
+<h4>Settins in DCE (.js) and setup.typoscript (css)<a class="headerlink" href="#settins-in-dce-js-and-setup-typoscript-css" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>in the DCE 101 template</dt><dd><ul class="simple">
+<li><p>full name of the sitepackage</p></li>
+<li><p>coordinates center of the map, lati - longi</p></li>
+<li><p>location 1, lati1 - longi1</p></li>
+<li><p>location 2, lati2 - longi2</p></li>
+<li><p>JavaScript from the Extension and from zazu plus Extension CSS loaded through “f:asset”</p></li>
+</ul>
+</dd>
+<dt>in <em>x-z-z-xsitepackage/Resources/Public/JavaScript/Src/leaflet-zazu.js</em></dt><dd><ul class="simple">
+<li><p>leaflet-zazu.js - added in DCE 101 with f:asset</p></li>
+<li><p>zoom factor</p></li>
+<li><p>url of the pointer-logos “leaf-green.png”, “leaf-shadow.png” - they are now in fileadmin</p></li>
+<li><p>on pointer-logo-click message</p></li>
+<li><p>osm or mapbox maps</p></li>
+<li><p>jQuery activate button DSGVO - runs leaflet map</p></li>
+</ul>
+</dd>
+<dt>in Resources/Public/Ext/Leaflet-1.x.x</dt><dd><ul class="simple">
+<li><p>leaflet.js -&gt; TYPO3 12, new as f:asset in DCE</p></li>
+<li><p>leaflet.css -&gt; TYPO3 12, new as f:asset in DCE</p></li>
+</ul>
+</dd>
+</dl>
+<p>DSGVO-Sequence</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>DCE creates js “var lati”, js “var longi” etc.</p></li>
+<li><p>leaflet.css - loaded for the page with f:asset in DCE</p></li>
+<li><p>leaflet-zazu.js - loaded for the page with f:asset in DCE</p></li>
+<li><p>leaflet-zau.js - activates function with DSGVO button onclick</p></li>
+<li><p>leaflet-zazu.js - function loads the variable lati/longi</p></li>
+<li><p>leaflet-zazu.js - hides DSGVO button, and static map background</p></li>
+</ol>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="jquery-and-javascript">
+<h3>jQuery and JavaScript<a class="headerlink" href="#jquery-and-javascript" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>jQuery</dt><dd><p>is included in the Templates/Page/Default.html (or whatever Template) at the bottom
+because Extensions (e.g. shariff) go usually on the top of “includeJSFooter”
+so would be before jQuery. And if jQuery is in the header Google is complaining:
+“no code before content”</p>
+</dd>
+<dt>JavaScript</dt><dd><p>is included with “includeJSFooter” in setup.typoscript (only there TYPO3 will compress it)</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="news-tx-news-and-news-slider-on-home-called-without-news-plugin-but-typosscript">
+<h3>News tx_news and news slider on Home called without news-plugin but TyposScript<a class="headerlink" href="#news-tx-news-and-news-slider-on-home-called-without-news-plugin-but-typosscript" title="Link to this heading">¶</a></h3>
+<section id="changed-templates-and-partials">
+<h4>Changed Templates and Partials<a class="headerlink" href="#changed-templates-and-partials" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>Templates</dt><dd><ul class="simple">
+<li><p>Templates/News/News/Detail.html (3 divs added, prev-next to bootom)</p></li>
+<li><p>Templates/News/News/Detail.html (moved back-link into div of main text)</p></li>
+<li><p>Templates/News/News/List.html (if template 9 or 10 etc.)</p></li>
+</ul>
+</dd>
+<dt>Partials</dt><dd><ul class="simple">
+<li><p>Partials/News/Detail/Shariff.html (choose social medias)</p></li>
+</ul>
+</dd>
+<dt>Partials/List</dt><dd><ul class="simple">
+<li><p>Item.html</p></li>
+<li><p>new: ItemBrowseList.html (for the news FlexSlider)</p></li>
+<li><p>new: ItemLatest.html (the layout 9 for Latest in the footer)</p></li>
+<li><p>new: downloadItem.html (the layout for Gesitrel Downloads with news)</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>static templates - news must be included BEFORE zazupackage otherwise news settings in setup.typoscript will not come through</p>
+</div>
+<ol class="arabic simple">
+<li><p>TypoScript/Helper/news.typoscript .lib = construct news List for slider</p></li>
+<li><p>add DCE 26 news slider to home</p></li>
+<li><p>make pages for “all news” and “single news” install plugin news on the pages</p></li>
+<li><p>special list-template for the news slider</p></li>
+</ol>
+<p>add to 2.
+a. the lib inserts the news (like a plugin), and creates a template-case
+b. in the fluid-template you refer to the case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">fluid</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">&lt;f:if condition=”{settings.templateLayout} == 10”&gt;</div>
+<div class="line-block">
+<div class="line">&lt;f:then&gt;</div>
+<div class="line-block">
+<div class="line">&lt;f:render partial=”List/BrowseList” arguments=”{newsItem: newsItem,settings:settings,iterator:iterator}” /&gt;</div>
+</div>
+<div class="line">&lt;/f:then&gt;</div>
+<div class="line">&lt;f:else&gt;</div>
+<div class="line-block">
+<div class="line">&lt;f:render partial=”List/Item” arguments=”{newsItem: newsItem,settings:settings,iterator:iterator}” /&gt;</div>
+</div>
+<div class="line">&lt;/f:else&gt;</div>
+</div>
+<div class="line">&lt;/f:if&gt;</div>
+</div>
+<ol class="loweralpha simple" start="3">
+<li><p>if you want to use the distingtion in the regular plugin you must add it to the TSConfig of the pages</p></li>
+</ol>
+</section>
+<section id="news-flexslider">
+<h4>News FlexSlider<a class="headerlink" href="#news-flexslider" title="Link to this heading">¶</a></h4>
+<p>In the Templates/News/News/List.html choose the Partial for the FlexSlider-News</p>
+<div class="highlight-fluid notranslate"><div class="highlight"><pre><span></span>&lt;f:if condition=&quot;{settings.templateLayout} == 10&quot;&gt;
+    &lt;f:then&gt;
+        &lt;f:render partial=&quot;List/ItemBrowseList&quot; arguments=&quot;{newsItem: newsItem,settings:settings,iterator:iterator}&quot; /&gt;
+    &lt;/f:then&gt;
+</pre></div>
+</div>
+<p>Inside Partials/News/List/ItemBrowseList.html is a cycle viewhelper that puts allways 2 news in on &lt;li&gt;&lt;/li&gt;</p>
+<div class="highlight-fluid notranslate"><div class="highlight"><pre><span></span>&lt;f:cycle values=&quot;{0: &#39;&lt;li&gt;&#39;, 1: &#39;&#39;}&quot; as=&quot;lis&quot;&gt;
+    &lt;f:format.raw&gt;{lis}&lt;/f:format.raw&gt;
+&lt;/f:cycle&gt;
+
+#partial here
+
+&lt;f:cycle values=&quot;{0: &#39;&#39;, 1: &#39;&lt;/li&gt;&#39;}&quot; as=&quot;endLis&quot;&gt;
+    &lt;f:format.raw&gt;{endLis}&lt;/f:format.raw&gt;
+&lt;/f:cycle&gt;
+
+
+&lt;f:if condition =&quot;{iterator.isLast}&quot; &gt;
+    &lt;f:if condition =&quot;{iterator.isOdd}&quot;&gt;
+        &lt;/li&gt;
+    &lt;/f:if&gt;
+&lt;/f:if&gt;
+</pre></div>
+</div>
+</section>
+<section id="news-prepeared-cases-for-list">
+<h4>News prepeared cases for List<a class="headerlink" href="#news-prepeared-cases-for-list" title="Link to this heading">¶</a></h4>
+<p>Set in TCEMAIN.tsconfig for the plugin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tx_news</span><span class="o">.</span><span class="n">templateLayouts</span> <span class="p">{</span>
+    <span class="mi">9</span> <span class="o">=</span> <span class="n">newsLatest</span>
+    <span class="mi">10</span> <span class="o">=</span> <span class="n">caseListBrowse</span>
+    <span class="mi">11</span> <span class="o">=</span> <span class="n">caseDownloads</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>About special list-templates for news:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://die-schwarzwald-werbeagentur.zazudesign.de/internet-programmierung/news-latest-typo3-extension-news-or-tx_news.html">https://die-schwarzwald-werbeagentur.zazudesign.de/internet-programmierung/news-latest-typo3-extension-news-or-tx_news.html</a></p>
+</div></blockquote>
+</section>
+<section id="detail-and-list-view-image-size">
+<h4>Detail and List view image size<a class="headerlink" href="#detail-and-list-view-image-size" title="Link to this heading">¶</a></h4>
+<p>#the plugin-settings are sufficient to render the right image size - render - but news original css (css news basic) .news-single .article .news-img-wrap is limiting to 282 px.</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="nb">plugin</span><span class="p">.</span>tx_news <span class="ss">{</span>
+   settings <span class="ss">{</span>
+      detail <span class="ss">{</span>
+         media <span class="ss">{</span>
+            image <span class="ss">{</span>
+               maxWidth <span class="o">=</span> <span class="mi">600</span>
+               maxHeight <span class="o">=</span> <span class="mi">600</span>
+            <span class="ss">}</span>
+         <span class="ss">}</span>
+      <span class="ss">}</span>
+      <span class="c">#Same image size then detail so only one image to load, with many</span>
+      <span class="c">#news this has to change!</span>
+      list <span class="ss">{</span>
+         media <span class="ss">{</span>
+            image <span class="ss">{</span>
+               maxWidth <span class="o">=</span> <span class="mi">600</span>
+               maxHeight <span class="o">=</span> <span class="mi">600</span>
+            <span class="ss">}</span>
+         <span class="ss">}</span>
+      <span class="ss">}</span>
+   <span class="ss">}</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>No struggle with closing brackets:</strong>
+News list on the normal news-list page has a 2 column backend-layout, but it is the same template behind it like the normal page-layout-template.
+The second column with the news-aside goes directly inside the news list.html template:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;f:cObject</span> <span class="pre">typoscriptObjectPath=&quot;lib.dynamicContent&quot;</span> <span class="pre">data=&quot;{pageUid:</span> <span class="pre">'{data.uid}',</span> <span class="pre">colPos:</span> <span class="pre">'2'}&quot;</span> <span class="pre">/&gt;</span></code></p>
+</div>
+</section>
+<section id="some-news-setting-stuff">
+<h4>Some News setting stuff<a class="headerlink" href="#some-news-setting-stuff" title="Link to this heading">¶</a></h4>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>settings <span class="ss">{</span>
+    <span class="c"># Geänderte CSS verknüpfen:</span>
+    cssFile <span class="o">=</span> <span class="s">EXT:bsggerapackage/Templates/Resources/Public/Css/tx_news.css</span>
+
+    <span class="c"># Platzhalterbild entfernen:</span>
+    displayDummyIfNoMedia <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c"># Bildgrößen:</span>
+    detail<span class="p">.</span>media<span class="p">.</span>image<span class="p">.</span>maxWidth <span class="o">=</span> <span class="mi">200</span>
+    list<span class="p">.</span>media<span class="p">.</span>image<span class="p">.</span>maxWidth <span class="o">=</span> <span class="mi">110</span>
+    list<span class="p">.</span>media<span class="p">.</span>image<span class="p">.</span>maxHeight <span class="o">=</span>
+
+    <span class="c"># rel-Attribut für Fancybox vergeben:</span>
+    <span class="c"># im Partial &quot;FalMediaImage.html&quot; muss für Fancybox auch die Klasse &quot;fancybox&quot; vergeben werden!</span>
+    detail<span class="p">.</span>media<span class="p">.</span>image<span class="p">.</span>lightbox <span class="o">=</span> fancybox
+
+    <span class="c"># Social-Texte übersetzen:</span>
+    facebookLocale <span class="o">=</span> de_DE
+    googlePlusLocale <span class="o">=</span> de
+    disqusLocale <span class="o">=</span> de
+
+    <span class="c"># Social-Links entfernen:</span>
+    detail<span class="p">.</span>showSocialShareButtons <span class="o">=</span> <span class="mi">0</span>
+
+    list<span class="p">.</span>paginate<span class="p">.</span>itemsPerPage <span class="o">=</span> <span class="mi">5</span>
+
+    <span class="c"># Datum in URL einfügen:</span>
+    link <span class="ss">{</span>
+        skipControllerAndAction <span class="o">=</span> <span class="mi">1</span>
+        hrDate <span class="o">=</span> <span class="mi">1</span>
+        hrDate <span class="ss">{</span>
+        day <span class="o">=</span> j
+        month <span class="o">=</span> n
+        year <span class="o">=</span> Y
+    <span class="ss">}</span>
+<span class="ss">}</span>
+
+<span class="c">#in TSconfig</span>
+CAdefaults<span class="p">.</span>sys_file_reference<span class="p">.</span>showinpreview <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nb">plugin</span><span class="p">.</span>tx_news<span class="p">.</span>_LOCAL_LANG<span class="p">.</span>de<span class="p">.</span>more-link <span class="o">=</span> weiter
+<span class="nb">plugin</span><span class="p">.</span>tx_news<span class="p">.</span>_LOCAL_LANG<span class="p">.</span>en<span class="p">.</span>more-link <span class="o">=</span> read more
+<span class="nb">plugin</span><span class="p">.</span>tx_news<span class="p">.</span>_LOCAL_LANG<span class="p">.</span>fr<span class="p">.</span>more-link <span class="o">=</span> lire la suite
+
+<span class="nb">plugin</span><span class="p">.</span>tx_news<span class="p">.</span>_LOCAL_LANG<span class="p">.</span>de<span class="p">.</span>back-link <span class="o">=</span> zurück zur Übersicht
+<span class="nb">plugin</span><span class="p">.</span>tx_news<span class="p">.</span>_LOCAL_LANG<span class="p">.</span>en<span class="p">.</span>back-link <span class="o">=</span> back to list view
+<span class="nb">plugin</span><span class="p">.</span>tx_news<span class="p">.</span>_LOCAL_LANG<span class="p">.</span>fr<span class="p">.</span>back-link <span class="o">=</span> retour à la liste
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="news-update-from-typo3-11-5">
+<h4>News update from TYPO3 11.5<a class="headerlink" href="#news-update-from-typo3-11-5" title="Link to this heading">¶</a></h4>
+<p>The paginated view-helper must be omitted for the new pagination setup
+I needs now the paginated extension from Georg Ringer</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="news-route-enhancer-for-speaking-news-url">
+<h3>News-Route Enhancer for speaking news URL<a class="headerlink" href="#news-route-enhancer-for-speaking-news-url" title="Link to this heading">¶</a></h3>
+<section id="config-yaml-for-routing-and-speaking-url-paths-of-news">
+<h4>config.yaml for routing and speaking URL paths of news<a class="headerlink" href="#config-yaml-for-routing-and-speaking-url-paths-of-news" title="Link to this heading">¶</a></h4>
+<p>extend after “websiteTitle:’’” with the following:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">websiteTitle</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="nt">routeEnhancers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">News</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extbase</span>
+<span class="w">    </span><span class="nt">extension</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">News</span>
+<span class="w">    </span><span class="nt">plugin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pi1</span>
+<span class="w">    </span><span class="nt">routes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">routePath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/&#39;</span>
+<span class="w">        </span><span class="nt">_controller</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;News::list&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">routePath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/page-{page}&#39;</span>
+<span class="w">        </span><span class="nt">_controller</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;News::list&#39;</span>
+<span class="w">        </span><span class="nt">_arguments</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">page</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;currentPage&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">routePath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/{news-title}&#39;</span>
+<span class="w">        </span><span class="nt">_controller</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;News::detail&#39;</span>
+<span class="w">        </span><span class="nt">_arguments</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">news-title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">news</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">routePath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/{category-name}&#39;</span>
+<span class="w">        </span><span class="nt">_controller</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;News::list&#39;</span>
+<span class="w">        </span><span class="nt">_arguments</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">category-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">overwriteDemand/categories</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">routePath</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/{tag-name}&#39;</span>
+<span class="w">        </span><span class="nt">_controller</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;News::list&#39;</span>
+<span class="w">        </span><span class="nt">_arguments</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">tag-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">overwriteDemand/tags</span>
+<span class="w">    </span><span class="nt">defaultController</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;News::list&#39;</span>
+<span class="w">    </span><span class="nt">defaults</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">page</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+<span class="w">    </span><span class="nt">aspects</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">news-title</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistedAliasMapper</span>
+<span class="w">        </span><span class="nt">tableName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tx_news_domain_model_news</span>
+<span class="w">        </span><span class="nt">routeFieldName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path_segment</span>
+<span class="w">      </span><span class="nt">page</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StaticRangeMapper</span>
+<span class="w">        </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+<span class="w">        </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;100&#39;</span>
+<span class="w">      </span><span class="nt">category-name</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistedAliasMapper</span>
+<span class="w">        </span><span class="nt">tableName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sys_category</span>
+<span class="w">        </span><span class="nt">routeFieldName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slug</span>
+<span class="w">      </span><span class="nt">tag-name</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistedAliasMapper</span>
+<span class="w">        </span><span class="nt">tableName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tx_news_domain_model_tag</span>
+<span class="w">        </span><span class="nt">routeFieldName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slug</span>
+<span class="w">  </span><span class="nt">PageTypeSuffix</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PageType</span>
+<span class="w">    </span><span class="nt">map</span><span class="p">:</span>
+<span class="w">      </span><span class="s">&#39;feed.xml&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9818</span>
+<span class="w">      </span><span class="s">&#39;calendar.ical&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9819</span>
+<span class="w">      </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">      </span><span class="nt">sitemap.xml</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1533906435</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="hard-coded-base-url">
+<h5>Hard coded base url!<a class="headerlink" href="#hard-coded-base-url" title="Link to this heading">¶</a></h5>
+<p>List item of news “isBasedOn” meta data the detail news article: inside List/Item.html add before the closing div</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">span</span>  <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;isBasedOn&quot;</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&quot;https://schema.org/CreativeWork&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;url&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;https://test.gesitrel.ch&lt;n:link newsItem=&quot;{newsItem}&quot; settings=&quot;{settings}&quot; uriOnly=&quot;true&quot; &gt;&lt;/n:link&gt;&#39;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>to add a publisher meta data for news: inside Templates/NewsTemplates/News/Detail.html</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;publisher&quot;</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&quot;https://schema.org/Organization&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Gesitrel AG&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+</section>
+<section id="flexslider">
+<h3>FlexSlider<a class="headerlink" href="#flexslider" title="Link to this heading">¶</a></h3>
+<section id="flexslider-has-a-white-border-remove-it">
+<h4>FlexSlider has a white border - remove it<a class="headerlink" href="#flexslider-has-a-white-border-remove-it" title="Link to this heading">¶</a></h4>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">flexslider</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="felxslider-show-arrows-in-mobile-sizes">
+<h4>Felxslider show arrows in mobile sizes<a class="headerlink" href="#felxslider-show-arrows-in-mobile-sizes" title="Link to this heading">¶</a></h4>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* take the arrow off-screen on small screens but then</span>
+<span class="c">you don&#39;t know that it is a slider on small screens*/</span>
+
+<span class="p">.</span><span class="nc">d16</span><span class="w"> </span><span class="p">.</span><span class="nc">flex-direction-nav</span><span class="w"> </span><span class="p">.</span><span class="nc">flex-prev</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">-60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">d16</span><span class="w"> </span><span class="p">.</span><span class="nc">flex-direction-nav</span><span class="w"> </span><span class="p">.</span><span class="nc">flex-next</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">-60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="flexslider-put-caption-on-top-of-image">
+<h4>FlexSlider put caption on top of image<a class="headerlink" href="#flexslider-put-caption-on-top-of-image" title="Link to this heading">¶</a></h4>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* felx-Caption*/</span>
+<span class="p">.</span><span class="nc">d16</span><span class="w"> </span><span class="p">.</span><span class="nc">flexslider</span><span class="w"> </span><span class="p">.</span><span class="nc">slides</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">d16</span><span class="w"> </span><span class="p">.</span><span class="nc">flex-caption</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">    </span><span class="k">bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;noto_sansregular&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">);</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="import-export-of-database-for-the-dces">
+<h3>Import/Export of database for the DCEs<a class="headerlink" href="#import-export-of-database-for-the-dces" title="Link to this heading">¶</a></h3>
+<p>If you want just to import/export the DCE tables -&gt; it is a long story …</p>
+<p>Best is to use phpAdmin and ignore the warnings for the uids.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="svgs-are-still-a-hassle">
+<h3>SVGs are still a hassle<a class="headerlink" href="#svgs-are-still-a-hassle" title="Link to this heading">¶</a></h3>
+<p>works for the i-world and the rest but gets bigger, svg as background-image</p>
+<blockquote>
+<div><p>make them all Base64 encode</p>
+<p><a class="reference external" href="https://b64.io/">https://b64.io/</a></p>
+</div></blockquote>
+<p>works for firefox but not the i-world</p>
+<blockquote>
+<div><p>url-encode background-image</p>
+<p><a class="reference external" href="https://yoksel.github.io/url-encoder/">https://yoksel.github.io/url-encoder/</a></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/logo-zazu-berlin.gif" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">bsggerapackage Documentation</a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#whois">Whois</a></li>
+<li><a class="reference internal" href="#instructions-and-issues">Instructions and Issues</a><ul>
+<li><a class="reference internal" href="#open-tasks">Open Tasks</a></li>
+<li><a class="reference internal" href="#changes-and-bugfixes-for-this-installation">Changes and bugfixes for this Installation</a></li>
+<li><a class="reference internal" href="#changes-for-typo3-12-4-x">Changes for TYPO3 12.4.x</a></li>
+<li><a class="reference internal" href="#changes-for-typo3-11-5-0">Changes for TYPO3 11.5.0</a><ul>
+<li><a class="reference internal" href="#new-grid-layout-2023">new grid layout (2023)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changes-for-typo3-10-4-3">Changes for TYPO3 10.4.3</a></li>
+<li><a class="reference internal" href="#powermail">powermail</a></li>
+<li><a class="reference internal" href="#general-changes">general changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-1-documentation-bsggerapackage">Part 1 Documentation bsggerapackage</a><ul>
+<li><a class="reference internal" href="#a-start-a-new-sitepackage-new-preferable-put-it-into-ddev-local-packages">A. Start a new sitepackage (new: preferable put it into DDEV local_packages)</a><ul>
+<li><a class="reference internal" href="#aa-the-folder-initialisation-for-getting-fileadmin-files-from-the-x-z-z-x-installation-not-tested">Aa. The folder “Initialisation” for getting fileadmin files from the x-z-z-x-Installation - not tested</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#b-start-a-new-typo3-website-full-hardware-server-setup">B. Start a new TYPO3 website: Full Hardware Server Setup</a></li>
+<li><a class="reference internal" href="#c-ddev-setup-instead-of-a-full-server">C. DDEV setup instead of a full server</a><ul>
+<li><a class="reference internal" href="#b2a-different-db-export-with-snapshot-above-point-14">B2a. different db export with snapshot (above point 14.)</a></li>
+<li><a class="reference internal" href="#b2b-change-to-ssh-for-connecting-with-vsc-to-bitbucket">B2b. Change to SSH for connecting with VSC to Bitbucket</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#c-errors-when-setting-up-a-new-page">C. Errors when setting up a new page</a></li>
+<li><a class="reference internal" href="#d-mittwald-preparations">D. Mittwald preparations</a></li>
+<li><a class="reference internal" href="#e-typo3-setup">E. TYPO3 Setup</a></li>
+<li><a class="reference internal" href="#f-admin-tools-section">F. Admin Tools section</a></li>
+<li><a class="reference internal" href="#g-some-dirty-work-to-get-your-just-dces-from-another-typo3-installation">G. Some dirty work – to get your just DCEs from another TYPO3 installation</a></li>
+<li><a class="reference internal" href="#h-sitemap-plus-sitemap-news">H. Sitemap plus Sitemap news</a></li>
+<li><a class="reference internal" href="#i-cookies-extension">I. Cookies Extension</a></li>
+<li><a class="reference internal" href="#j-felogin">J. felogin</a></li>
+<li><a class="reference internal" href="#k-htaccess">K. .htaccess</a></li>
+<li><a class="reference internal" href="#l-favicons">L. favicons</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-2-pre-stuff">Part 2: Pre-Stuff</a><ul>
+<li><a class="reference internal" href="#sphinx-for-rst-restructuredtext-documentation">Sphinx for .rst reStructuredText Documentation</a></li>
+<li><a class="reference internal" href="#create-a-pdf-with-sphinx">Create a PDF with Sphinx</a></li>
+<li><a class="reference internal" href="#composer">Composer</a><ul>
+<li><a class="reference internal" href="#versions">Versions</a></li>
+<li><a class="reference internal" href="#installing-typo3-composer-on-a-hardware-server">Installing TYPO3 composer on a hardware server</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#directories-and-files-of-the-bsggerapackage">Directories and Files of the bsggerapackage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#main-stuff">Main-Stuff</a><ul>
+<li><a class="reference internal" href="#fluidtemplate-setup">Fluidtemplate setup</a></li>
+<li><a class="reference internal" href="#old-version-direct-to-the-template-file">Old version direct to the template file</a></li>
+<li><a class="reference internal" href="#pagets-site-package-default">pagets__site_package_default</a></li>
+<li><a class="reference internal" href="#constants">CONSTANTS</a></li>
+<li><a class="reference internal" href="#rte-ckeditor-configuration-and-individual-config-activation">RTE CKEditor configuration and individual config activation</a><ul>
+<li><a class="reference internal" href="#ckeditor">CKEditor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#system-extension-form">System Extension Form</a><ul>
+<li><a class="reference internal" href="#confirmation-message">Confirmation Message</a></li>
+<li><a class="reference internal" href="#modifications-and-settings">Modifications and settings</a></li>
+<li><a class="reference internal" href="#css-column-bugs">CSS column bugs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#leaflet-map-and-openstreetmap">Leaflet map and OpenStreetmap</a><ul>
+<li><a class="reference internal" href="#settins-in-dce-js-and-setup-typoscript-css">Settins in DCE (.js) and setup.typoscript (css)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#jquery-and-javascript">jQuery and JavaScript</a></li>
+<li><a class="reference internal" href="#news-tx-news-and-news-slider-on-home-called-without-news-plugin-but-typosscript">News tx_news and news slider on Home called without news-plugin but TyposScript</a><ul>
+<li><a class="reference internal" href="#changed-templates-and-partials">Changed Templates and Partials</a></li>
+<li><a class="reference internal" href="#news-flexslider">News FlexSlider</a></li>
+<li><a class="reference internal" href="#news-prepeared-cases-for-list">News prepeared cases for List</a></li>
+<li><a class="reference internal" href="#detail-and-list-view-image-size">Detail and List view image size</a></li>
+<li><a class="reference internal" href="#some-news-setting-stuff">Some News setting stuff</a></li>
+<li><a class="reference internal" href="#news-update-from-typo3-11-5">News update from TYPO3 11.5</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#news-route-enhancer-for-speaking-news-url">News-Route Enhancer for speaking news URL</a><ul>
+<li><a class="reference internal" href="#config-yaml-for-routing-and-speaking-url-paths-of-news">config.yaml for routing and speaking URL paths of news</a><ul>
+<li><a class="reference internal" href="#hard-coded-base-url">Hard coded base url!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flexslider">FlexSlider</a><ul>
+<li><a class="reference internal" href="#flexslider-has-a-white-border-remove-it">FlexSlider has a white border - remove it</a></li>
+<li><a class="reference internal" href="#felxslider-show-arrows-in-mobile-sizes">Felxslider show arrows in mobile sizes</a></li>
+<li><a class="reference internal" href="#flexslider-put-caption-on-top-of-image">FlexSlider put caption on top of image</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#import-export-of-database-for-the-dces">Import/Export of database for the DCEs</a></li>
+<li><a class="reference internal" href="#svgs-are-still-a-hassle">SVGs are still a hassle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">bsggerapackage 1.1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">bsggerapackage Documentation</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2019, Thomas Hezel.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

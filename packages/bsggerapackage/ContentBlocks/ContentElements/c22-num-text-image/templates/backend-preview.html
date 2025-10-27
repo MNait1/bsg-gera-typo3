@@ -1,0 +1,27 @@
+<html data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Header">
+    <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">BEARBEITEN</cb:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+  
+    <f:sanitize.html>
+         <p>Graphische Nummer: {data.number}</p>
+        <p>
+            <f:format.crop maxCharacters="100" append=" …">{data.textarea}</f:format.crop>
+        </p>
+    </f:sanitize.html>
+      <f:for each="{data.image}" as="image" iteration="iterator">
+        <f:image image="{image}" width="250" /> -
+    </f:for>
+   
+</f:section>
+
+<f:section name="Footer">
+    zazuberlin/number-text-image
+</f:section>
+
+</html>

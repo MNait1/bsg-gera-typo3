@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+   <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-24T18:20:51Z" product-name="sitepackage">
+      <header>
+            <authorName>Thomas Hezel</authorName>
+            <authorEmail>info@zazu.berlin</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="templates.page.default.breadcrumb" xml:space="preserve">
+            <source>Yor are here:</source>
+            <target>Sie sind hier:</target>
+         </trans-unit>
+         <trans-unit id="templates.page.default.shariffShare" xml:space="preserve">
+            <source>You like these page? Here you can share it: </source>
+            <target>Ihnen gefällt diese Seite? Hier können Sie sie teilen: </target>
+         </trans-unit>
+         <trans-unit id="templates.page.default.visitUs" xml:space="preserve">
+            <source>Visit us on Instagram:</source>
+            <target>Besuchen Sie uns auf Instagram:</target>
+         </trans-unit>
+         <trans-unit id="templates.page.default.linkedinUs" xml:space="preserve">
+            <source>Here you find our LinkedIn account.</source>
+            <target>Hier kommen Sie zu unserem LinkedIn-Account.</target>
+         </trans-unit>
+         <trans-unit id="templates.page.default.xingUs" xml:space="preserve">
+            <source>Here you find our Xing account.</source>
+            <target>Hier kommen Sie zu unserem Xing-Account.</target>
+         </trans-unit>
+         <trans-unit id="templates.page.default.twitterUs" xml:space="preserve">
+            <source>Here you find our Twitter account.</source>
+            <target>Hier kommen Sie zu unserem Twitter-Account.</target>
+         </trans-unit>
+         <trans-unit id="templates.form.form.formName" xml:space="preserve">
+            <source>Contact Form</source>
+            <target>Kontaktformular</target>
+         </trans-unit>
+         <trans-unit id="templates.news.news.detail.prevArticle" xml:space="preserve">
+            <source>previous article:</source>
+            <target>vorherige Nachricht:</target>
+         </trans-unit>
+         <trans-unit id="templates.news.news.detail.nextArticle" xml:space="preserve">
+            <source>next article:</source>
+            <target>nächste Nachricht:</target>
+         </trans-unit>
+         <trans-unit id="templates.news.news.list.headline" xml:space="preserve">
+            <source>Aktuelles</source>
+            <target>News</target>
+         </trans-unit>
+        </body>
+    </file>
+</xliff>
+
+
+

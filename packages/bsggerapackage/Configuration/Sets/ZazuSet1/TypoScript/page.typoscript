@@ -1,0 +1,48 @@
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    #shortcutIcon = EXT:bsggerapackage/Resources/Public/Icons/favicon.ico
+
+    #id ins body-Tag
+    bodyTag >
+    bodyTagCObject = TEXT
+    bodyTagCObject.dataWrap = <body id="p{page:uid}" itemscope itemtype="http://schema.org/localBusiness">
+
+    meta.viewport = width=device-width, initial-scale=1.0
+    meta.author = zazu.berlin
+
+
+    // Part 1: Fluid template section
+    10 = PAGEVIEW
+    10 {
+        paths {
+            0 = EXT:bsggerapackage/Resources/Private/PageView/
+            10 = {$bsggerapackage.template_path}
+        }
+
+        dataProcessing {
+            # makes content elements available as {content} in Fluid template
+            10 = page-content
+
+            11 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            11 {
+              levels = 3
+              expandAll = 1
+              includeSpacer = 1
+              as = menuMain
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = list
+                special.value = 1
+                levels = 1
+                as = justHome
+            }
+        }
+
+    }
+}

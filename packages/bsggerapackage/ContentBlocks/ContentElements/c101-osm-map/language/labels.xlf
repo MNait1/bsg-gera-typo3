@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-10-21T08:25:47+00:00" product-name="zazuberlin/c101-osm-map">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>c101-osm-map</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Open-Street-Map-Leaflet-Map</source>
+			</trans-unit>
+			<trans-unit id="longiCenter.label">
+				<source>Longitude East Center</source>
+			</trans-unit>
+			<trans-unit id="longiCenter.description">
+				<source>Longitude for the center of the map e.g. 13.404954</source>
+			</trans-unit>
+			<trans-unit id="latiCenter.label">
+				<source>Latitude North Center</source>
+			</trans-unit>
+			<trans-unit id="latiCenter.description">
+				<source>Latitude for the center of the map e.g. 52.520008</source>
+			</trans-unit>
+			<trans-unit id="longi1.label">
+				<source>Longitude East Spot 1</source>
+			</trans-unit>
+			<trans-unit id="longi1.description">
+				<source>Longitude of the first spot e.group. 13.404954 </source>
+			</trans-unit>
+			<trans-unit id="lati1.label">
+				<source>Latitude North Spot 1</source>
+			</trans-unit>
+			<trans-unit id="lati1.description">
+				<source>Latitude of the first spot e.g. 52.520008</source>
+			</trans-unit>
+			<trans-unit id="longi2.label">
+				<source>Longitude East Spot 2</source>
+			</trans-unit>
+			<trans-unit id="longi2.description">
+				<source>Longitude of the second spot e.g. 13.404954 </source>
+			</trans-unit>
+			<trans-unit id="lati2.label">
+				<source>Latitude North Spot 2</source>
+			</trans-unit>
+			<trans-unit id="lati2.description">
+				<source>Latitude of the second spot e.g. 52.520008 </source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

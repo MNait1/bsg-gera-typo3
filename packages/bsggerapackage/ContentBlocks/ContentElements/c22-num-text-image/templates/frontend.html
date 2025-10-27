@@ -1,0 +1,19 @@
+<f:asset.css identifier="c22Css" href="{cb:assetPath()}/c22.css" />
+
+<!--c22 - col2TxtImg-->
+<div class="c22 wrapper center clearfix{f:if(condition: '{data.toggle}', then: ' bottomLine', else: '')}">
+    <article>
+
+        <div class="colLeft">
+            <div class="number">{data.number}</div>
+            <div class="textblock">
+                <f:format.html>{data.textarea}</f:format.html>
+            </div>
+        </div>
+        <div class="colRight">
+            <f:for each="{data.image}" as="image" iteration="iterator">
+                <f:image image="{image}" />
+            </f:for>
+        </div>
+    </article>
+</div><!-- END c22-->

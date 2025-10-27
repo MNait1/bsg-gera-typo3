@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-02-25UTC19:23:130">
+        <header>
+            <authorName>Thomas Hezel</authorName>
+            <authorEmail>film@inter.net</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="templates.page.default.breadcrumb" xml:space="preserve">
+            <source>Yor are here:</source>
+         </trans-unit>
+         <trans-unit id="templates.page.default.shariffShare" xml:space="preserve">
+            <source>You like these page? Here you can share it: </source>
+         </trans-unit>
+         <trans-unit id="templates.page.default.visitUs" xml:space="preserve">
+            <source>Visit our accounts:</source>
+         </trans-unit>
+         <trans-unit id="templates.page.default.linkedinUs" xml:space="preserve">
+            <source>Here you find our LinkedIn account.</source>
+         </trans-unit>
+         <trans-unit id="templates.page.default.xingUs" xml:space="preserve">
+            <source>Here you find our Xing account.</source>
+         </trans-unit>
+         <trans-unit id="templates.page.default.twitterUs" xml:space="preserve">
+            <source>Here you find our Twitter account.</source>
+         </trans-unit>
+         <trans-unit id="templates.form.form.formName" xml:space="preserve">
+            <source>Contact Form</source>
+         </trans-unit>
+         <trans-unit id="templates.news.news.detail.prevArticle" xml:space="preserve">
+            <source>previous article:</source>
+         </trans-unit>
+         <trans-unit id="templates.news.news.detail.nextArticle" xml:space="preserve">
+            <source>next article:</source>
+         </trans-unit>
+         <trans-unit id="templates.news.news.list.headline" xml:space="preserve">
+            <source>Aktuelles</source>
+         </trans-unit>
+        </body>
+    </file>
+</xliff>
+
+

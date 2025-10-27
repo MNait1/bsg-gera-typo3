@@ -1,0 +1,101 @@
+
+/**
+*
+*  c131
+*  image row, 3 different layouts
+*  Container
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.c131 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+
+
+.c131.bottomLine {
+    border-bottom: 1px solid var(--blue);
+}
+
+
+/*======= 576 ========= MEDIA QUERIES ======= Rand 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+.c131 img {
+    margin-bottom: 25px;
+}
+
+}
+
+/*======= 768========= MEDIA QUERIES ======== Rand 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .c131 figure {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .c131 .even img {
+        width: 31.83857%;
+        /*426 at 1338*/
+    }
+
+    /*make the big container bigger so it fits to the small ones in hight*/
+    .c131 .leftColBig,
+    .c131 .rightColBig {
+        width: 65.91928%;
+        height: 44.69357vw;
+        /* 598 to  1338*/
+        overflow: hidden;
+    }
+
+    /*make the img bigger in the big container so it fills the space*/
+    .c131 .leftColBig img,
+    .c131 .rightColBig img {
+        margin-bottom: 0;
+        width: 102%;
+    }
+
+    .c131 .rightColSmall,
+    .c131 .leftColSmall {
+        width: 31.83857%;
+        /*426 at 1338*/
+    }
+
+    /*adjusting the horizontal white space in % according to the full viewport*/
+    .c131 img {
+        margin-bottom: 2.14592vw;
+        /*30 at 1398 - % of the viewport width*/
+    }
+
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== Rand 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== Rand 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+ 
+    .c131 img {
+        margin-bottom: 30px;
+        /*fix from here in relation to viewport*/
+    }
+
+    .c131 .leftColBig,
+    .c131 .rightColBig {
+        height: 598px;
+    }
+
+}
+
+
+/*END-c131*/

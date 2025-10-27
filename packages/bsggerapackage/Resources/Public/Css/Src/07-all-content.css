@@ -1,0 +1,635 @@
+@charset "UTF-8";
+
+/**
+*
+* Here all content css except:
+* DCEs -> dce.css
+* Header -> layout.css,
+* Footer and Social Media -> template.css
+*
+* sitepackage © by Thomas Hezel, zazu.berlin 20190509
+**/
+
+/**
+*
+* COOKIES
+*
+**/
+/*cookies V8*/
+#tx_cookies_inner.collapse {
+    bottom: -40px;
+}
+
+#tx_cookies_inner.collapse.show {
+    bottom: 0;
+}
+
+
+#tx_cookies_inner {
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+#tx_cookies_inner h3 {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#tx_cookies input[type="submit"],
+#tx_cookies #tx_cookies_close,
+#tx_cookies #tx_cookies_showPermanent {
+    background: #003b7f;
+    color: #fff;
+}
+
+#tx_cookies #tx_cookies_showPermanent {
+    font-size: 0.8em;
+    right: 10px;
+    left: auto;
+    top: auto;
+    bottom: 0;
+    position: fixed;
+}
+
+#tx_cookies #tx_cookies_showPermanent .btn-secondary {
+    background: #ddd;
+}
+
+#tx_cookies .typo3-messages {
+    font-size: 0.8em;
+    margin-top: 10px;
+    list-style-type: none;
+    text-align: right;
+    color: #003b7f;
+}
+
+#tx_cookies .typo3-messages h4 {
+    display: none;
+}
+
+
+
+/**
+*
+*  Kontaktformular - Kontakt page id 10
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.kontakt {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.kontakt h2 {
+    margin-bottom: 1em;
+}
+
+.kontakt button {
+    border: solid 2px #5c2466;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 10px 10px 10px;
+}
+
+.kontakt button:hover {
+    background-color: rgba(16, 161, 199, 0.2);
+}
+
+.kontakt input,
+.kontakt textarea {
+    width: 100%;
+}
+
+.kontakt .form-group {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.kontakt input {
+    height: 2.1em;
+}
+
+.confirmation article {
+    display: block;
+    padding: 1.5em;
+    border: solid 2px rgba(149, 222, 17, 1);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.input.name::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a,.b%7Bfill:none;stroke:%2395de11;stroke-linejoin:round;stroke-width:2px;%7D.a%7Bstroke-linecap:round;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EPerson%3C/title%3E%3Cpath class='a' d='M66.61,65.49l-1.43-16.6c-.74-8.1-5.6-9-5.6-9s-5.78-1.5-11.41-2.44l0,0C47.21,42.7,43.6,46.61,38,46.61s-9.15-4.06-10.15-9.18l0,0c-5.63.94-11.37,2.44-11.37,2.44s-4.87.9-6,9L9.42,65.49'/%3E%3Cpath class='b' d='M38,1.54C26.22,1.54,25.57,9,26.39,18S32.68,34.52,38,34.52,48.82,27.1,49.64,18,49.81,1.54,38,1.54Z'/%3E%3Cpath class='a' d='M32.38,14s7.49,1.05,9.82-4.66c0,0,2.51,4.62,6.17,4.62'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.input.firma::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a,.b,.c%7Bfill:none;stroke:%2395de11;stroke-width:2px;%7D.a,.b%7Bstroke-miterlimit:10;%7D.b%7Bstroke-linecap:round;%7D.c%7Bstroke-linejoin:round;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EFirma%3C/title%3E%3Cline class='a' x1='30.88' y1='16.84' x2='45.1' y2='16.84'/%3E%3Cline class='a' x1='30.88' y1='24.84' x2='45.1' y2='24.84'/%3E%3Cline class='a' x1='30.88' y1='32.84' x2='45.1' y2='32.84'/%3E%3Cline class='a' x1='30.88' y1='48.84' x2='45.1' y2='48.84'/%3E%3Cline class='a' x1='30.88' y1='56.84' x2='45.1' y2='56.84'/%3E%3Cline class='a' x1='30.88' y1='40.84' x2='45.1' y2='40.84'/%3E%3Cline class='a' x1='30.88' y1='64.84' x2='45.1' y2='64.84'/%3E%3Cline class='a' x1='12.22' y1='48.84' x2='20.11' y2='48.84'/%3E%3Cline class='a' x1='12.22' y1='56.84' x2='20.11' y2='56.84'/%3E%3Cline class='a' x1='12.22' y1='40.84' x2='20.11' y2='40.84'/%3E%3Cline class='a' x1='12.22' y1='64.84' x2='20.11' y2='64.84'/%3E%3Cline class='a' x1='55.73' y1='48.84' x2='63.56' y2='48.84'/%3E%3Cline class='a' x1='55.73' y1='56.84' x2='63.56' y2='56.84'/%3E%3Cline class='a' x1='55.73' y1='64.84' x2='63.56' y2='64.84'/%3E%3Cline class='b' x1='37.96' y1='1.34' x2='37.96' y2='8.5'/%3E%3Cpath class='c' d='M25.36,66.65V11.88a3,3,0,0,1,3-3h19.2a3,3,0,0,1,3,3V66.65'/%3E%3Cpath class='c' d='M6.74,66.65V35.51a3,3,0,0,1,3-3H20.11'/%3E%3Cpath class='c' d='M69.3,66.65V43.6a3,3,0,0,0-3-3H55.73'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.input.subject::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:%2395de11;stroke-linejoin:round;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EStift%3C/title%3E%3Cpath class='a' d='M58.56,41.79,68.73,65,43.61,59.53,8.67,32.08c-1.93-1.52-1.8-4.93.28-7.59l6.74-8.57c2.09-2.66,5.38-3.59,7.3-2.08Z'/%3E%3Cline class='a' x1='55.68' y1='42.29' x2='43.81' y2='57.39'/%3E%3Cline class='a' x1='65.26' y1='57.95' x2='61.3' y2='62.86'/%3E%3Cline class='a' x1='49.88' y1='49.35' x2='30.1' y2='33.81'/%3E%3Cline class='a' x1='16.49' y1='37.57' x2='30.18' y2='20.14'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.input.email::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%2395de11;%7D.b%7Bfill:none;stroke:%2395de11;stroke-miterlimit:10;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EMail%3C/title%3E%3Cpath class='a' d='M63.26,26.05a2.25,2.25,0,0,1,2.25,2.25V61.8a2.25,2.25,0,0,1-2.25,2.25H12.78a2.26,2.26,0,0,1-2.26-2.25V28.3a2.26,2.26,0,0,1,2.26-2.25H63.26m0-2H12.78A4.27,4.27,0,0,0,8.52,28.3V61.8a4.27,4.27,0,0,0,4.26,4.25H63.26a4.26,4.26,0,0,0,4.25-4.25V28.3a4.26,4.26,0,0,0-4.25-4.25Z'/%3E%3Cpolyline class='b' points='10.64 25.71 38.02 47.22 65.39 25.71'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.input.telephone::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a,.b%7Bfill:none;stroke:%2395de11;stroke-width:2px;%7D.a%7Bstroke-linecap:square;stroke-linejoin:round;%7D.b%7Bstroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ETelefon%3C/title%3E%3Cpath class='a' d='M53.51,47.55a3.49,3.49,0,0,0-4-.23l-5.77,3.19a98.69,98.69,0,0,1-8.95-8h0l-.05,0,0,0h0a97.7,97.7,0,0,1-8-8.94l3.18-5.77a3.52,3.52,0,0,0-.22-4l-6.38-9.56a2.58,2.58,0,0,0-2.5-1.29c-1.75.08-6.91,4.94-6.91,4.94-2.73,2.42-2.13,4.55-2.13,4.55,1.84,13,15.51,25.53,16.56,26.62,1.41,1.31,13.62,14.72,26.62,16.55,0,0,2.12.61,4.55-2.12,0,0,4.86-5.16,4.94-6.91a2.57,2.57,0,0,0-1.3-2.5Z'/%3E%3Cpath class='b' d='M40.79,22.74a13.06,13.06,0,0,1,12.7,12.65'/%3E%3Cpath class='b' d='M41.05,15.5A20.29,20.29,0,0,1,60.72,35'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.input.message::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:%2395de11;stroke-linejoin:round;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EStift%3C/title%3E%3Cpath class='a' d='M58.56,41.79,68.73,65,43.61,59.53,8.67,32.08c-1.93-1.52-1.8-4.93.28-7.59l6.74-8.57c2.09-2.66,5.38-3.59,7.3-2.08Z'/%3E%3Cline class='a' x1='55.68' y1='42.29' x2='43.81' y2='57.39'/%3E%3Cline class='a' x1='65.26' y1='57.95' x2='61.3' y2='62.86'/%3E%3Cline class='a' x1='49.88' y1='49.35' x2='30.1' y2='33.81'/%3E%3Cline class='a' x1='16.49' y1='37.57' x2='30.18' y2='20.14'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+/*submit*/
+.btn-primary::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 67'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:%2395de11;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ESenden%3C/title%3E%3Cpath class='a' d='M21.9,65.27H65.82a3.19,3.19,0,0,0,3.06-2.67l4.19-29.9A2.29,2.29,0,0,0,70.75,30H26.18L46.81,49l24.62-17.8'/%3E%3Cline class='a' x1='35.58' y1='55.99' x2='14.02' y2='55.99'/%3E%3Cline class='a' x1='30.83' y1='48.04' x2='2.94' y2='48.04'/%3E%3Cline class='a' x1='23.88' y1='40.1' x2='11.24' y2='40.1'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {
+    .kontakt {
+        text-align: left;
+    }
+
+    .kontakt-fields {
+        column-count: 2;
+        column-gap: 80px;
+        margin: 0;
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+    }
+
+    .kontakt .form-group {
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+        text-align: left;
+    }
+
+    .kontakt .input {
+        text-align: center;
+    }
+
+    .kontakt .btn-group {
+        text-align: left;
+    }
+
+    .kontakt .form-check,
+    .kontakt .checkbox {
+        text-align: left;
+    }
+
+    .kontakt textarea {
+        height: 190px;
+    }
+
+    /*submit button down*/
+    .kontakt .actions {
+        margin-top: 200px;
+    }
+
+    .kontakt .btn-primary {
+        margin-left: -120px;
+    }
+
+    .kontakt input[type="checkbox"] {
+        width: 30px;
+        height: 30px;
+        margin-right: 30px;
+    }
+
+}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {
+    .kontakt textarea {
+        height: 198px;
+    }
+}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/*END-Kontaktform - form */
+
+
+
+/* ================== NEWS Aktuelles + single news===============  NEWS ================================ */
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+/*nächste und vorherige Nachricht*/
+
+.news-single ul.prev-next {
+    list-style: none outside none;
+    padding: 0;
+    margin: 1em 0 0 0;
+    border: 0;
+    float: left;
+}
+
+.news-single .prev-next li {
+    margin-top: 0.5em;
+}
+
+/*überschreiben der Extension CSS*/
+
+.news .article {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+/*LIST*/
+.news-list-all h1 {
+    margin-bottom: 0.4em;
+}
+
+.news-list-all hr {
+    margin: 0 0 0.5em 0;
+}
+
+.news-list-all {
+    padding-top: 10px;
+    margin-bottom: 2em;
+}
+
+.news-list-all p {
+    margin-bottom: 0.4em;
+}
+
+.news-list-all .more {
+    color: #10a1c7;
+}
+
+.news-list-text {
+    float: left;
+    width: 79.03225806451613%;
+    /* 245 / 310 */
+}
+
+.news-list-teaser p {
+    margin-bottom: 5px;
+}
+
+.news-list-item a {
+    text-decoration: none;
+}
+
+.news-list-item h2 {
+    font-size: 1em;
+    line-height: 1.1em;
+    margin-top: 0.2em;
+}
+
+.news-list-date {
+    float: left;
+    width: 20.967741935483872%;
+    /* 65 / 310 */
+    font-size: 0.7em;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: #ccc;
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+
+.news-list-container .tag {
+    display: block;
+    font-size: 3.5em;
+    color: #95DE11;
+    margin: -1px 0 4px 0;
+    line-height: 100%;
+}
+
+.news-list-img {
+    display: none;
+}
+
+.newsAside {
+    display: none;
+}
+
+/*News Single*/
+
+/*padding corresponds to margin news-list-date*/
+.news-single-item .teaser-text {
+    padding-top: 10px;
+    line-height: 1.4em;
+}
+
+
+.news-single-item {
+    margin-top: 10px;
+    margin-bottom: 1em;
+}
+
+.news-single-item h1 {
+    margin-top: 20px;
+}
+
+.news-single-item a {
+    text-decoration: none;
+}
+
+/*overwrite css news extension long setting - here width*/
+.news-single .article .news-img-wrap img {
+    width: auto;
+    /*now zazu width - container is max 599px(50%) */
+    max-width: 100%;
+}
+
+.news-single .article .news-img-wrap {
+    width: 100%;
+    margin: 0;
+}
+
+.news-single .news-img-wrap img {
+    padding: 0 0 10px 0;
+    height: auto;
+}
+
+/*news single backlink*/
+.news-single .news-backlink-wrap {
+    float: right;
+    margin: 0.5em 0 0 10px;
+}
+
+.news-single .news-backlink-wrap a {
+    color: #009ee3;
+}
+
+/*prev-next single*/
+.news-single-item .prev-next {
+    color: #009ee3;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+
+@media only screen and (min-width: 576px) {
+    .news-list-date {
+        width: 17.094017094017094%;
+        /*80px/468px*/
+        font-size: 0.8em;
+    }
+
+    .news-list-text {
+        width: 65.8119658119658%;
+        /*308px/468px*/
+    }
+
+    .news-list-img {
+        display: block;
+        float: right;
+        width: 14.529914529914532%;
+        /*68px/468px*/
+        margin-bottom: 10px;
+    }
+
+    .news-list-img img {
+        float: right;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+
+@media only screen and (min-width: 990px) {
+
+    /*news-list p8*/
+    .newsAside {
+        display: block;
+        float: left;
+        width: 23.362445414847162%;
+        /* 214 / 916 */
+        margin-left: 4.366812227074235%;
+        /*40px/916px*/
+    }
+
+    .newsAside h2 {
+        margin-top: 1.09em;
+    }
+
+    .news-list-all {
+        float: left;
+        width: 72.27074235807859%;
+        /*662px/916px*/
+    }
+
+    .news-list-date {
+        width: 11.436950146627565%;
+        /*78px/682px*/
+    }
+
+    .news-list-text {
+        width: 65.6891495601173%;
+        /*448px/682px*/
+    }
+
+    .news-list-img {
+        width: 19.941348973607038%;
+        /*136px/682px*/
+    }
+
+    /*news single p9*/
+    .news-single .news-text-wrap,
+    .news-single .teaser-text {
+        width: 57.42358078602619%;
+        /*526px/916px*/
+    }
+
+    /*teaster-text for list*/
+    .news-list-all .teaser-text {
+        width: 100%;
+    }
+
+    .news-list-all .newsCont {
+        margin-top: 2em;
+    }
+
+    /*results in max-with for the image of 599px*/
+    .news-single .article .news-img-wrap {
+        width: 40.39301310043668%;
+        /*370px/916px*/
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+
+@media only screen and (min-width: 2512px) {}
+
+/* ===== =======  END-NEWS responsive ==============================*/
+
+
+/**
+*
+*  Datenschutz Impressum
+*
+**/
+
+/*======= 320  padding l,r  15  = 290 ===*/
+
+.datenschutz,
+.impressum {
+    padding-bottom: 2em;
+}
+
+.datenschutz h2,
+.impressum h2 {
+    margin-top: 1em;
+}
+
+.text_rot {
+    color: red;
+}
+
+.aendern {
+    color: red;
+}
+
+.datenschutz .list_abc {
+    list-style-type: lower-alpha
+}
+
+.datenschutz .list_none {
+    list-style-type: none
+}
+
+.datenschutz .abstand1 li {
+    margin-bottom: 1em;
+}
+
+.datenschutz .list_abc_abstand {
+    list-style-type: lower-alpha;
+}
+
+.datenschutz .list_abc_abstand li {
+    margin-bottom: 1em;
+}
+
+.datenschutz h4 {
+    margin-bottom: 0;
+}
+
+.datenschutz p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.datenschutz article ul {
+    list-style-type: none;
+}
+
+.datenschutz article ul li:before {
+    content: '\2014';
+    position: absolute;
+    margin-left: -20px;
+}
+
+/*======= 576 ========= MEDIA QUERIES ======= border 15 = 546 ===*/
+@media only screen and (min-width: 576px) {}
+
+/*======= 768 ========= MEDIA QUERIES ======= border 15 = 738 ===*/
+@media only screen and (min-width: 768px) {}
+
+/*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
+@media only screen and (min-width: 990px) {
+
+    /*Impressum*/
+    .impLeftCol {
+        float: left;
+        width: 48.90829694323144%;
+        /* 448 / 916 */
+    }
+
+    .impRightCol {
+        float: left;
+        width: 48.90829694323144%;
+        /* 448 / 916 */
+        margin-left: 2.1834061135371177%;
+        /* 20 / 916 */
+    }
+
+    /*Datenschutz*/
+    .datenschutzLeftCol {
+        float: left;
+        width: 48.90829694323144%;
+        /* 448 / 916 */
+        padding-right: 2.1834061135371177%;
+        /* 20 / 916 */
+    }
+
+    .datenschutzRightCol {
+        float: left;
+        width: 48.90829694323144%;
+        /* 448 / 916 */
+        margin-left: 2.1834061135371177%;
+        /* 20 / 916 */
+        padding-left: 2.1834061135371177%;
+        /* 20 / 916 */
+    }
+}
+
+/*======= 1398 ======= MEDIA QUERIES ======== border 30 = 1338 ==*/
+@media only screen and (min-width: 1398px) {}
+
+/*======= 2512 ======= MEDIA QUERIES ==== border 151-45 = 2396 ==*/
+@media only screen and (min-width: 2512px) {}
+
+/*END-Datenschutz Impressum*/
+
+
+
+/*###########################################################################*/
+
+
+/**
+*
+* for special pages extra css for the content blocks
+*
+**/

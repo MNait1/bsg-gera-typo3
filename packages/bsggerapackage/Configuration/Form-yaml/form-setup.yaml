@@ -1,0 +1,21 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:bsggerapackage/Resources/Private/Templates/Form/'
+                partialRootPaths:
+                  100: 'EXT:bsggerapackage/Resources/Private/Partials/Form/'
+                layoutRootPaths:
+                  100: 'EXT:bsggerapackage/Resources/Private/Layouts/Form/'
+
+      persistenceManager:
+        allowedExtensionPaths:
+          10: EXT:bsggerapackage/Configuration/Form-yaml/Forms/
+        #set this to false in production mode
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true

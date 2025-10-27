@@ -1,0 +1,24 @@
+<f:asset.css identifier="c24Css" href="{cb:assetPath()}/c24.css" />
+
+<!-- c24-col2Txt-->
+<div class="c24 wrapper center clearfix">
+    <f:if condition="{data.toggle}">
+        <h1 class="overAll">{data.header}</h1>
+    </f:if>
+    <article>
+        <div class="leftCol">
+            <f:format.html>{data.textarea1}</f:format.html>
+        </div>
+        <div class="rightCol">
+            <f:format.html>{data.textarea2}</f:format.html>
+            <f:if condition="{data.linktext}">
+                <p class="link">
+                    <f:link.typolink parameter="{data.link}">
+                        <f:format.case mode="upper">{data.linktext}</f:format.case>
+                    </f:link.typolink>
+                </p>
+            </f:if>
+        </div>
+    </article>
+</div>
+<!-- END c24-->

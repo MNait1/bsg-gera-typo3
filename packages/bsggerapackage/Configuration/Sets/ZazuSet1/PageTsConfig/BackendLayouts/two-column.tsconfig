@@ -1,0 +1,36 @@
+#
+#  BACKENDLAYOUT two-column
+#
+
+mod {
+    web_layout {
+        BackendLayouts {
+            two-column {
+              title = LLL:EXT:bsggerapackage/Resources/Private/Language/locallang_be.xlf:backendLayout.2_column.title
+              icon = EXT:bsggerapackage/Resources/Public/Icons/bel-2-col.png
+                config {
+                    backend_layout {
+                        colCount = 2
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                      name = LLL:EXT:bsggerapackage/Resources/Private/Language/locallang.xlf:backendLayout.2_column.columnName.colPos_0
+                                      colPos = 0
+                                      identifier = main
+                                    }
+                                    2 {
+                                      name = LLL:EXT:bsggerapackage/Resources/Private/Language/locallang.xlf:backendLayout.2_column.columnName.colPos_2
+                                      colPos = 2
+                                      identifier = sidebar
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

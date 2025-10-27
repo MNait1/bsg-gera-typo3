@@ -1,0 +1,12 @@
+<li>
+    <f:if condition="{breadItem.current}">
+        <f:then>
+            » <span class="current">{breadItem.title}</span>
+        </f:then>
+        <f:else>
+            » <a href="{breadItem.link}" target="_top" title="{breadItem.title}">
+                {breadItem.title}
+            </a>
+        </f:else>
+    </f:if>
+</li>

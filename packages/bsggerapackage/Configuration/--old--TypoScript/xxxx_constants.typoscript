@@ -1,0 +1,111 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+
+#sitepackage constants own category
+# customcategory=bsggerapackage=bsggerapackage
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:bsggerapackage/Resources/Private/Layouts/ContentElements/
+        templateRootPath = EXT:bsggerapackage/Resources/Private/Templates/ContentElements/
+        partialRootPath = EXT:bsggerapackage/Resources/Private/Partials/ContentElements/
+    }
+}
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        #cat=bsggerapackage//m; type=string; label= fluidtemplate Page - Path to Layouts/Page/
+        layoutRootPath = EXT:bsggerapackage/Resources/Private/Layouts/Page/
+        #cat=bsggerapackage//n; type=string; label= fluidtemplate Page- Path to Partials/Page/
+        partialRootPath = EXT:bsggerapackage/Resources/Private/Partials/Page/
+        #cat=bsggerapackage//o; type=string; label= fluidtemplate Page - Path to Templates/Page/
+        templateRootPath = EXT:bsggerapackage/Resources/Private/Templates/Page/
+
+        dataProcessing {
+            #cat=bsggerapackage//p; type=string; label= footer menue starting page uid (1)
+            40.special.value = 1
+            #cat=bsggerapackage//q; type=string; label= meta menu uid folder
+            50.special.value = 12
+        }
+    }
+    meta {
+        #cat=bsggerapackage//i; type=string; label= Meta Head Description
+        description = This is the basic Web-Setup of fliesen.berlin
+        #cat=bsggerapackage//i; type=string; label= Author of the website
+        author = Thomas Hezel
+        #cat=bsggerapackage//j; type=string; label= Meta Head Keywords
+        keywords = Data Democracy and Digitalisation
+    }
+    tracking {
+        google {
+            #cat=bsggerapackage//k; type=string; label= Google tracking ID for this site
+            trackingID =
+            #cat=bsggerapackage//l; type=string; label= Google anonymize
+            anonymizeIp = 1
+        }
+    }
+}
+
+
+
+##############
+### CONFIG ###
+##############
+
+config {
+    #cat=bsggerapackage//d; type=boolean; label= no caching, only for development phase
+    no_cache = 0
+
+    #cat=bsggerapackage//e; type=boolean; label= Show Admin Panel in FE
+    admPanel = 0
+    #admPanel must also be additonal enabled for the user in TSconfig
+
+    #cat=bsggerapackage//g; type=string; label= the JS for the email decryption, 'external' for in a temp-file
+    removeDefaultJS = 0
+
+    #cat=bsggerapackage//h; type=boolean; label= Send Cache Headers - true "1" for Google
+    sendCacheHeaders = 1
+
+}
+
+
+
+###########
+# Globals #
+###########
+#cat=bsggerapackage//b; type=string; label= Page of the news FlexSlider, only one page here
+globals.page.newsSlider = 1
+#cat=bsggerapackage//c; type=string; label= Page/s of the normal FlexSlider, comma seperated list of page IDs
+globals.page.normalSlider = 2
+
+
+
+###########
+# News #
+###########
+newsBrowse {
+    settings {
+        #cat=bsggerapackage//r; type=string; label= news browse player Detail Pid
+        detailPid = 9
+        #cat=bsggerapackage//s; type=string; label= news browse player Starting Point Folder
+        startingpoint = 11
+    }
+}
+
+
+tx_news {
+        settings {
+            #cat=bsggerapackage//t; type=string; label= News List Back Pid
+            backPid = 8
+            #cat=bsggerapackage//u; type=string; label= News List Detail Pid
+            detailPid = 9
+        }
+}

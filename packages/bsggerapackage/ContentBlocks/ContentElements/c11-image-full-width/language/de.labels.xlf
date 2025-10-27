@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="en" target-language="de" date="2025-08-08T18:04:46+00:00" product-name="zazuberlin/d11-image-full-width">
+        <header/>
+        <body>
+            <trans-unit id="title">
+                <source>c11 - one image - full width</source>
+                <target>c11 - Ein Bild - volle Breite</target>
+            </trans-unit>
+            <trans-unit id="description">
+                <source>One image full width of the screen.</source>
+                <target>Ein Bild über die volle Bildschirmbreite.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

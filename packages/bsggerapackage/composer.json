@@ -1,0 +1,38 @@
+{
+    "name": "zazuberlin/bsggerapackage",
+    "type": "typo3-cms-extension",
+    "description": "Sitepackage from zazu.berlin, based on fluid and the sets system.",
+    "homepage": "https://zazu.berlin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Thomas Hezel",
+            "role": "Developer",
+            "email": "info@zazu.berlin"
+        }
+    ],
+    "keywords": [
+      "TYPO3 CMS",
+      "zazu-berlin",
+      "sitepackage",
+      "fluid",
+      "menu processor"
+    ],
+    "repositories": [
+    ],
+    "require": {
+      "typo3/minimal": "^13.4",
+      "typo3/cms-rte-ckeditor": "^13.4",
+      "typo3/cms-fluid-styled-content": "^13.4"
+    },
+    "autoload": {
+      "psr-4": {
+        "Zazuberlin\\bsggerapackage\\": "Classes/"
+      }
+    },
+    "extra": {
+      "typo3/cms": {
+         "extension-key": "bsggerapackage"
+      }
+   }
+}
