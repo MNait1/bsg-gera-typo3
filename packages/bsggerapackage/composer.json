@@ -1,19 +1,19 @@
 {
-    "name": "zazuberlin/bsggerapackage",
+    "name": "nobrain/bsggerapackage",
     "type": "typo3-cms-extension",
-    "description": "Sitepackage from zazu.berlin, based on fluid and the sets system.",
-    "homepage": "https://zazu.berlin",
+    "description": "Sitepackage from nobrain, based on fluid and the sets system.",
+    "homepage": "https://drv-bund.de",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Thomas Hezel",
+            "name": "Nait Bouih El Mahdi",
             "role": "Developer",
-            "email": "info@zazu.berlin"
+            "email": "mahdinaitbouih@gmail.com"
         }
     ],
     "keywords": [
       "TYPO3 CMS",
-      "zazu-berlin",
+      "nobrain",
       "sitepackage",
       "fluid",
       "menu processor"
@@ -27,7 +27,7 @@
     },
     "autoload": {
       "psr-4": {
-        "Zazuberlin\\bsggerapackage\\": "Classes/"
+        "Nobrain\\Bsggerapackage\\": "Classes/"
       }
     },
     "extra": {

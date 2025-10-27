@@ -1,4 +1,9 @@
 base: 'https://bsggera.ddev.site/'
+dependencies:
+  - typo3/fluid-styled-content
+  - zazuberlin/zazuset1
+  - typo3/form
+  - typo3/seo-sitemap
 languages:
   -
     title: Deutsch
