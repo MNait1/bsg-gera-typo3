@@ -4,9 +4,16 @@ group: default
 prefixFields: true
 prefixType: full
 fields:
-  -
-    identifier: header
+  
+  - identifier: header
+    label: Überschrift über alles
     useExistingField: true
+
+  - identifier: toggle
+    label: Überschrift über alles ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
 
   - identifier: textarea
     type: Textarea
