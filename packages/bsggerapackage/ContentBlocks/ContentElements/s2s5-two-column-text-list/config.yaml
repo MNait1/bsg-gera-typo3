@@ -6,11 +6,21 @@ prefixType: full
 fields:
   
   - identifier: header
-    label: Überschrift über alles
+    label: Überschrift über uns
     useExistingField: true
 
+  - identifier: header2
+    label: Überschrift Mitglieder
+    useExistingField: false
+
   - identifier: toggle
-    label: Überschrift über alles ja/nein
+    label: Überschrift über uns ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+
+  - identifier: toggle2
+    label: Überschrift Mitglieder ja/nein
     type: Checkbox
     renderType: checkboxToggle
     default: 0

@@ -1,11 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
 
-    <f:asset.css identifier="s2s5CSS" href="{cb:assetPath()}/s2s5.css" />
+<f:asset.css identifier="s2s5CSS" href="{cb:assetPath()}/s2s5.css" />
 
 <div class="c24 wrapper center clearfix">
     <f:if condition="{data.toggle}">
         <h1 class="overAll">{data.header}</h1>
+    </f:if>
+    <f:if condition="{data.toggle2}">
+        <h2 class="overAll">{data.header2}</h2>
     </f:if>
     <article>
         <div class="leftCol">
