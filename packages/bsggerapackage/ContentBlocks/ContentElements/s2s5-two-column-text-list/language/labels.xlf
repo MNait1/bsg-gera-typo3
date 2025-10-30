@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Uberuns/UnsereMitglieder</source>
+				<source>s2s5-Über uns/Unsere Mitglieder</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source>Description for Content Element nobrain/s2s5-two-column-text-list</source>
+				<source>Geben Sie hier Ihren "Über uns" Test ein und die Mitglieder dieser Sparte</source>
 			</trans-unit>
 		</body>
 	</file>
