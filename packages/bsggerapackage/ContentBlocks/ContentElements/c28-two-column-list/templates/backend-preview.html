@@ -1,8 +1,6 @@
-<html
-    data-namespace-typo3-fluid="true"
->
+<html data-namespace-typo3-fluid="true">
 
-<f:layout name="Preview"/>
+<f:layout name="Preview" />
 
 <f:section name="Header">
     <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">BEARBEITEN</cb:link.editRecord>
@@ -10,17 +8,20 @@
 
 <f:section name="Content">
     <h2>{data.header}</h2>
-    <f:for each="{data.listItems}" as="li" iteration="iterator">
-        <ol>
-            <li>
-                {li.text}
-            </li>
-        </ol>
-    </f:for>
+    <ol>
+        <f:for each="{data.listItems}" as="li" iteration="iterator">
+             <li>
+             {li.text}
+             </li>
+        </f:for>
+    </ol>
 </f:section>
 
+<f:comment>
 <f:section name="Footer">
-    zazuberlin/<f:translate key="{cb:languagePath()}:description" />
+    
+    <f:translate key="{cb:languagePath()}:description" />
 </f:section>
+</f:comment>
 
 </html>

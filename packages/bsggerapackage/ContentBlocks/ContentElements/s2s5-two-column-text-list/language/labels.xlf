@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-10-30T15:38:10+00:00" product-name="nobrain/s2s5-two-column-text-list">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Uberuns/UnsereMitglieder</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description for Content Element nobrain/s2s5-two-column-text-list</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
