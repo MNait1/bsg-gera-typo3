@@ -1,0 +1,29 @@
+name: nobrain/s2s5-two-column-text-list
+typeName: nobrain_s2s5twocolumntextlist
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  -
+    identifier: header
+    useExistingField: true
+
+  - identifier: textarea
+    type: Textarea
+    label: Text links
+    description: 'Text links'
+    enableRichtext: true
+    richtextConfiguration: zazu
+    rows: 40
+
+  - identifier: listItems
+    type: Collection
+    label: List Items
+    labelField: text
+    fields:
+      - identifier: text
+        type: Text
+        default: 'Default value'
+        min: 4
+        max: 15
+        required: true
