@@ -8,7 +8,6 @@
 
 :root {
     --drvgelb: #d3db2b;
-    --drvweiß: #dadbdc;
     --fontGrey: rgb(115, 119, 128);
     --blue: rgb(98, 180, 234); /*#62b4ea*/
     /*#62B4EA*/
@@ -105,50 +104,50 @@ html {
 }
 
 h1 {
-    font-family: 'Roboto, ralewayVar', Arial, Helvetica, sans-serif;
+    font-family: 'ralewayVar', Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 2.5em;
     margin-top: 2rem;
     margin-bottom: 0.67em;
     line-height: 1.2em;
-    color: var(--drvweiß);
+    color: var(--blue);
 }
 
 h2 {
-    font-family: 'Roboto, ralewayVar', Arial, Helvetica, sans-serif;
+    font-family: 'ralewayVar', Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 1.6666666666667em;
     /*30px*/
     margin-top: 2rem;
     margin-bottom: 0.67em;
     line-height: 1.2em;
-    color: var(--drvweiß);
+    color: var(--blue);
 }
 
 h3 {
-    font-family: 'Roboto, ralewayVar', Arial, Helvetica, sans-serif;
+    font-family: 'ralewayVar', Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 1.444444445em;
     /*26px*/
     line-height: 1.2em;
     margin-top: 2rem;
     margin-bottom: 0.67em;
-    color: var(--drvweiß);
+    color: var(--blue);
 }
 
 h4 {
-    font-family: 'Roboto, ralewayVar', Arial, Helvetica, sans-serif;
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 1.2222222223em;
     /*22px*/
     line-height: 1.2em;
     margin-top: 2rem;
     margin-bottom: 0.67em;
-    color: var(--drvweiß);
+    color: var(--blue);
 }
 
 h5 {
-    font-family: 'Roboto, ralewayVar', Arial, Helvetica, sans-serif;
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 1.111111112em;
     /*20px*/
@@ -160,7 +159,7 @@ h5 {
 
 
 h6 {
-    font-family: 'Roboto, ralewayVar', Arial, Helvetica, sans-serif;
+    font-family: 'noto_sansregular', Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 1em;
     line-height: 1.5em;

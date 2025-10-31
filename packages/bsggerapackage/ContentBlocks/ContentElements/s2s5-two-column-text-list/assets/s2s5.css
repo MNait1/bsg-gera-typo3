@@ -1,0 +1,80 @@
+#about-und-spieler {
+    color: whitesmoke;
+    padding: 4rem 1rem;
+}
+
+.background {
+        background-color: rgb(133, 97, 31, 0);
+
+}
+
+.background2 {
+    background: #6983A1;
+}
+
+#about-und-spieler .two-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+#about-und-spieler .about-text,
+#about-und-spieler .spieler-box {
+    flex: 1 1 40%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0rem 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#about-und-spieler h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Spieler-Liste */
+.spieler-liste {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.spieler-liste li {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.6rem;
+    border-radius: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+section {
+    position: relative;
+    padding: clamp(3rem, 5vw, 6rem) 1rem;
+}
+
+.section .container {
+    margin: 0 auto;
+}
+
+.section--solid {
+    background: var(--solid, #f4f6f8);
+    color: var(--solid-text, #0b1f36);
+}
+
+/* Grid für zwei Spalten mit Video und über uns */

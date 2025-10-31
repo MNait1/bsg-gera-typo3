@@ -1,24 +1,42 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
 
-    <f:asset.css identifier="s2s5CSS" href="{cb:assetPath()}/s2s5.css" />
+<f:asset.css identifier="s2s5CSS" href="{cb:assetPath()}/s2s5.css" />
 
-<div class="c24 wrapper center clearfix">
-    <f:if condition="{data.toggle}">
-        <h1 class="overAll">{data.header}</h1>
-    </f:if>
-    <article>
-        <div class="leftCol">
+<f:if condition="{data.toggle3}">
+    <f:then>
+        <section class="section background" id="about-und-spieler">
+    </f:then>
+    <f:else>
+        <section class="section background2" id="about-und-spieler">
+    </f:else>
+</f:if>
+<article class="center wrapper">
+    <div class="container two-col">
+
+        <div class="about-text">
+            <f:if condition="{data.toggle}">
+                <h2 class="overAll">{data.header}</h2>
+            </f:if>
             <f:format.html>{data.textarea}</f:format.html>
         </div>
-        <f:if condition="{data.listItems}">
-            <f:for each="{data.listItems}" as="item" iteration="iterator">
-                <li class="listItem {f:if(condition: '{iterator.isEven}', then: 'even', else: 'odd')}">
-                    <f:format.nl2br>{item.text}</f:format.nl2br>
-                </li>
-            </f:for>
-        </f:if>
-    </article>
-</div>
+
+        <div class="spieler-box">
+            <f:if condition="{data.toggle2}">
+                <h2 class="overAll">{data.header2}</h2>
+            </f:if>
+            <ul class="spieler-liste">
+                <f:if condition="{data.listItems}">
+                    <f:for each="{data.listItems}" as="item" iteration="iterator">
+                        <li class="listItem {f:if(condition: '{iterator.isEven}', then: 'even', else: 'odd')}">
+                            <f:format.nl2br>{item.text}</f:format.nl2br>
+                        </li>
+                    </f:for>
+                </f:if>
+            </ul>
+        </div>
+    </div>
+</article>
+</section>
 
 </html>
