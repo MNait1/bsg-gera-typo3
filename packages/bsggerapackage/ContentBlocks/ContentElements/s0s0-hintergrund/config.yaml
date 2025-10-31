@@ -1,0 +1,22 @@
+name: nobrain/s0s0-hintergrund
+typeName: nobrain_s0s0hintergrund
+group: default
+prefixFields: true
+prefixType: full
+fields:
+
+  - identifier: toggle2
+    label: Hintergrund ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0  
+
+  - identifier: image
+    useExistingField: true
+    label: Image
+    type: File
+    extendedPalette: false
+    minitems: 1
+    maxitems: 1
+    allowed: jpg, jpeg, png, gif, svg
+    description: 'Bild linke Spalte.'

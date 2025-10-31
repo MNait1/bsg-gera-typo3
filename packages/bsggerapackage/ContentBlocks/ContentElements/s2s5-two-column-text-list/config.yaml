@@ -10,6 +10,7 @@ fields:
     useExistingField: true
 
   - identifier: header2
+    type: Textarea
     label: Überschrift Mitglieder
     useExistingField: false
 
@@ -21,6 +22,12 @@ fields:
 
   - identifier: toggle2
     label: Überschrift Mitglieder ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0  
+
+  - identifier: toggle3
+    label: Hintergrundbild ja/nein
     type: Checkbox
     renderType: checkboxToggle
     default: 0

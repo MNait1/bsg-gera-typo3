@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Content">
+    <f:for each="{data.image}" as="image" iteration="iterator">
+        <f:image image="{image}" /> -
+    </f:for>
+</f:section>
+
+
+<f:section name="Footer">
+    Laden Sie hier ihren Hintergrund hoch und schalten sie diesen hier ein
+</f:section>
+
+
+</html>
