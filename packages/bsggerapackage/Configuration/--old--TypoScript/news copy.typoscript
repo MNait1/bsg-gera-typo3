@@ -69,4 +69,36 @@ plugin.tx_news._LOCAL_LANG.fr.back-link = retour à la liste
 
 ########## NEWS DCE ###########
 ###### browse News on HOME with Flexslider #########
+plugin.tx_news {
+  templateLayouts.10 = caseListBrowse
+}
+
+lib.newsBrowse = EXTBASEPLUGIN
+lib.newsBrowse {
+  extensionName = News
+  pluginName = Pi1
+  vendorName = GeorgRinger
+
+  settings < plugin.tx_news.settings
+  settings {
+        #only use top-news for the slider
+        topNewsRestriction = 1
+        limit = 999
+        cropMaxCharacters = 100
+        hidePagination = 1
+        #where to find the detail page
+        detailPid = 10
+        #override what is chosen in the plugin
+        overrideFlexformSettingsIfEmpty := addToList(detailPid)
+        #the news folder is starting point
+        startingpoint = 6
+        #choose the layout in fluid refering "if condition 10"
+        templateLayout = 10
+        list.media.image.maxWidth = 760
+        list.media.image.maxHeight = 760
+
+        defaultAction = list
+  }
+}
+
 
