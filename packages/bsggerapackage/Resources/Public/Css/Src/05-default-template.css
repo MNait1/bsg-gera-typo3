@@ -121,6 +121,20 @@
   justify-content: center;
   gap: 16px;
 }
+
+#metaNav {
+  float: none;
+  margin: 24px auto 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--blue);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+#metaNav li { float: none; padding: 0; border: 0; }
+
+
 #metaNav li {
   float: none;
   padding: 0;
