@@ -15,4 +15,24 @@ fields:
     enableRichtext: false
     rows: 1
 
+  - identifier: listItems
+    type: Collection
+    label: Buttons
+    description: 'Beliebig viele Buttons (Text + Link)'
+    minItems: 0
+    maxItems: 50
+    fields:
+    - identifier: link
+      type: Link
+      label: Link at the end
+      description: 'TypoLink (page/external/mail/url) for the link at the end'
+      required: false
+      default: ''
+    - identifier: linktext
+      type: Text
+      label: Link text 
+      description: 'Text des unteren Links'
+
+
+
 

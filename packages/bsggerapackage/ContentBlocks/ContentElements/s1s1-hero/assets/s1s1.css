@@ -1,0 +1,37 @@
+/* Allgemeiner Button-Stil */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* Hover-Effekt */
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Aktiver / Hauptbutton */
+.btn-primary {
+  background-color: #d9f200; /* helles Gelb-Grün */
+  border-color: #d9f200;
+  color: #000000;
+}
+
+/* Optionale Anpassung für mobile Geräte */
+@media (max-width: 768px) {
+  .btn {
+    display: block;
+    margin: 8px auto;
+    width: 80%;
+    text-align: center;
+  }
+}

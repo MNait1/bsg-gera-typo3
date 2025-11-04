@@ -28,15 +28,19 @@ TCEMAIN {
         }
     }
 
-    /*This is to choose news layouts from the plugin*/
-    tx_news.templateLayouts {
-        9 = newsLatest
-        10 = caseListBrowse
-        11 = caseDownloads
-    }
+    
+
 }
 
 
+/*This is to choose news layouts from the plugin*/
+tx_news.templateLayouts {
+        9 = newsLatest
+        10 = aktuelles
+    }
+
+
+    
 #############
 #### RTE ####
 #############

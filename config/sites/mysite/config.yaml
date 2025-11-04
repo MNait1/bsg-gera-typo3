@@ -4,6 +4,7 @@ dependencies:
   - zazuberlin/zazuset1
   - typo3/form
   - typo3/seo-sitemap
+  - georgringer/news
 languages:
   -
     title: Deutsch
