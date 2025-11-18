@@ -35,8 +35,8 @@ TCEMAIN {
 
 /*This is to choose news layouts from the plugin*/
 tx_news.templateLayouts {
-        9 = newsLatest
-        10 = aktuelles
+        9 = aktuelles
+        10 = topNews
     }
 
 
