@@ -1,0 +1,19 @@
+name: nobrain/s5s2
+typeName: nobrain_s5s2
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: header
+    useExistingField: true
+
+  - identifier: textarea1
+    type: Textarea
+    label: Textbereich
+    enableRichtext: true
+
+  - identifier: media
+    type: File
+    label: Medien (Bild oder Video)
+    allowed: 'jpg,jpeg,png,webp,mp4'
+    maxItems: 1

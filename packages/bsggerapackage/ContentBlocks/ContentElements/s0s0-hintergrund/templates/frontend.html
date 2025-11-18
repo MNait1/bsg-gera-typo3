@@ -3,19 +3,22 @@
 
 <f:asset.css identifier="s0s0CSS" href="{cb:assetPath()}/s0s0.css" />
 
-<div class="page-bg" aria-hidden="true">
-    <f:if condition="{data.toggle2}">
-        <f:then>
+
+<f:if condition="{data.toggle2}">
+
+    <f:then>
+        <div class="page-bg" aria-hidden="true">
             <f:for each="{data.image}" as="image" iteration="iterator">
                 <f:if condition="{iterator.isFirst}">
                     <div class="page-bg__image" style="background-image: url('{f:uri.image(image: image)}')"></div>
                 </f:if>
             </f:for>
-        </f:then>
-        <f:else>
-            <div class="page-bg2" aria-hidden="true"></div>
-        </f:else>
-    </f:if>
-</div>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="page-bg2" aria-hidden="true"></div>
+    </f:else>
+</f:if>
+
 
 </html>
