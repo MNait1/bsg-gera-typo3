@@ -9,12 +9,12 @@ languages:
   -
     title: Deutsch
     enabled: true
-    languageId: 0
-    base: /
     locale: de_DE.utf8
+    hreflang: de-DE
+    base: /
+    websiteTitle: ''
     navigationTitle: Deutsch
     flag: de
-    hreflang: de-DE
-    websiteTitle: ''
-rootPageId: 1
+    languageId: 0
+rootPageId: 26
 websiteTitle: ''
