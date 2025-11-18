@@ -9,7 +9,7 @@
 :root {
     --drvgelb: #d3db2b;
     
-    --fontGrey: rgb(115, 119, 128);
+    --fontGrey: rgb(0, 0, 0);
     --blue: rgb(98, 180, 234); /*#62b4ea*/
     /*#62B4EA*/
     --brightBlue: #EDF6FE;
@@ -184,7 +184,7 @@ a {
 
 a,
 a:visited {
-    color: #000;
+    color: #083163;
 }
 
 a:hover {

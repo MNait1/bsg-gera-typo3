@@ -3,15 +3,18 @@
     data-namespace-typo3-fluid="true">
 <f:layout name="General" />
 <!--Templates/News/List.html changed zazu 20170326-->
+
+
 <f:section name="content">
   <!--TYPO3SEARCH_end-->
   <f:if condition="{news}">
     <f:then>
+
   <f:comment>The wrapper-class only for not-latest</f:comment>   
-    <f:if condition="{settings.templateLayout} != 9">
-        <div class="news-list-container wrapper clearfix" id="news-container-{contentObjectData.uid}">
+    <f:if condition="{settings.templateLayout} == 9">
+        <div  id="news-container-{contentObjectData.uid}">
         <div class="center">
-          <div class="news-list-all">
+          <div >
     </f:if>
 
         <f:if condition="{settings.hidePagination}">
