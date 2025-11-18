@@ -6,4 +6,4 @@ nbproject
 /vendor
 /public/*
 !/public/.htaccess
-/config
+/config/sites/mysite/config.yaml
