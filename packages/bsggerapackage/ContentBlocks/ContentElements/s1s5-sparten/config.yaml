@@ -1,0 +1,57 @@
+name: nobrain/s1s5-sparten
+typeName: nobrain_s1s5sparten
+group: default
+prefixFields: true
+prefixType: full
+
+fields:
+  - identifier: header
+    label: Gesamtüberschrift
+    useExistingField: true
+
+  - identifier: toggle
+    label: Gesamtüberschrift anzeigen?
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 1
+
+  - identifier: items
+    label: Sparten-Karten
+    type: Collection
+    minitems: 1
+    maxitems: 16
+    fields:
+      - identifier: image
+        label: Bild
+        type: File
+        maxitems: 1
+        allowed: jpg, jpeg, png, gif, webp
+        description: 'Kartenbild'
+
+      - identifier: title
+        label: Überschrift
+        type: Text
+        description: 'Titel der Sparte (z. B. Fußball)'
+
+      - identifier: text
+        label: Text
+        type: Textarea
+        enableRichtext: false
+        rows: 6
+        description: 'Kurzbeschreibung der Sparte'
+
+      - identifier: link
+        label: (Optional) Link
+        type: Link
+        description: 'Verlinkung zur Detailseite oder extern'
+
+      - identifier: linktext
+        label: (Optional) Link-Text
+        type: Text
+        default: 'Mehr erfahren →'
+
+  - identifier: toggleLine
+    label: Blaue Linie am Ende ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
