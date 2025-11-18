@@ -194,6 +194,7 @@ we need to add a clear after the container. */
 #mainMenuBox nav a:hover {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 20%;
+    height: 100%;
 }
 
 /* Hide Dropdowns by Default
