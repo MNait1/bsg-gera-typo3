@@ -1,0 +1,23 @@
+<html
+    data-namespace-typo3-fluid="true"
+>
+
+<f:layout name="Preview"/>
+
+<f:section name="Header">
+    <cb:link.editRecord uid="{data.uid}" table="{data.mainType}"><f:translate key="{cb:languagePath()}:editContentBlock" /></cb:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+     <f:translate key="{cb:languagePath()}:amountOfImages" />: {data.image}<br>
+    <f:for each="{data.image}" as="image" iteration="iterator">
+        <f:image image="{image}" width="250" /> - 
+    </f:for>
+</f:section>
+
+
+<f:section name="Footer">
+    zazuberlin/flexslider
+</f:section>
+
+</html>

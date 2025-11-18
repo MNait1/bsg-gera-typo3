@@ -1,0 +1,47 @@
+<f:asset.script identifier="jQeuery" src="EXT:bsggerapackage/Resources/Public/JavaScript/Min/jquery-3.3.1.min.js" />
+<f:asset.script identifier="flexSliderJs" src="{cb:assetPath()}/FlexSlider-2.7.2/jquery.flexslider-min.js" />
+
+<f:asset.script identifier="flexsliderInit">
+    $(document).ready(function() {
+    $('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    pauseOnHover: true,
+    slideshow: true,
+    controlNav: "thumbnails"
+    });
+    });
+</f:asset.script>
+
+<f:asset.css identifier="flexsliderCss" href="{cb:assetPath()}/FlexSlider-2.7.2/flexslider.css" />
+<f:asset.css identifier="c17Css" href="{cb:assetPath()}/c17.css" />
+
+
+<!--c17 flexSlider full width-->
+<div class="c17 clearfix">
+    <figure class="slider">
+        <h2 class="visuallyhidden">
+            <f:comment>
+                This is the header of the flexslider. The auto-page-title needs additional code in the TypoScript setup to be
+                displayed.
+                pageTitle = TEXT
+                pageTitle.data = page:title
+            </f:comment>
+            <f:if condition="{data.header}">
+                <f:then>{data.header}</f:then>
+                <f:else>
+                    <f:cObject typoscriptObjectPath="pageTitle" />
+                </f:else>
+            </f:if>
+        </h2>
+        <div class="flexslider">
+            <ul class="slides">
+                <f:for each="{data.image}" as="image" iteration="iterator">
+                    <li>
+                        <f:image image="{image}" />
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </figure>
+</div><!-- END d17-->

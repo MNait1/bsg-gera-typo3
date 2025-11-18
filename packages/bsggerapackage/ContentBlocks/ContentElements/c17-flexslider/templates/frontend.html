@@ -18,30 +18,36 @@
 
 
 <!--c17 flexSlider full width-->
-<div class="c17 clearfix">
-    <figure class="slider">
-        <h2 class="visuallyhidden">
-            <f:comment>
-                This is the header of the flexslider. The auto-page-title needs additional code in the TypoScript setup to be
-                displayed.
-                pageTitle = TEXT
-                pageTitle.data = page:title
-            </f:comment>
-            <f:if condition="{data.header}">
-                <f:then>{data.header}</f:then>
-                <f:else>
-                    <f:cObject typoscriptObjectPath="pageTitle" />
-                </f:else>
-            </f:if>
-        </h2>
-        <div class="flexslider">
-            <ul class="slides">
-                <f:for each="{data.image}" as="image" iteration="iterator">
-                    <li>
-                        <f:image image="{image}" />
-                    </li>
-                </f:for>
-            </ul>
-        </div>
-    </figure>
-</div><!-- END d17-->
+
+<div class="center wrapper">
+    <div class="ichbineinmecklenburger">
+        <div class="c17 clearfix">
+            <figure class="slider">
+                <h2 class="visuallyhidden">
+                    <f:comment>
+                        This is the header of the flexslider. The auto-page-title needs additional code in the
+                        TypoScript setup to be
+                        displayed.
+                        pageTitle = TEXT
+                        pageTitle.data = page:title
+                    </f:comment>
+                    <f:if condition="{data.header}">
+                        <f:then>{data.header}</f:then>
+                        <f:else>
+                            <f:cObject typoscriptObjectPath="pageTitle" />
+                        </f:else>
+                    </f:if>
+                </h2>
+                <div class="flexslider">
+                    <ul class="slides">
+                        <f:for each="{data.image}" as="image" iteration="iterator">
+                            <li>
+                                <f:image image="{image}" />
+                            </li>
+                        </f:for>
+                    </ul>
+                </div>
+            </figure>
+        </div><!-- END d17-->
+    </div>
+</div>
