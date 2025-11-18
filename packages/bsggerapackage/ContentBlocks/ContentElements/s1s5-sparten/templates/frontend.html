@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s1s5CSS" href="{cb:assetPath()}/s1s5.css" />
+
+<section id="sparten" class="section section--solid" style="--solid:#E4E97B; --solid-text:#083163;">
+  <div class="container">
+    <f:if condition="{data.toggle}">
+      <h3>{data.header}</h3>
+    </f:if>
+
+    <div id="spartensection" class="cards sparten-cards">
+      <f:for each="{data.items}" as="item">
+        <article class="card">
+          <f:if condition="{item.image}">
+            <f:image image="{item.image.0}" class="card-img" alt="{item.title}" loading="lazy" />
+          </f:if>
+
+          <div class="card-content">
+            <h4>{item.title}</h4>
+
+            <f:if condition="{item.text}">
+              <p lang="de">
+                <f:format.crop maxCharacters="260" append=" …">
+                  <f:format.stripTags>{item.text}</f:format.stripTags>
+                </f:format.crop>
+              </p>
+            </f:if>
+
+            <f:if condition="{item.link}">
+              <f:link.typolink parameter="{item.link}" class="card-link">
+                <f:if condition="{item.linktext}">
+                  <f:then>{item.linktext}</f:then>
+                  <f:else>Mehr erfahren →</f:else>
+                </f:if>
+              </f:link.typolink>
+            </f:if>
+          </div>
+        </article>
+      </f:for>
+    </div>
+  </div>
+</section>
+
+</html>
