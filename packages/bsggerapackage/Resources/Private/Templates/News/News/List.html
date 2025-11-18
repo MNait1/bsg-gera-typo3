@@ -11,7 +11,7 @@
 
             <f:comment>The wrapper-class only for Standard LIST - here open the Div's</f:comment>
             <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
-                <div class="news-list-container wrapper clearfix news-list-view"
+                <div class="news-list-container wrapper clearfix news-list-view top-news-background"
                     id="news-container-{contentObjectData.uid}">
                     <div class="center">
                         <div class="news-list-all">
@@ -40,6 +40,7 @@
                         </ul>
                     </div>
                 </f:then>
+
                 <f:else>
                     <div class="news-zazu-list">
                         <f:comment>Hier kommt die neue For-Schleife nur für paginated.</f:comment>
