@@ -1,24 +1,17 @@
-
-
-.hero::before,
-.hero::after { content: none !important; } /* Safety */
-
+/* ---------- HERO ---------- */
 .hero{
   position: relative;
   min-height: 100vh;
   height: 100vh;
-
-  
-  --offset: 22vh;
+  --offset: 22vh;                 /* kleiner = höher */
   padding-top: var(--offset);
   padding-left: 2rem;
-
   max-width: 1300px;
   margin: 0 auto;
-
   color: whitesmoke;
   text-align: left;
 }
+
 
 .hero h1{
   margin: 0 0 .5rem;
@@ -36,64 +29,76 @@
   color: inherit;
 }
 
-
+/* Button-Reihe (Layout) */
 .actions,
-.hero-actions{
+.hero-actions,
+.button-list{
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 3rem;            
+  gap: 3rem;                  
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 .actions li,
-.hero-actions li{ margin: 0; }
+.hero-actions li,
+.button-list li{ margin: 0; }
 
-/* Buttons (nur im Hero-Bereich) */
+/* Buttons im Hero  */
+
+.hero .btn::before,
+.hero .btn::after{ content: none !important; }
+
+/* Basisstil */
 .hero .btn{
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
   padding: .8rem 1.1rem;
-  border-radius: .6rem;
+  border-radius: .8rem;
   border: 2px solid transparent;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  transition: all .25s ease;
-  color: whitesmoke;
+  line-height: 1;
+  margin: 0;                      /* Abstand kommt vom UL-gap */
+  transition: filter .25s ease, background-color .25s ease, color .25s ease;
 }
+
+
 .hero .btn-primary{
   background: #d3db2b;
   color: #083163;
-  border-color: transparent;
 }
 .hero .btn-primary:hover{ filter: brightness(.95); }
 
+/* Ghost (transparent) – für helle Hintergründe */
 .hero .btn-ghost{
   background: transparent;
-  color: whitesmoke;
-  border-color: rgba(255,255,255,.6);
+  color: #0b1f36;
+  border-color: rgba(0,0,0,.35);
 }
 .hero .btn-ghost:hover{
-  background: rgba(255,255,255,.12);
-  color: whitesmoke;
+  background: rgba(0,0,0,.06);
 }
 
-/* Responsive Feinschliff */
-@media (max-width: 700px){
-  .hero{
-    padding-left: 1rem;
-    --offset: 22vh;
-  }
-}
-@media (max-width: 410px){
-  .actions,
-  .hero-actions{ gap: 1rem; }
-}
+
+/* @media Responsive  */
 @media (max-width: 768px){
+  .actions, .hero-actions, .button-list{ gap: 1rem; }
   .hero .btn{
     display: block;
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    margin: 8px auto;
+  }
+}
+@media (max-width: 700px){
+  .hero{
+    padding-left: 1rem;
+    --offset: 22vh;
   }
 }
