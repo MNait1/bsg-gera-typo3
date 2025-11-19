@@ -79,7 +79,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 /* Text bleibt im Block */
@@ -109,7 +109,7 @@
   font-weight: 600;
   text-decoration: none;
   align-self: flex-start;
-  margin-top: 0.5rem;
+  margin-top: auto;
 }
 
 .card-link:hover {
