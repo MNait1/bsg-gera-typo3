@@ -50,8 +50,4 @@ fields:
         type: Text
         default: 'Mehr erfahren →'
 
-  - identifier: toggleLine
-    label: Blaue Linie am Ende ja/nein
-    type: Checkbox
-    renderType: checkboxToggle
-    default: 0
+ 
