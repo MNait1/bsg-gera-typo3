@@ -281,12 +281,16 @@
     margin-bottom: 0.4em;
 }
 
+#h1-center {
+    text-align: center;
+}
+
 .news-list-all hr {
     margin: 0 0 0.5em 0;
 }
 
 .news-list-all {
-    padding-top: 10px;
+    padding: 10px 30px 0 30px;
     margin-bottom: 2em;
 }
 
@@ -295,7 +299,10 @@
 }
 
 .news-list-all .more {
-    color: #10a1c7;
+    color: #083163;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1.05rem;
 }
 
 .news-list-text {
@@ -322,10 +329,10 @@
     float: left;
     width: 20.967741935483872%;
     /* 65 / 310 */
-    font-size: 0.7em;
+    font-size: 1em;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 300;
-    color: #ccc;
+    color: #4f6f96;
     margin-bottom: 10px;
     padding-right: 5px;
 }
@@ -367,6 +374,7 @@
 .news-single-item a {
     text-decoration: none;
 }
+
 
 /*overwrite css news extension long setting - here width*/
 .news-single .article .news-img-wrap img {
@@ -435,7 +443,7 @@
 
 /*======= 990 ======== MEDIA QUERIES ======== border 15 = 960 ===*/
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 1150px) {
 
     /*news-list p8*/
     .newsAside {
@@ -453,7 +461,8 @@
 
     .news-list-all {
         float: left;
-        width: 72.27074235807859%;
+        width: 100%;
+        /* width: 72.27074235807859%; */
         /*662px/916px*/
     }
 
@@ -633,3 +642,88 @@
 * for special pages extra css for the content blocks
 *
 **/
+
+/* NEWS: grid / boxes für "Aktuelles" (1 / 2 / 3 columns) */
+.news-zazu-list,
+.news-list-all .newsCont {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.news-zazu-list .news-list-item,
+.news-list-all .news-list-item {
+  background: rgba(240, 240, 239, 0.8);
+  color: #083163;
+  padding: 1.1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  flex-direction: column;
+  overflow: hidden;
+  /* min-width entfernen und stattdessen width:100% nutzen */
+  width: 100%;
+  /* Verhindert das Überlappen */
+  margin-bottom: 1rem;
+  /* Besseres Box-Modell */
+  box-sizing: border-box;
+}
+
+/* Anpassung des Grid-Layouts für bessere Responsivität */
+.news-zazu-list,
+.news-list-all .newsCont {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem;
+    /* Minimale Breite auf 100% der verfügbaren Breite setzen */
+    grid-template-columns: 1fr;
+}
+
+/* Ab 768px zwei Spalten */
+@media only screen and (min-width: 768px) {
+    .news-zazu-list,
+    .news-list-all .newsCont {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ab 1150px drei Spalten */
+@media only screen and (min-width: 1150px) {
+    .news-zazu-list,
+    .news-list-all .newsCont {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+/* Box-styling */
+.news-list-item .article,
+.news-list-item > .newsContItem { /* ergänzend, falls Struktur variert */
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+/* Bild / Teaser anpassen damit es in der Box korrekt skaliert */
+.news-list-item .news-img-wrap,
+.news-list-item .news-list-img {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.news-list-item .news-img-wrap img,
+.news-list-item .news-list-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.top-news-background {
+    background: #6983A1;
+}

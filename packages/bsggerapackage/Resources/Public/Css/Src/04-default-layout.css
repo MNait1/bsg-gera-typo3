@@ -17,6 +17,7 @@ http://zazu.berlin
 :root {
     --drvgelb: #d3db2b;
     --drvdunkelblau: #083163;
+    --drvweis: #dadbdc;
 }
 
 
@@ -39,6 +40,7 @@ http://zazu.berlin
     /*for absolute telefon, mail*/
     position: relative;
     margin-bottom: 1em;
+    background: rgba(8, 49, 99, 0.85);
 }
 
 /**
@@ -98,7 +100,7 @@ input#hamburger {
     height: 4px;
     width: 41px;
     border-radius: 4px;
-    background: var(--blue);
+    background: var(--drvweis);
     display: block;
     transition: 0.5s;
     transform-origin: center;
@@ -150,10 +152,12 @@ we need to add a clear after the container. */
 #mainMenuBox nav ul {
     float: right;
     padding: 0;
-    margin: 0;
+    margin: 0.5em 0 0 0;
     list-style: none;
     position: relative;
     z-index: 999;
+    
+
 }
 
 /* Positioning the navigation items inline, no inline float left instead*/
@@ -161,7 +165,7 @@ we need to add a clear after the container. */
 #mainMenuBox nav ul li {
     margin: 0px;
     float: left;
-    border-bottom: solid 1px var(--blue);
+    border-bottom: solid 1px var(--drvweis);
 }
 
 /* Styling the links */
@@ -172,6 +176,8 @@ we need to add a clear after the container. */
     /*padding top corresponds to font-size*/
     font-size: 16px;
     text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.3s;
 }
 
 /*from second level onwards background color*/
@@ -186,7 +192,9 @@ we need to add a clear after the container. */
 
 /* Background color change on Hover same as mobile nav! Here normal nav*/
 #mainMenuBox nav a:hover {
-    background-color: var(--brightBlue);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20%;
+    height: 100%;
 }
 
 /* Hide Dropdowns by Default
@@ -329,9 +337,11 @@ we need to add a clear after the container. */
     }
 
     #mainMenuBox nav a:hover {
-        background-color: var(--brightBlue);
         border: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 0%;
     }
+
 
     /*padding of the dropdown menu mobile, level2*/
     #mainMenuBox nav ul ul a {
@@ -468,7 +478,7 @@ we need to add a clear after the container. */
     }
 
     #mainHeader #logoContainer {
-        padding: 1em 1em 0 0;
+        padding: 1em 1em 1em 0;
         float: left;
         width: 260px;
         clear: right;

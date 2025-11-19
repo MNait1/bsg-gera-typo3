@@ -11,13 +11,14 @@
 
             <f:comment>The wrapper-class only for Standard LIST - here open the Div's</f:comment>
             <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
-                <div class="news-list-container wrapper clearfix news-list-view"
+                <div class="news-list-container wrapper clearfix news-list-view top-news-background"
                     id="news-container-{contentObjectData.uid}">
                     <div class="center">
                         <div class="news-list-all">
-                            <h1>Aktuelles</h1>
+                            <h1 id="h1-center">Top News</h1>
                             <hr />
             </f:if>
+
 
             <f:if condition="{settings.hidePagination}">
                 <f:then>
@@ -39,15 +40,17 @@
                         </ul>
                     </div>
                 </f:then>
+
                 <f:else>
                     <div class="news-zazu-list">
                         <f:comment>Hier kommt die neue For-Schleife nur für paginated.</f:comment>
-
+                        
+<!--(Aus kommentiert damit Top News immer oben bleibt und nicht paginiert wird)
                         <f:if condition="{settings.list.paginate.insertAbove}">
                             <f:render partial="List/Pagination"
                                 arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
                         </f:if>
-
+-->
 
                         <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
                             <f:switch expression="{settings.templateLayout}">
@@ -66,10 +69,12 @@
                             </f:switch>
                         </f:for>
 
+<!--(Aus kommentiert damit Top News immer oben bleibt und nicht paginiert wird)
                         <f:if condition="{settings.list.paginate.insertBelow}">
                             <f:render partial="List/Pagination"
                                 arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
                         </f:if>
+-->
 
                     </div>
                 </f:else>
@@ -82,6 +87,13 @@
                 <div class="newsAside">
                     <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}" />
                 </div>
+            </f:if>
+
+            <!-- Hier die fehlenden Schließungen ergänzen -->
+            <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
+                </div> <!-- .news-list-all -->
+                </div> <!-- .center -->
+                </div> <!-- .news-list-container -->
             </f:if>
 
         </f:then>

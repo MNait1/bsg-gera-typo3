@@ -1,0 +1,31 @@
+
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers">
+
+<f:layout name="Preview" />
+
+<f:section name="Header">
+  <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">
+    <f:if condition="{data.header}">
+      <f:then>{data.header}</f:then>
+      <f:else>Unsere Sparten</f:else>
+    </f:if>
+  </cb:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+  <f:for each="{data.items}" as="item" iteration="it">
+    <f:if condition="{item.image}">
+      <f:image image="{item.image.0}" width="90" />
+    </f:if>
+    <strong>{item.title}</strong>
+    <f:if condition="{item.text}">
+      — <f:format.crop maxCharacters="60" append=" …">{item.text}</f:format.crop>
+    </f:if>
+    <f:if condition="{!it.isLast}"> • </f:if>
+  </f:for>
+</f:section>
+
+</html>
+e
