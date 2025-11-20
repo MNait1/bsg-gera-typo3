@@ -4,13 +4,11 @@
 
   <!-- Basis-Styles -->
   <f:asset.css identifier="s1s1CSS" href="{cb:assetPath()}/s1s1.css" />
-  <!-- Hero-Styles -->
-  <f:asset.css identifier="s2s5CSS" href="{cb:assetPath()}/s2s5.css" />
 
 <div class="hero">
+  <div class="wrapper center">
   <h1><f:format.raw>{data.header}</f:format.raw></h1>
   <h2><f:format.raw>{data.header2}</f:format.raw></h2>
-
 
   <ul class="actions hero-actions">
     <f:for each="{data.listItems}" as="item" iteration="it">
@@ -24,6 +22,7 @@
       </li>
     </f:for>
   </ul>
+  </div>
 </div>
 
 

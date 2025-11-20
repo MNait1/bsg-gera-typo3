@@ -723,3 +723,7 @@
     height: auto;
     display: block;
 }
+
+.top-news-background {
+    background: #6983A1;
+}

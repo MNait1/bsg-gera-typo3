@@ -58,12 +58,12 @@ color: var(--drvdunkelblau);
 }
 
 #mainHeader #logoContainer {
-    width: 100%;
     padding: 1em;
     margin: 0;
-    float: none;
+    float: right;
     text-align: center;
 }
+
 
 #mainHeader #logo {
     width: 60%;
@@ -87,7 +87,7 @@ label.hamburger {
     margin-right: auto;
     float: left;
     cursor: pointer;
-    margin-top: 0.4em;
+    margin-top: 1em;
 }
 
 input#hamburger {
@@ -181,9 +181,7 @@ we need to add a clear after the container. */
 }
 
 /*from second level onwards background color*/
-#mainMenuBox nav ul li ul li {
-    background-color: rgba(240, 240, 240, 0.8);
-}
+
 
 /*level 2 when hover over level 3*/
 #mainMenuBox nav ul li ul li:hover {
@@ -204,7 +202,7 @@ we need to add a clear after the container. */
     display: none;
     position: absolute;
     /* has to be the same number as the "line-height" of "nav a" */
-    top: 60px;
+    top: 50px;
 }
 
 /*level 2 drop down*/
@@ -258,7 +256,7 @@ we need to add a clear after the container. */
 *
 */
 
-@media all and (max-width: 760px) {
+@media all and (max-width: 790px) {
     #mainMenuBox {
         position: static;
         /*back to normal for "absolute" telefon, mail back to Header*/
@@ -267,6 +265,7 @@ we need to add a clear after the container. */
     label.hamburger {
         display: block;
     }
+   
 
     /* zazu: plus sign is now from lable*/
     #mainMenuBox li>a:after {
@@ -296,18 +295,18 @@ we need to add a clear after the container. */
     }
 
     #mainMenuBox .toggle:hover {
-        color: #5c2466;
+        color: var(--drvweis);
     }
 
     #mainMenuBox .toggle:after {
         content: '+';
         font-size: 1.5em;
-        color: #5c2466;
+        color: var(--drvweis);
     }
 
     #mainMenuBox [id^=drop]:checked+.toggle:after {
         content: '–';
-        color: #5c2466;
+        color: var(--drvweis);
     }
 
     /*second level, different style*/
@@ -357,12 +356,12 @@ we need to add a clear after the container. */
 
     /*second level color*/
     #mainMenuBox nav ul ul a {
-        background-color: pink;
+        background-color: unset;
     }
 
     /*third level color*/
     #mainMenuBox nav ul ul ul a {
-        background-color: red;
+        background-color: var(--drvdunkelblau);
     }
 
     /* Hide Dropdowns by Default second level*/
@@ -448,6 +447,24 @@ we need to add a clear after the container. */
     margin-top: 8px;
 }
 
+/*======= 479 ========= MEDIA QUERIES ======= Rand 6 = 460 ===*/
+
+@media only screen and (max-width: 479px) {
+    #mainHeader #logoContainer {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+    }
+
+        #mainHeader #logo {
+        width: 220px;
+    }
+}
+
+
 /*======= 480 ========= MEDIA QUERIES ======= Rand 6 = 460 ===*/
 
 @media only screen and (min-width: 480px) {
@@ -469,7 +486,7 @@ we need to add a clear after the container. */
 
 /* @media now 761 not 760 since mixture of 'max' and 'min'*/
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 791px) {
 
     /*for bigger screens no margin under header*/
 
@@ -496,6 +513,10 @@ we need to add a clear after the container. */
 
     #mainMenu {
         clear: right;
+    }
+     #mainMenuBox nav ul li ul li {
+    background-color: rgba(8, 49, 99, 1);
+    
     }
 
 }

@@ -17,13 +17,17 @@
 
 .c17 .slider img {
     width: 100%;
-    height: auto;
+}
+
+.ichbineinmecklenburger {
+    border-radius: 12px;
 }
 
 .c17 figure {
     margin: 0 0 0 0;
     position: relative;
     width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -52,7 +56,7 @@
 
     /*zoom in slider*/
     .c17 .flexslider img {
-        width: 130% !important;
+        width: 100% !important;
         height: auto;
     }
 
