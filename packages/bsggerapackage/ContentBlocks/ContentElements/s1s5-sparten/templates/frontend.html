@@ -3,8 +3,19 @@
 
 <f:asset.css identifier="s1s5CSS" href="{cb:assetPath()}/s1s5.css" />
 
-<section id="sparten" class="section section--solid" style="--solid:#E4E97B; --solid-text:#083163;">
-  <div class="container">
+
+<f:if condition="{data.toggle3}">
+  <f:then>
+    <section class="section background" id="about-und-spieler">
+  </f:then>
+  <f:else>
+    <section class="section background-hellgelb" id="about-und-spieler">
+  </f:else>
+</f:if>
+
+
+<section id="sparten" class="section section--solid" >
+  <div class="wrapper center">
     <f:if condition="{data.toggle}">
       <h3>{data.header}</h3>
     </f:if>
@@ -40,6 +51,8 @@
       </f:for>
     </div>
   </div>
+</section>
+
 </section>
 
 </html>
