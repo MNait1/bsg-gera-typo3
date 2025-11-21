@@ -50,4 +50,8 @@ fields:
         type: Text
         default: 'Mehr erfahren →'
 
- 
+  - identifier: toggle3
+    label: Hintergrundbild ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0

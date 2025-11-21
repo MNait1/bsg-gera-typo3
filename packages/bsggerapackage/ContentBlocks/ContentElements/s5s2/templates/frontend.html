@@ -3,9 +3,16 @@
 
 <f:asset.css identifier="s5s2CSS" href="{cb:assetPath()}/s5s2.css" />
 
+<f:if condition="{data.toggle3}">
+    <f:then>
+        <section class="section background" id="about-und-spieler">
+    </f:then>
+    <f:else>
+        <section class="section background-hellblau" id="about-und-spieler">
+    </f:else>
+</f:if>
 
-<div class="full">
-    <div class="container two-col">
+    <div class="wrapper center two-col">
         <div class="about-text">
             <f:if condition="{data.header}">
                 <h2>{data.header}</h2>
@@ -21,6 +28,6 @@
 
 
     </div>
-</div>
 
+</section>
 </html>

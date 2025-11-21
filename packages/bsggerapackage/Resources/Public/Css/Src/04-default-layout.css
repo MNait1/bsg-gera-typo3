@@ -16,9 +16,30 @@ http://zazu.berlin
 
 :root {
     --drvgelb: #d3db2b;
+    --drvhellgelb: #E4E97B;
     --drvdunkelblau: #083163;
+    --drvhellblau: #6983A1;
     --drvweis: #dadbdc;
 }
+
+.background {
+        background-color: rgb(133, 97, 31, 0);
+
+}
+
+.background-hellgelb {
+    background: var(--drvhellgelb);
+}
+
+.background {
+        background-color: rgb(133, 97, 31, 0);
+
+}
+
+.background-hellblau {
+    background: var(--drvhellblau) ;
+}
+
 
 
 /**

@@ -1,4 +1,6 @@
 .video-wrap {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   aspect-ratio: 16/9;
   background: #0b1f36;
   border-radius: 0.8rem;
@@ -11,6 +13,7 @@
   grid-template-columns: 1fr 3fr;
   gap: 3rem;
   align-items: center;
+  
 }
 
 .video-wrap video,
@@ -22,13 +25,15 @@
   object-fit: cover; /* optional */
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-}
 
-.full {
-  width: 100%;
-  height: 50vh;
+
+
+@media (max-width: 1000px) {
+  .two-col {
+    grid-template-columns: 1fr; 
+  }
+
+  .about-text {
+    font-size: 1.2rem; 
+  }
 }
