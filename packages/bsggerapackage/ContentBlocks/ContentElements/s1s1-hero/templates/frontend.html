@@ -13,10 +13,8 @@
   <ul class="actions hero-actions">
     <f:for each="{data.listItems}" as="item" iteration="it">
       <li>
-        <f:link.typolink
-          parameter="{item.link}"
-          class="btn {f:if(condition: it.isFirst, then: 'btn-primary', else: 'btn-ghost')}"
-        >
+        <f:link.typolink parameter="{item.link}"
+          class="btn {f:if(condition: it.isFirst, then: 'btn-primary', else: 'btn-ghost')}">
           {item.linktext}
         </f:link.typolink>
       </li>

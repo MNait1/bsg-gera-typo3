@@ -122,7 +122,18 @@ h2 {
     margin-top: 2rem;
     margin-bottom: 0.67em;
     line-height: 1.2em;
-    color: var(--drvweiß);
+    color: #000000;
+}
+
+h2.hell {
+    font-family: 'robotoVar, ralewayVar', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.6666666666667em;
+    /*30px*/
+    margin-top: 2rem;
+    margin-bottom: 0.67em;
+    line-height: 1.2em;
+    color: #ddd;
 }
 
 h3 {

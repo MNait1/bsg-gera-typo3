@@ -25,7 +25,9 @@
   object-fit: cover; /* optional */
 }
 
-
+.textarea {
+  color:#ddd;
+}
 
 
 @media (max-width: 1000px) {

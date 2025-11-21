@@ -16,6 +16,7 @@
 
 <f:section name="Content">
   <f:for each="{data.items}" as="item" iteration="it">
+    <div>
     <f:if condition="{item.image}">
       <f:image image="{item.image.0}" width="90" />
     </f:if>
@@ -24,8 +25,12 @@
       — <f:format.crop maxCharacters="60" append=" …">{item.text}</f:format.crop>
     </f:if>
     <f:if condition="{!it.isLast}"> • </f:if>
+    </div>
   </f:for>
 </f:section>
 
+<f:section name="Footer">
+  Fügen Sie hier Ihre Sparten mit Bild, Titel und Text hinzu.
+</f:section>
+
 </html>
-e
