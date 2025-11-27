@@ -1,0 +1,30 @@
+name: nobrain/s6s3-text-block
+typeName: nobrain_s6s3textblock
+group: default
+prefixFields: true
+prefixType: full
+fields:
+ 
+  - identifier: header
+    label: Überschrift des Textblocks
+    useExistingField: true
+
+  - identifier: textarea
+    type: Textarea
+    label: Text
+    description: 'Text'
+    enableRichtext: true
+    richtextConfiguration: zazu
+    rows: 40
+  
+  - identifier: toggle
+    label: Überschrift ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+
+  - identifier: toggle3
+    label: Hintergrundbild ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0

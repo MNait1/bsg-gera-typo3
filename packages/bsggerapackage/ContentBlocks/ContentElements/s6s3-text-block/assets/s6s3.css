@@ -1,0 +1,35 @@
+.background {
+  background-color: rgb(133, 97, 31, 0);
+}
+
+.background2 {
+  background: #6983a1;
+}
+
+.text {
+  color: whitesmoke;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.text p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: clamp(1.3rem, calc(1.3vw + 0.5rem), 1.9rem);
+}
+.text h2 {
+  font-size: clamp(2.2rem, calc(2.2vw + 0.5rem), 3.5rem);
+}
+
+.s6s3-text-block {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.s6s3header {
+  color: whitesmoke;
+  text-align: center;
+}
