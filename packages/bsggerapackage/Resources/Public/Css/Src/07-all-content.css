@@ -292,12 +292,17 @@
     color: #ddd;
 }
 
+#h1-center-dunkel {
+    text-align: center;
+    color: #083163;
+}
+
 .news-list-all hr {
     margin: 0 0 0.5em 0;
 }
 
 .news-list-all {
-    
+
     margin-bottom: 2em;
 }
 
@@ -653,7 +658,7 @@
 /* NEWS: grid / boxes für "Aktuelles" (1 / 2 / 3 columns) */
 .news-zazu-list,
 .news-list-all .newsCont {
-    display: grid;
+    display: flex;
     gap: 1.5rem;
     margin: 1rem 0 2rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -680,11 +685,12 @@
 /* Anpassung des Grid-Layouts für bessere Responsivität */
 .news-zazu-list,
 .news-list-all .newsCont {
-    display: grid;
+    display: flex;
     gap: 1.5rem;
     margin: 1rem 0 2rem;
     /* Minimale Breite auf 100% der verfügbaren Breite setzen */
     grid-template-columns: 1fr;
+
 }
 
 /* Ab 768px zwei Spalten */
@@ -736,4 +742,204 @@
 
 .top-news-background {
     background: #6983A1;
+}
+
+/* Bildergalerie CSS */
+
+/* GRID wie Sparten */
+.sparten-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+/* Allgemeine Card */
+.card {
+    background: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+/* teaser-text MUSS Flex sein */
+.teaser-text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Platzhalter für gleiche Höhe */
+.platzhalter {
+    min-height: 70px;
+}
+
+/* Bildcontainer */
+.news-img-wrap {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    margin-top: auto; 
+    margin-bottom: 0.8rem;
+}
+
+/* Bild selbst */
+.news-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Link */
+.teaser-text .more {
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* große Tablets / kleiner Desktop: 3 Spalten */
+@media (max-width: 1200px) {
+  .sparten-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tablets: 2 Spalten */
+@media (max-width: 900px) {
+  .sparten-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Handy: 1 Spalte */
+@media (max-width: 600px) {
+  .sparten-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .news-img-wrap {
+    height: 160px;   /* auf dem Handy etwas kleiner */
+  }
+}
+
+/* ===========================================
+   BILDERGALERIE – Detailansicht (no-bodytext)
+   Klasse am Wrapper: .news-single-item.news-gallery
+   =========================================== */
+
+/* Abstand unter der Überschrift-Box */
+.news-single-item.news-gallery .header {
+    margin-bottom: 1rem;
+}
+
+/* Überschrift zentriert */
+.news-single-item.news-gallery .header h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Teaser / Beschreibung direkt unter der Überschrift */
+.news-single-item.news-gallery .teaser-text {
+    width: 100%;
+    text-align: center !important;
+    font-size: 1.3rem;
+    color: #444;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+/* Falls TYPO3 noch zusätzliche Tags im Teaser hat (strong, span, p) */
+.news-single-item.news-gallery .teaser-text * {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ===========================================
+   GALLERY GRID
+   =========================================== */
+
+/* 4-Spalten-Galerie */
+.news-single-item.news-gallery .news-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Bilder nebeneinander */
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+/* Jede Bild-Kachel */
+.news-single-item.news-gallery .news-gallery-item {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 4/3;          /* gleiche Kachelgröße */
+    background: #f7f7f7;
+    border-radius: 0.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover-Effekt */
+.news-single-item.news-gallery .news-gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Bilder: immer komplett sichtbar, nicht abgeschnitten */
+.news-single-item.news-gallery .news-gallery-img,
+.news-single-item.news-gallery .news-gallery-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;   /* zeigt immer das ganze Bild */
+    display: block;
+    border-radius: 0.4rem;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+/* Tablet (2 Spalten) */
+@media (max-width: 900px) {
+    .news-single-item.news-gallery .news-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-single-item.news-gallery .header h3 {
+        font-size: 1.8rem;
+    }
+
+    .news-single-item.news-gallery .teaser-text {
+        font-size: 1.15rem;
+    }
+}
+
+/* Smartphone (1 Spalte) */
+@media (max-width: 480px) {
+    .news-single-item.news-gallery .news-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-single-item.news-gallery .header h3 {
+        font-size: 1.6rem;
+    }
+
+    .news-single-item.news-gallery .teaser-text {
+        font-size: 1.1rem;
+    }
 }

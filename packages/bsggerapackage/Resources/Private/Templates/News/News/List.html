@@ -1,80 +1,138 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
 <f:layout name="General" />
 <!--Templates/News/List.html changed zazu 20181107-->
-
 
 <f:section name="content">
     <!--TYPO3SEARCH_end-->
     <f:if condition="{news}">
         <f:then>
 
+            <!--News-->
             <f:comment>The wrapper-class only for Standard LIST - here open the Div's</f:comment>
             <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
                 <div class="news-list-container wrapper clearfix news-list-view top-news-background"
-                    id="news-container-{contentObjectData.uid}">
+                     id="news-container-{contentObjectData.uid}">
                     <div class="center">
                         <div class="news-list-all">
                             <h1 id="h1-center">Top News</h1>
                             <hr />
             </f:if>
 
+            <!--Bildergalerie-->
+            <f:if condition="{settings.templateLayout} == 13">
+                <div class="news-list-container wrapper clearfix news-list-view top-news-background2"
+                     id="news-container-{contentObjectData.uid}">
+                    <div class="center">
+                        <div class="news-list-all">
+                            <h1 id="h1-center-dunkel">Bildergalerie</h1>
+                            <hr />
+            </f:if>
+
 
             <f:if condition="{settings.hidePagination}">
                 <f:then>
+                    <!--News-->
+                    <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
+                        <div class="news-zazu-list">
+                    </f:if>
+
+                    <!--Bildergalerie-->
+                    <f:if condition="{settings.templateLayout} == 13">
+                        <div class="sparten-cards">
+                    </f:if>
+
                     <f:comment>Now the For-Iterator for NOT paginated news -> FlexSlider.</f:comment>
-                    <div class="flexslider">
-                        <ul class="slides">
-                            <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <f:if condition="{settings.templateLayout} == 10">
-                                    <f:then>
-                                        <f:render partial="List/ItemBrowseList"
-                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                    </f:then>
-                                    <f:else>
-                                        <f:render partial="List/Item"
-                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                    </f:else>
+
+                    <!-- *** HIER: Schleife mit Limit NUR für templateLayout = 10 *** -->
+                    <f:for each="{news}" as="newsItem" iteration="iterator">
+
+                        <f:if condition="{settings.templateLayout} == 10">
+                            <f:then>
+                                <!-- nur die ersten 3 Einträge ausgeben -->
+                                <f:if condition="{iterator.cycle} <= 3">
+                                    <f:switch expression="{settings.templateLayout}">
+                                        <f:case value="10">
+                                            <f:render partial="List/ItemBrowseList"
+                                                      arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                                        </f:case>
+                                        <f:case value="13">
+                                            <f:render partial="List/ImageBrowseList"
+                                                      arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                                        </f:case>
+                                        <f:defaultCase>
+                                            <f:render partial="List/Item"
+                                                      arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                                        </f:defaultCase>
+                                    </f:switch>
                                 </f:if>
-                            </f:for>
-                        </ul>
-                    </div>
+                            </f:then>
+                            <f:else>
+                                <!-- alle anderen Layouts: ohne Limit -->
+                                <f:switch expression="{settings.templateLayout}">
+                                    <f:case value="10">
+                                        <f:render partial="List/ItemBrowseList"
+                                                  arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                                    </f:case>
+                                    <f:case value="13">
+                                        <f:render partial="List/ImageBrowseList"
+                                                  arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                                    </f:case>
+                                    <f:defaultCase>
+                                        <f:render partial="List/Item"
+                                                  arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                                    </f:defaultCase>
+                                </f:switch>
+                            </f:else>
+                        </f:if>
+
+                    </f:for>
                 </f:then>
 
                 <f:else>
-                    <div class="news-zazu-list center wrapper">
-                        <f:comment>Hier kommt die neue For-Schleife nur für paginated.</f:comment>
-                        
-<!--(Aus kommentiert damit Top News immer oben bleibt und nicht paginiert wird)
-                        <f:if condition="{settings.list.paginate.insertAbove}">
-                            <f:render partial="List/Pagination"
-                                arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
--->
+                    <!--News-->
+                    <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
+                        <div class="news-zazu-list">
+                    </f:if>
 
-                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-                            <f:switch expression="{settings.templateLayout}">
-                                <f:case value="10">
-                                    <f:render partial="List/ItemBrowseList"
-                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                </f:case>
-                                <f:case value="11">
-                                    <f:render partial="List/downloadItem"
-                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                </f:case>
-                                <f:defaultCase>
-                                    <f:render partial="List/Item"
-                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                                </f:defaultCase>
-                            </f:switch>
-                        </f:for>
+                    <!--Bildergalerie-->
+                    <f:if condition="{settings.templateLayout} == 13">
+                        <div class="sparten-cards">
+                    </f:if>
 
-<!--(Aus kommentiert damit Top News immer oben bleibt und nicht paginiert wird)
-                        <f:if condition="{settings.list.paginate.insertBelow}">
-                            <f:render partial="List/Pagination"
-                                arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
--->
+                    <f:comment>Hier kommt die neue For-Schleife nur für paginated.</f:comment>
+
+                    <!--(Aus kommentiert damit Top News immer oben bleibt und nicht paginiert wird)-->
+                    <f:if condition="{settings.list.paginate.insertAbove}">
+                        <f:render partial="List/Pagination"
+                                  arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                    </f:if>
+
+
+                    <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                        <f:switch expression="{settings.templateLayout}">
+                            <f:case value="10">
+                                <f:render partial="List/ItemBrowseList"
+                                          arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                            </f:case>
+                            <f:case value="13">
+                                <f:render partial="List/ImageBrowseList"
+                                          arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                            </f:case>
+                            <f:defaultCase>
+                                <f:render partial="List/Item"
+                                          arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+                            </f:defaultCase>
+                        </f:switch>
+                    </f:for>
+
+                    <!--(Aus kommentiert damit Top News immer oben bleibt und nicht paginiert wird)-->
+                    <f:if condition="{settings.list.paginate.insertBelow}">
+                        <f:render partial="List/Pagination"
+                                  arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                    </f:if>
 
                     </div>
                 </f:else>
@@ -85,12 +143,13 @@
                 </div>
                 <!--close news-list-all-->
                 <div class="newsAside">
-                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}" />
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent"
+                               data="{pageUid: '{data.uid}', colPos: '2'}" />
                 </div>
             </f:if>
 
             <!-- Hier die fehlenden Schließungen ergänzen -->
-            <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9">
+            <f:if condition="{settings.templateLayout} == 10 || {settings.templateLayout} == 9 || {settings.templateLayout} == 13">
                 </div> <!-- .news-list-all -->
                 </div> <!-- .center -->
                 </div> <!-- .news-list-container -->
