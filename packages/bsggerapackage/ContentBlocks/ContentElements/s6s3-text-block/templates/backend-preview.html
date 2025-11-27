@@ -1,0 +1,21 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:layout name="Preview"/>
+
+<f:section name="Header">
+    <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">{data.header}</cb:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+    <h2>{data.header}</h2>
+    <f:sanitize.html><p><f:format.crop maxCharacters="200" append=" …">{data.textarea}</f:format.crop></p></f:sanitize.html>
+</f:section>
+
+<f:section name="Footer">
+    In diesem Content Element können Sie einen Textblock mit Überschrift und Text anlegen.
+</f:section>
+</html>
