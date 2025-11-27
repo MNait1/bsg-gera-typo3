@@ -9,16 +9,18 @@
     <f:then>
         <div class="page-bg" aria-hidden="true">
             <f:for each="{data.image}" as="image" iteration="iterator">
-                <f:if condition="{iterator.isFirst}">
+                <!-- Nur das erste Bild wird als Hintergrund verwendet -->
+                <f:if condition="{iterator.isFirst}"> 
                     <div class="page-bg__image" style="background-image: url('{f:uri.image(image: image)}')"></div>
                 </f:if>
             </f:for>
         </div>
     </f:then>
     <f:else>
-        <div class="page-bg2" aria-hidden="true"></div>
+        <!-- Farbverlauf als Hintergrund, wenn kein Bild aktiv ist -->
+        <div class="page-bg2" aria-hidden="true"></div> 
     </f:else>
-</f:if>
+</f:if> 
 
 
 </html>

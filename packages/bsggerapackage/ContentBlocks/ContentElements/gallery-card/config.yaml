@@ -1,0 +1,44 @@
+name: nobrain/gallery-card
+typeName: nobrain_gallery-card
+group: default
+prefixFields: true
+prefixType: full
+
+fields:
+  - identifier: header
+    label: Gesamtüberschrift
+    useExistingField: true
+
+  - identifier: items
+    label: Galerie-Jahre
+    type: Collection
+    minitems: 1
+    maxitems: 16
+    fields:
+      - identifier: image
+        label: Bild
+        type: File
+        maxitems: 1
+        allowed: jpg, jpeg, png, gif, webp
+        description: 'Kartenbild'
+
+      - identifier: title
+        label: Überschrift
+        type: Text
+        description: 'Jahr (z.B. 2005)'
+
+      - identifier: link
+        label: (Optional) Link
+        type: Link
+        description: 'Link zum Album'
+
+      - identifier: linktext
+        label: (Optional) Link-Text
+        type: Text
+        default: 'Album öffnen →'
+
+  - identifier: toggle3
+    label: Hintergrundbild ja/nein
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
