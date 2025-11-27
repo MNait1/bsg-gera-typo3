@@ -37,6 +37,7 @@ TCEMAIN {
 tx_news.templateLayouts {
         9 = aktuelles
         10 = topNews
+        13 = Bildergalerie
     }
 
 
