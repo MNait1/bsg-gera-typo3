@@ -1,4 +1,3 @@
-
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers">
@@ -9,29 +8,25 @@
   <cb:link.editRecord uid="{data.uid}" table="{data.mainType}">
     <f:if condition="{data.header}">
       <f:then>{data.header}</f:then>
-      <f:else>Unsere Sparten</f:else>
+      <f:else>Jahres-Galerie</f:else>
     </f:if>
   </cb:link.editRecord>
 </f:section>
 
 <f:section name="Content">
   <f:for each="{data.items}" as="item" iteration="it">
-    <div>
-    <f:if condition="{item.image}">
-      <f:image image="{item.image.0}" width="90" />
-    </f:if>
-    <strong>{item.title}</strong>
-    <f:if condition="{item.text}">
-      — <f:format.crop maxCharacters="60" append=" …">{item.text}</f:format.crop>
-    </f:if>
-    <!-- Trennzeichen -->
-    <f:if condition="{!it.isLast}"> • </f:if>
-    </div>
+    <span>
+      <f:if condition="{item.image}">
+        <f:image image="{item.image.0}" width="70" style="vertical-align:middle; margin-right:6px;" />
+      </f:if>
+      <strong>{item.title}</strong>
+      <f:if condition="{!it.isLast}"> • </f:if>
+    </span>
   </f:for>
 </f:section>
 
 <f:section name="Footer">
-  Fügen Sie hier Ihre Sparten mit Bild, Titel und Text hinzu.
+  Fügen Sie hier Ihre Jahres-Alben mit Vorschaubild, Titel und Link hinzu.
 </f:section>
 
 </html>

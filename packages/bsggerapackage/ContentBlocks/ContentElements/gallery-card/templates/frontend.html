@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="gallery-cardCSS" href="{cb:assetPath()}/gallery-card.css" />
+
+<f:if condition="{data.toggle3}">
+    <f:then>
+        <section class="section background" id="galerie-jahre-wrapper">
+    </f:then>
+    <f:else>
+        <section class="section background-hellgelb" id="galerie-jahre-wrapper">
+    </f:else>
+</f:if>
+
+    <section id="gallery-cards" class="section section--solid">
+        <div class="wrapper center">
+
+            <h3>{data.header}</h3>
+
+            <div id="gallery-grid-wrapper" class="gallery-grid">
+                <f:for each="{data.items}" as="item">
+                    <article class="gallery-card">
+                        <f:if condition="{item.image}">
+                            <f:image image="{item.image.0}" class="gallery-card-img" alt="{item.title}" loading="lazy" />
+                        </f:if>
+
+                        <div class="gallery-card-content">
+                            <h4>{item.title}</h4>
+
+                            <f:if condition="{item.link}">
+                                <f:link.typolink parameter="{item.link}" class="gallery-card-link">
+                                    <f:if condition="{item.linktext}">
+                                        <f:then>{item.linktext}</f:then>
+                                        <f:else>Album öffnen →</f:else>
+                                    </f:if>
+                                </f:link.typolink>
+                            </f:if>
+                        </div>
+                    </article>
+                </f:for>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+</html>

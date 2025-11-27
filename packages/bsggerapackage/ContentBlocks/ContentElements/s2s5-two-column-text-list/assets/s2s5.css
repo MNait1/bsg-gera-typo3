@@ -1,3 +1,4 @@
+/* Hauptbereich für Über uns und Spieler */
 #about-und-spieler {
     color: whitesmoke;
     padding: 4rem 1rem;
@@ -12,6 +13,7 @@
     background: #6983A1;
 }
 
+/* Zwei-Spalten-Layout */
 #about-und-spieler .two-col {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +23,7 @@
     margin: 0 auto;
 }
 
+/* Text- und Spieler-Box */
 #about-und-spieler .about-text,
 #about-und-spieler .spieler-box {
     flex: 1 1 40%;
@@ -30,6 +33,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Überschrift */
 #about-und-spieler h3 {
     font-size: 2rem;
     margin-top: 0;
@@ -38,6 +42,8 @@
 }
 
 /* Spieler-Liste */
+
+/* Container Spieler-Liste */
 .spieler-liste {
     list-style: none;
     padding: 0;
@@ -47,12 +53,13 @@
     margin-top: 1rem;
 }
 
+/* Einzelne Spieler */
 .spieler-liste li {
     background: rgba(255, 255, 255, 0.5);
     padding: 0.6rem;
     border-radius: 6px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Namen in Großbuchstaben */
     font-weight: 500;
 }
 
@@ -68,6 +75,7 @@ section {
     padding: clamp(3rem, 5vw, 6rem) 1rem;
 }
 
+/* Zentrierter Inhalt innerhalb einer Section */
 .section .container {
     margin: 0 auto;
 }
