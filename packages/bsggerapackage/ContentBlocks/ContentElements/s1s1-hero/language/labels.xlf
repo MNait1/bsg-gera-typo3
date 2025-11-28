@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>s1s1-hero/textbereich</source>
+				<source>Hero/Startbereich</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source>Description for Content Element nobrain/s1s1-hero</source>
+				<source>Hero Section, ist der erste Bereich einer Seite mit einem Titel und Knöpfen</source>
 			</trans-unit>
 		</body>
 	</file>

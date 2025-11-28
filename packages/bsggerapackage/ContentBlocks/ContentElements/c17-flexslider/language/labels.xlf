@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-10-14T04:49:39+00:00" product-name="zazuberlin/c17-flexslider">
+	<file datatype="plaintext" original="labels.xlf" source-language="de" date="2025-10-14T04:49:39+00:00" product-name="zazuberlin/c17-flexslider">
 		<header/>
 		<body>
             <trans-unit id="title">
-                <source>c17 - flexslider-full width</source>
+                <source>Diashow im 16/9 Format</source>
             </trans-unit>
             <trans-unit id="description">
-                <source>A flexslider using the full width of the screen.</source>
+                <source>Eine Diashow die vorzugsweise mit 16/9 Bildern gefüllt werden kann.</source>
             </trans-unit>
 			<trans-unit id="amountOfImages">
-				<source>Amount of Images</source>
+				<source>Anzahl der Bilder</source>
 			</trans-unit>
 			<trans-unit id="image.label">
-				<source>Images</source>
+				<source>Bilder</source>
 			</trans-unit>
 			<trans-unit id="header.label">
-				<source>Header</source>
+				<source>Überschrift</source>
 			</trans-unit>
 			<trans-unit id="header.description">
-				<source>A hidden headline for SEO.</source>
+				<source>Eine versteckte Überschrift für SEO.</source>
 			</trans-unit>
 			<trans-unit id="editContentBlock">
-				<source>EDIT</source>
+				<source>BEARBEITEN</source>
 			</trans-unit>
 		</body>
 	</file>

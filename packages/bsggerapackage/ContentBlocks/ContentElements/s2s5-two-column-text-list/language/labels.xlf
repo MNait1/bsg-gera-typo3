@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>s2s5-Über uns/Unsere Mitglieder</source>
+				<source>Über uns | Unsere Mitglieder</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source>Geben Sie hier Ihren "Über uns" Test ein und die Mitglieder dieser Sparte</source>
+				<source>Hier kann ein Über uns Text und die Mitglieder der Sparte hinzugefügt werden</source>
 			</trans-unit>
 		</body>
 	</file>
