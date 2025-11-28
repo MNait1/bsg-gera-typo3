@@ -15,11 +15,11 @@
 .text p {
   margin: 0;
   line-height: 1.5;
-  font-size: clamp(1.3rem, calc(1.3vw + 0.5rem), 1.9rem);
+  font-size: clamp(1rem, calc(0.7vw + 0.5rem), 1.3rem);
 }
 
 .text-h2 {
-  font-size: clamp(2.2rem, calc(2.2vw + 0.5rem), 3.5rem);
+  font-size: clamp(2.1rem, calc(2vw + 0.5rem), 3.3rem);
 }
 
 
@@ -38,4 +38,20 @@
 
 #fließtext {
   padding: 3rem 1rem;
+}
+
+/* Link‑Farben nur innerhalb des s6s3-Blocks */
+.s6s3-text-block a {
+  color: #b600c7; /* normale Linkfarbe */
+  text-decoration: underline;
+}
+
+.s6s3-text-block a:visited {
+  color: #e400d1; /* besuchte Links */
+}
+
+.s6s3-text-block a:hover,
+.s6s3-text-block a:focus {
+  color: #ffffff; /* hover/focus */
+  text-decoration: none;
 }

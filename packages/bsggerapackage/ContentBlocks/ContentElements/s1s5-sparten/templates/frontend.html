@@ -6,21 +6,21 @@
 
 <f:if condition="{data.toggle3}">
   <f:then>
-    <section class="section background" id="about-und-spieler">
+    <section class="background" id="about-und-spieler">
   </f:then>
   <f:else>
-    <section class="section background-hellgelb" id="about-und-spieler">
+    <section class="background-hellgelb" id="about-und-spieler">
   </f:else>
 </f:if>
 
 
-<section id="sparten" class="section section--solid" >
+<section id="sparten" >
   <div class="wrapper center">
     <f:if condition="{data.toggle}">
       <h3>{data.header}</h3>
     </f:if>
 
-    <div id="spartensection" class="cards sparten-cards">
+    <div id="spartensection" class="sparten-cards">
       <f:for each="{data.items}" as="item">
         <article class="card">
           <f:if condition="{item.image}">
