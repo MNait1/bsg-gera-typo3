@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>s1s5-sparten</source>
+				<source>Sparten Karten</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source>Description for Content Element nobrain/s1s5-sparten</source>
+				<source>Mit diesem Content Element werden Karten erstellt, die für kurze Infos und Links zu den Sparten genutzt werdne können</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -7,7 +7,7 @@
 				<source>Text Media Block</source>
 			</trans-unit>
 			<trans-unit id="description">
-				<source>Text mit Überschrift links und Media rechts</source>
+				<source>Ein Content Element mit zwei Spalten, auf der linken Seite text und auf der rechten ein Foto oder Video</source>
 			</trans-unit>
 		</body>
 	</file>
