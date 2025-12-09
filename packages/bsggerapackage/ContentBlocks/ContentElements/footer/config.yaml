@@ -1,0 +1,40 @@
+name: nobrain/footer
+typeName: nobrain_footer
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: lefttext
+    label: Text
+    type: Textarea
+    enableRichtext: false
+    rows: 6
+    description: 'Informationstext im linken Bereich des Footers'
+
+  - identifier: copyrighttext
+    label: Text
+    type: Textarea
+    enableRichtext: false
+    rows: 6
+    description: 'Informationstext im unteren mittleren Bereich des Footers'
+
+  - identifier: link1
+    label: (Optional) Link
+    type: Link
+    description: 'Telefonnummer oder E-Mail-Adresse im linken Bereich des Footers'
+
+  - identifier: link2
+    label: (Optional) Link
+    type: Link
+    description: 'Telefonnummer oder E-Mail-Adresse im linken Bereich des Footers'
+
+  - identifier: link
+    label: (Optional) Link
+    type: Link
+    description: 'Datenschutz-Link im mittleren Bereich des Footers'
+
+  - identifier: link4
+    label: (Optional) Link
+    type: Link
+    description: 'Impressum-Link im mittleren Bereich des Footers'
+

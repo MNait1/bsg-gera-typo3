@@ -1,51 +1,57 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 <!--
-	=====================
-		Partials/List/Item.html
-		changed zazu 20170426/20240111
+    =====================
+        Partials/List/Item.html
+        changed zazu 20170426/20240111
 
-		{f:if(condition: newsItem.istopnews, then: ' topnews')}
+        {f:if(condition: newsItem.istopnews, then: ' topnews')}
 -->
+
 <div class="card articletype-{newsItem.type}" itemscope="itemscope" itemtype="http://schema.org/Article">
-	<n:excludeDisplayedNews newsItem="{newsItem}" />
+    <n:excludeDisplayedNews newsItem="{newsItem}" />
 
+    <!-- header -->
+    <div class="header">
+        <h2>
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"
+                    additionalAttributes="{itemprop:'url'}">
+                <span itemprop="headline">{newsItem.title}</span>
+            </n:link>
+        </h2>
+    </div>
 
-	<!-- header -->
-	<div class="header">
-		<h2>
-			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"
-				additionalAttributes="{itemprop:'url'}">
-				<span itemprop="headline">{newsItem.title}</span>
-			</n:link>
-		</h2>
-	</div>
+    <!-- teaser + Bild -->
+    <div class="teaser-text">
+        <n:removeMediaTags>
+            <!-- Teasertext -->
+            <div itemprop="description" class="platzhalter">
+                {newsItem.teaser -> f:format.crop(
+                    maxCharacters: '{settings.cropMaxCharacters}',
+                    respectWordBoundaries: '1',
+                    append: '&nbsp;…'
+                ) -> f:format.html()}
+            </div>
 
-	<!-- teaser -->
-	<div class="teaser-text">
-		<n:removeMediaTags>
-			<div itemprop="description" class="platzhalter">{newsItem.teaser -> f:format.crop(maxCharacters:
-				'{settings.cropMaxCharacters}', respectWordBoundaries:'1', append:'&nbsp;…') ->
-				f:format.html()}</div>
+            <!-- Bild – jetzt mit Link zur Detailansicht -->
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="news-card-image-link">
+                <div class="news-img-wrap card-img">
+                    <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper"
+                                   audioClass="audio-wrapper">
+                        <f:render partial="Detail/MediaContainer"
+                                  arguments="{media: {0: newsItem.mediaNonPreviews.0}, settings: settings}" />
+                    </n:renderMedia>
+                </div>
+            </n:link>
 
-			<!-- Bilder-->
-			<div class="news-img-wrap card-img">
-				<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper"
-					audioClass="audio-wrapper">
+        </n:removeMediaTags>
 
-					<f:render partial="Detail/MediaContainer"
-						arguments="{media: {0: newsItem.mediaNonPreviews.0}, settings: settings}" />
-
-				</n:renderMedia>
-			</div>
-
-
-
-		</n:removeMediaTags>
-		<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
-			<f:translate key="more-link" />
-		</n:link>
-	</div>
+        <!-- Mehr erfahren -->
+        <n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+            <f:translate key="more-link" />
+        </n:link>
+    </div>
 
 </div>
 
