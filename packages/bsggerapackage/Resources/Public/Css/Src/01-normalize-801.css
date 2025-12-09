@@ -21,6 +21,14 @@ html {
  */
 
 body {
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom,
+            #e4e97b 0%,
+            #c9d188 25%,
+            #9fb3c8 55%,
+            #6983a1 100%);
+  background-attachment: fixed;
   margin: 0;
 }
 
@@ -30,6 +38,7 @@ body {
 
 main {
   display: block;
+  min-height: auto;
 }
 
 /**

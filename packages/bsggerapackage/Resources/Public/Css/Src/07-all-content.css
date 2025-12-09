@@ -375,13 +375,9 @@
 
 
 .news-single-item {
-    margin-top: 0;
-    margin-bottom: 1em;
-    background: rgba(240, 240, 239, 0.8);
-    padding: 1rem 2rem 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    overflow: visible !important;
+    height: auto !important;
+
 }
 
 .news-single-item h1 {
@@ -661,13 +657,6 @@
 **/
 
 /* NEWS: grid / boxes für "Aktuelles" (1 / 2 / 3 columns) */
-.news-zazu-list,
-.news-list-all .newsCont {
-    display: flex;
-    gap: 1.5rem;
-    margin: 1rem 0 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
 
 .news-zazu-list .news-list-item,
 .news-list-all .news-list-item {
@@ -691,7 +680,7 @@
 .news-zazu-list,
 .news-list-all .newsCont {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
     margin: 1rem 0 2rem;
     /* Minimale Breite auf 100% der verfügbaren Breite setzen */
     grid-template-columns: 1fr;
@@ -703,19 +692,11 @@
 
     .news-zazu-list,
     .news-list-all .newsCont {
-        grid-template-columns: repeat(2, 1fr);
+        flex-direction: row;
+        gap: 1.5rem;
     }
 }
 
-/* Ab 1150px drei Spalten */
-@media only screen and (min-width: 1150px) {
-
-    .news-zazu-list,
-    .news-list-all .newsCont {
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-}
 
 /* Box-styling */
 .news-list-item .article,
@@ -850,7 +831,6 @@
             #9fb3c8 55%,
             #6983a1 100%);
     background-attachment: fixed;
-    pointer-events: none;
 }
 
 /* Abstand unter der Überschrift-Box */

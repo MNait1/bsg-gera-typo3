@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<!-- Footer -->
+<footer id="mainFooter" class="clearfix">
+    <div class="center wrapper">
+        <h2 class="visuallyhidden">BSG BfA Gera - Dein Sportverein!</h2>
+
+        <div class="contFooter">
+
+            <!-- linke Spalte: Adresse / Text -->
+            <div class="footer-text footerMid">
+                <p>
+                    <f:format.nl2br>{data.lefttext}</f:format.nl2br>
+                </p>
+            </div>
+
+            <!-- rechte Spalte: Telefon & Mail -->
+            <div class="footer-text footerRight">
+
+                <!-- Telefon -->
+                <f:if condition="{data.link1}">
+                    <p>
+                        <f:link.typolink parameter="{data.link1}">
+                            <span id="phone"></span>
+                            <f:if condition="{data.link1.text}">
+                                <f:then>{data.link1.text}</f:then>
+                                <f:else>{data.link1.url}</f:else>
+                            </f:if>
+                        </f:link.typolink>
+                    </p>
+                </f:if>
+
+                <!-- E-Mail -->
+                <f:if condition="{data.link2}">
+                    <p>
+                        <f:link.typolink parameter="{data.link2}">
+                            <span id="mail"></span>
+                            <f:if condition="{data.link2.text}">
+                                <f:then>{data.link2.text}</f:then>
+                                <f:else>{data.link2.url}</f:else>
+                            </f:if>
+                        </f:link.typolink>
+                    </p>
+                </f:if>
+            </div>
+        </div>
+
+        <!-- Impressum / Datenschutz -->
+        <ul id="metaNav">
+            <f:if condition="{data.link}">
+                <li>
+                    <f:link.typolink parameter="{data.link}">
+                        <f:if condition="{data.link.text}">
+                            <f:then>{data.link.text}</f:then>
+                            <f:else>Impressum</f:else>
+                        </f:if>
+                    </f:link.typolink>
+                </li>
+            </f:if>
+
+            <f:if condition="{data.link4}">
+                <li>
+                    <f:link.typolink parameter="{data.link4}">
+                        <f:if condition="{data.link4.text}">
+                            <f:then>{data.link4.text}</f:then>
+                            <f:else>Datenschutzerklärung</f:else>
+                        </f:if>
+                    </f:link.typolink>
+                </li>
+            </f:if>
+        </ul>
+
+        <p class="footer-copy">{data.copyrighttext}</p>
+    </div>
+</footer>
+
+</html>
