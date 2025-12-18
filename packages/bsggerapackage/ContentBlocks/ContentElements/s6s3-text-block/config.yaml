@@ -18,13 +18,13 @@ fields:
     rows: 40
   
   - identifier: toggle
-    label: Überschrift ja/nein
+    label: Überschrift anzeigen
     type: Checkbox
     renderType: checkboxToggle
     default: 0
 
   - identifier: toggle3
-    label: Hintergrundbild ja/nein
+    label: Hintergrundbild sichtbar
     type: Checkbox
     renderType: checkboxToggle
     default: 0
