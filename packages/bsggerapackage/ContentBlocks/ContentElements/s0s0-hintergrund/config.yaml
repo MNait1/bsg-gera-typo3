@@ -6,7 +6,7 @@ prefixType: full
 fields:
 
   - identifier: toggle2
-    label: Hintergrund ja/nein
+    label: Hintergrund sichtbar
     type: Checkbox
     renderType: checkboxToggle
     default: 0  

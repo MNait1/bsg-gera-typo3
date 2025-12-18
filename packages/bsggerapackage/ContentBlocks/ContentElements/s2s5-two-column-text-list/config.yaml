@@ -6,28 +6,28 @@ prefixType: full
 fields:
   
   - identifier: header
-    label: Überschrift über uns
+    label: Überschrift Text
     useExistingField: true
 
   - identifier: header2
     type: Textarea
-    label: Überschrift Mitglieder
+    label: Überschrift Liste
     useExistingField: false
 
   - identifier: toggle
-    label: Überschrift über uns ja/nein
+    label: Überschrift von Text anzeigen
     type: Checkbox
     renderType: checkboxToggle
     default: 0
 
   - identifier: toggle2
-    label: Überschrift Mitglieder ja/nein
+    label: Überschrift von Liste anzeigen
     type: Checkbox
     renderType: checkboxToggle
     default: 0  
 
   - identifier: toggle3
-    label: Hintergrundbild ja/nein
+    label: Hintergrundbild sichtbar
     type: Checkbox
     renderType: checkboxToggle
     default: 0

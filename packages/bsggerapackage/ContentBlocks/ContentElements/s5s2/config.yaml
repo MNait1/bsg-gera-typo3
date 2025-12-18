@@ -19,7 +19,7 @@ fields:
     maxItems: 1
 
   - identifier: toggle3
-    label: Hintergrundbild ja/nein
+    label: Hintergrundbild sichtbar
     type: Checkbox
     renderType: checkboxToggle
     default: 0

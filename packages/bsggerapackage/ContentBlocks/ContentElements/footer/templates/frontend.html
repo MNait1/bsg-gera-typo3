@@ -22,7 +22,6 @@
                 <f:if condition="{data.link1}">
                     <p>
                         <f:link.typolink parameter="{data.link1}">
-                            <span id="phone"></span>
                             <f:if condition="{data.link1.text}">
                                 <f:then>{data.link1.text}</f:then>
                                 <f:else>{data.link1.url}</f:else>
@@ -35,7 +34,6 @@
                 <f:if condition="{data.link2}">
                     <p>
                         <f:link.typolink parameter="{data.link2}">
-                            <span id="mail"></span>
                             <f:if condition="{data.link2.text}">
                                 <f:then>{data.link2.text}</f:then>
                                 <f:else>{data.link2.url}</f:else>
