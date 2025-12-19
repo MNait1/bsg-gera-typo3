@@ -31,10 +31,10 @@ fields:
   - identifier: link
     label: (Optional) Link
     type: Link
-    description: 'Datenschutz-Link im mittleren Bereich des Footers'
+    description: 'Impressum-Link im mittleren Bereich des Footers'
 
   - identifier: link4
     label: (Optional) Link
     type: Link
-    description: 'Impressum-Link im mittleren Bereich des Footers'
+    description: 'Datenschutz-Link im mittleren Bereich des Footers'
 
