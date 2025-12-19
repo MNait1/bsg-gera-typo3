@@ -30,7 +30,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .s5s2-two-col {
     grid-template-columns: 1fr; 
   }
