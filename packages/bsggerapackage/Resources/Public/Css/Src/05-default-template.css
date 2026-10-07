@@ -6,6 +6,7 @@
 #mainFooter {
   background: rgba(8, 49, 99);
   margin-top: auto;
+  position: static;
 }
 
 .footer-text {

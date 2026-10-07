@@ -33,10 +33,10 @@ config {
     // Compression and concatenation of CSS and JS Files
     // only if they are included with TS "include", needs level in .htaccess
     // plus TYPO3 BE/FE Configure Installation wide options for compression level (1-9/7)
-    compressCss = 0
-    compressJs = 0
-    concatenateCss = 0
-    concatenateJs = 0
+    // compressCss = 0
+    // compressJs = 0
+    // concatenateCss = 0
+    // concatenateJs = 0
 
     // the JS in the head for decryption of email addresses
     removeDefaultJS = 1

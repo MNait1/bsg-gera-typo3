@@ -1,0 +1,12 @@
+/vendor/
+/var/
+/public/typo3temp/
+/public/typo3conf/ext/   # nur bei Composer-Projekten
+/public/fileadmin/       # Bilder/Galerien, oft sehr groß
+/public/_assets/
+.env
+config/system/settings.php
+config/system/additional.php
+*.sql
+*.log
+node_modules/

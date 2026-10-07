@@ -69,5 +69,57 @@
   }
 }
 
+/* ================================
+   MOBILE
+================================ */
 
-/* Grid für zwei Spalten mit Video und über uns */
+@media (max-width: 700px) {
+
+    #about-und-spieler .wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+
+    #about-und-spieler .s2s5-two-col {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        gap: 2rem;
+    }
+
+    #about-und-spieler .about-text,
+    #about-und-spieler .spieler-box {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    #about-und-spieler .about-text h2,
+    #about-und-spieler .about-text p,
+    #about-und-spieler .spieler-box h2 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    #about-und-spieler .spieler-liste {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    #about-und-spieler .spieler-liste .listItem {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

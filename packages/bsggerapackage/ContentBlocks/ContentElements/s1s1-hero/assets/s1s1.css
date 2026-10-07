@@ -101,6 +101,33 @@
     --offset: 22vh;
   }
 
+@media (max-width: 600px) {
+    .hero {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        --offset: 22vh;
+        height: auto;
+    }
+
+    .hero .wrapper.center {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        line-height: 1.05;
+    }
+
+    .hero h2,
+    .hero p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
   /* Buttons nur anders ANORDNEN, nicht verändern */
   .actions,
   .hero-actions,

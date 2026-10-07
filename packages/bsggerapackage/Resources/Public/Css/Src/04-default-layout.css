@@ -62,6 +62,7 @@ http://zazu.berlin
     position: relative;
     margin-bottom: 1em;
     background: rgba(8, 49, 99);
+    padding-bottom: 0;
 }
 
 /**
